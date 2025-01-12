@@ -1,0 +1,106 @@
+/* .nav-container {
+  font-family: "'Courier Prime', sans-serif";
+  font-size: "1em";
+  font-weight: "600";
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px;
+  background-color: #2b2b2b;
+  color: white;
+}
+
+.dots {
+  display: flex;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 4px;
+}
+
+.orange {
+  background-color: orange;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.green {
+  background-color: green;
+}
+
+.title {
+  font-weight: bold;
+}
+
+.icon {
+  font-size: 1.5em;
+} */
+
+.nav-inside-container {
+  position: sticky;
+  top: 0;
+  height: 2.5em;
+  background: #ccc;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 0 1em;
+}
+
+.dots-inside-container {
+  display: flex;
+  align-items: center;
+  align-items: "center";
+  flex-wrap: "wrap";
+}
+
+.text-inside-container {
+  font-family: 'Courier Prime', sans-serif;
+  font-size: 1.2em;
+  font-weight: 600;
+  font-size: "0.9em";
+}
+
+.dot {
+  content: '""';
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.orange-dot {
+  background-color: var(--terminal-orange-dot);
+}
+
+.yellow-dot {
+  background-color: var(--terminal-yellow-dot);
+}
+
+.green-dot {
+  background-color: var(--terminal-green-dot);
+}
+
+@media screen and (max-width: 600px) {
+  .text-inside-container {
+    font-size: 0.7em;
+  }
+
+  .dot {
+    width: 0.7em;
+    height: 0.7em;
+    margin-right: 5px;
+  }
+
+  .nav-inside-container {
+    padding: 0 0.5em;
+    height: 1.8em;
+  }
+}
+

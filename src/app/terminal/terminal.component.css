@@ -1,0 +1,70 @@
+.container-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1%;
+  height: 50vh;
+}
+
+.terminal {
+  scroll-behavior: smooth;
+  max-height: 376px;
+  overflow-y: auto;
+}
+
+.term-container {
+  width: 80%;
+  height: 45vh;
+  background: var(--terminal-background-color);
+  border-radius: 2%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.term-container::-webkit-scrollbar {
+  width: 0;
+}
+
+.terminal-prompt {
+  color: rgb(169, 23, 168);
+  margin-left: 1.4em;
+}
+
+.terminal-username {
+  font-size: 1.2em;
+  font-weight: 600;
+  margin-top: 1em;
+  margin-bottom: 0.4em;
+  font-family: 'Courier Prime', sans-serif;
+  padding-bottom: 4px;
+}
+
+.terminal-welcome-messages {
+  font-family: 'Courier Prime', sans-serif;
+  font-size: 1.2em;
+  font-weight: 550;
+  color: var(--terminal-text-black);
+  margin: 0.5em 1.4em;
+}
+
+.input {
+  outline: none;
+  border: none;
+  background-color: var(--terminal-background-color);
+  color: var(--terminal-text-black);
+}
+
+@media screen and (max-width: 600px) {
+  .term-container {
+    height: 40vh;
+    width: 100%;
+  }
+
+  .terminal-welcome-messages {
+    font-size: 1em;
+  }
+
+  .terminal-username {
+    font-size: 1em;
+  }
+}

@@ -1,0 +1,30 @@
+<div class="container-div">
+  <div class="term-container" #terminal (click)="focusInput()">
+    <app-terminal-nav></app-terminal-nav>
+    <div class="terminal">
+      <div class="terminal-welcome-messages">
+        {{ terminalConfiguration.welcome_message }}
+      </div>
+      <app-terminal-output
+        *ngFor="let cmd of output"
+        [terminalUsername]="terminalConfiguration.terminal_username"
+        [command]="cmd.command"
+        [response]="cmd.response"
+      ></app-terminal-output>
+      <div class="terminal-prompt">
+        <span class="terminal-username"
+          >{{ terminalConfiguration.terminal_username }}
+          <input
+            #inputRef
+            type="text"
+            aria-label="input-form"
+            autoFocus
+            [(ngModel)]="input"
+            (keypress)="handleKeyPress($event)"
+            class="input"
+          />
+        </span>
+      </div>
+    </div>
+  </div>
+</div>

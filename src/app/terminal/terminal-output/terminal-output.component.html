@@ -1,0 +1,9 @@
+<div>
+  <div class="terminal-prompt">
+    <span class="terminal-username">
+      {{ terminalUsername }}
+      <span style="color: black; font-weight: 600;">{{ command }}</span>
+    </span>
+  </div>
+  <div class="terminal-output" [innerHTML]="response"></div>
+</div>
