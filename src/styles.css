@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 /* @import '~bootstrap/dist/css/bootstrap.min.css'; */
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Roboto&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Roboto&display=swap");
 
 :root {
@@ -10,9 +10,17 @@
   --terminal-orange-dot: #fc5b57;
   --terminal-yellow-dot: #e5bf3c;
   --terminal-green-dot: #57c038;
+  --tw-shadow-color: #443626;
 }
 
 .bg-rich-black {
-  --tw-bg-opacity: 1;
-  background-color: rgb(10 9 8 / var(--tw-bg-opacity));
+  background-color: rgb(10 9 8);
+}
+
+.text-light-beige {
+  color: rgb(169 146 125); 
+}
+
+body {
+  background-color: rgb(10 9 8);
 }

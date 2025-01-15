@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Mudar Hussain';
+  
+  isWindow: boolean = window.innerWidth > 630 ? true : false;
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: any) {
+    this.isWindow = event.target.innerWidth > 630 ? true : false;
+  }
 }
