@@ -4,9 +4,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Roboto&display=swap");
 
 :root {
-  --terminal-background-color: rgb(253, 246, 228);
-  --terminal-nav-background-color: #ccc;
-  --terminal-text-black: #000000;
+  --terminal-background-color: rgb(20, 20, 20);
+  --terminal-nav-background-color: rgb(30, 30, 30);
+  --terminal-user: #A917A8;
+  --terminal-command: rgb(100, 149, 237);
+  --terminal-resp-heading: #FC5B57;
+  --terminal-resp: rgb(185, 145, 107);
   --terminal-orange-dot: #fc5b57;
   --terminal-yellow-dot: #e5bf3c;
   --terminal-green-dot: #57c038;
@@ -19,8 +22,4 @@
 
 .text-light-beige {
   color: rgb(169 146 125); 
-}
-
-body {
-  background-color: rgb(10 9 8);
 }

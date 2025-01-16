@@ -9,6 +9,7 @@ import { TerminalOutputComponent } from './terminal/terminal-output/terminal-out
 import { FormsModule } from '@angular/forms';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { MenuIconComponent } from './shared/menu-icon/menu-icon.component';
+import { SafeHtmlPipe } from './shared/pipes/safe-html.pipe';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { MenuIconComponent } from './shared/menu-icon/menu-icon.component';
     TerminalNavComponent,
     TerminalOutputComponent,
     NavbarComponent,
-    MenuIconComponent
+    MenuIconComponent,
+    SafeHtmlPipe
   ],
   imports: [
     BrowserModule,

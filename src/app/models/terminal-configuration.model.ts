@@ -3,56 +3,58 @@ export interface TerminalConfig {
   terminal_username: string;
   commands: {
     whoami: {
-      name: string;
-      profession: string;
-      company: string;
+      Name: string;
+      Profession: string;
+      Company: string;
     };
     experience: {
-      ellucian: string;
-      role: string;
-      internship_role: string;
-    };
+      Company: string,
+      Role: string,
+      Period: string,
+      Location: string,
+      Experience: string,
+    }[];
     education: {
-      title: string;
-      desc: string;
-      CGPA: string;
-    };
-    ls: {
-      [key: string]: string;
+      University: string;
+      Degree: string;
+      Period: string;
     };
     help: {
       [key: string]: string;
     };
     skills: {
-      frontend: string;
-      backend: string;
-      database: string;
-      programming_languages: string;
-      unit_testing: string;
-      version_control: string;
-      Agile_tool: string;
-      Tools: string;
+      Frontend: string;
+      Backend: string;
+      Database: string;
+      Programming_Languages: string;
+      Unit_Testing: string;
+      Version_Control: string;
+      Agile_Tool: string;
+      Other_Tools: string;
     };
     projects: {
-      JobLeet: string;
-      MessageQueue: string;
-    };
-    publications: {
-      image_caption: string;
-      url: string;
-    };
+      Name: string;
+      Category: string;
+      Description: string;
+      TechStack: string;
+      URL: string;
+    }[];
+    code: {
+      Coding_Platform: string,
+      Insights: string,
+      Handle: string
+    }[];
     blogs: {
-      blog_articles: string;
-      blog_url: string;
+      Blogs_Articles: string;
     };
     github: {
-      gh_handle: string;
+      GitHub_Handle: string;
     };
     linkedIn: {
-      linkedin: string;
+      LinkedIn_Profile: string;
     };
     contact: {
-      email: string;
+      Email_Address: string;
     };
   };
 }
