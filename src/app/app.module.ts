@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { MenuIconComponent } from './shared/menu-icon/menu-icon.component';
 import { SafeHtmlPipe } from './shared/pipes/safe-html.pipe';
+import { FooterComponent } from './shared/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { SafeHtmlPipe } from './shared/pipes/safe-html.pipe';
     TerminalOutputComponent,
     NavbarComponent,
     MenuIconComponent,
-    SafeHtmlPipe
+    SafeHtmlPipe,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

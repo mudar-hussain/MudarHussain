@@ -1,51 +1,40 @@
 .navbar-brand {
-    font-family:  "Caveat", serif;
-    font-size: 2rem;
-    color: #ffffff;
-    letter-spacing: .025em;
-    font-weight: 600;
-    padding: .25rem;
-  }
-  
-  .nav-link {
-    font-family: 'Roboto', serif; 
-    font-size: 1rem;
-    color: #ffffff;
-    margin-left: 1rem;
-    transition: color 0.3s ease;
-  }
-  
-  .nav-link:hover {
-    color: #d2b48c; /* Tan color on hover */
-    text-decoration: none;
-  }
-  
-  .navbar-toggler {
-    border: none;
-    padding: 0;
-    background: transparent; 
-    outline: none; 
-    box-shadow: none;
-  }
-  
-  .navbar-nav {
-    text-align: right;
-  }
-  
-  body {
-    background-color: rgb(10 9 8);
-    width: 100%;
-    padding-bottom: 1.5rem;
-    padding-top: 1.5rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 9999;
-  }
+  font-family: "Caveat", serif;
+  font-size: 2rem;
+  color: #ffffff;
+  letter-spacing: 0.025em;
+  font-weight: 600;
+  padding: 0.25rem;
+}
 
-  .custom-shadow {
-    box-shadow:  var(--tw-shadow-color) 0px 1px 0px;
-  }
-    
+.nav-link {
+  font-family: "Roboto", serif;
+  font-size: 1rem;
+  color: #ffffff;
+  margin-left: 1rem;
+  transition: color 0.3s ease;
+}
+
+.navbar-toggler {
+  border: none;
+  padding: 0;
+  background: transparent;
+  outline: none;
+  box-shadow: none;
+}
+
+.navbar-nav {
+  text-align: right;
+}
+
+body {
+  width: 100%;
+  padding-bottom: 1.5rem;
+  padding-top: 1.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}

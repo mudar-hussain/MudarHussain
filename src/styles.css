@@ -1,14 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 /* @import '~bootstrap/dist/css/bootstrap.min.css'; */
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Roboto&display=swap");
 
 :root {
   --terminal-background-color: rgb(20, 20, 20);
   --terminal-nav-background-color: rgb(30, 30, 30);
-  --terminal-user: #A917A8;
+  --terminal-user: #a917a8;
   --terminal-command: rgb(100, 149, 237);
-  --terminal-resp-heading: #FC5B57;
+  --terminal-resp-heading: #fc5b57;
   --terminal-resp: rgb(185, 145, 107);
   --terminal-orange-dot: #fc5b57;
   --terminal-yellow-dot: #e5bf3c;
@@ -21,5 +21,19 @@
 }
 
 .text-light-beige {
-  color: rgb(169 146 125); 
+  color: rgb(169 146 125);
+}
+
+.custom-bottom-shadow {
+  box-shadow: var(--tw-shadow-color) 0px 1px 0px;
+}
+
+.custom-top-shadow {
+  box-shadow: var(--tw-shadow-color) 0px -1px 0px;
+}
+
+.nav-link:hover,
+.link:hover {
+  color: #d2b48c !important; /* Tan color on hover */
+  text-decoration: none !important;
 }

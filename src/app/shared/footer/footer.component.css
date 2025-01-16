@@ -1,0 +1,12 @@
+footer {
+  padding: 10px;
+  color: #ffffff;
+}
+.brand {
+  font-family: "Caveat", serif;
+  font-size: 2rem;
+  color: #ffffff;
+  letter-spacing: 0.025em;
+  font-weight: 600;
+  padding: 0.25rem;
+}
