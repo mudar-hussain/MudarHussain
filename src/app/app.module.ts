@@ -11,6 +11,7 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
 import { MenuIconComponent } from './shared/menu-icon/menu-icon.component';
 import { SafeHtmlPipe } from './shared/pipes/safe-html.pipe';
 import { FooterComponent } from './shared/footer/footer.component';
+import { RestrictUserActionsDirective } from './directives/restrict-user-actions.directive';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { FooterComponent } from './shared/footer/footer.component';
     NavbarComponent,
     MenuIconComponent,
     SafeHtmlPipe,
-    FooterComponent
+    FooterComponent,
+    RestrictUserActionsDirective
   ],
   imports: [
     BrowserModule,

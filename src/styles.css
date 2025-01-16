@@ -37,3 +37,20 @@
   color: #d2b48c !important; /* Tan color on hover */
   text-decoration: none !important;
 }
+
+/* Prevent text selection */
+body {
+  user-select: none;
+  -webkit-user-select: none; /* For Safari */
+  -ms-user-select: none; /* For Internet Explorer */
+  -moz-user-select: none; /* For older Firefox */
+}
+
+/* Prevent image dragging */
+img {
+  pointer-events: none;
+  -webkit-user-drag: none;
+  -moz-user-drag: none;
+  -ms-user-drag: none;
+}
+
