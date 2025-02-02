@@ -1,0 +1,84 @@
+<div class="contact-container">
+  <div class="form-section">
+    <h2>Contact <span class="text-light-beige">Me</span></h2>
+    <p>Let's Build Something Amazing Together!</p>
+    <form (ngSubmit)="sendMessage()">
+      <div class="form-group">
+        <input
+          type="text"
+          placeholder="First Name"
+          name="firstName"
+          [(ngModel)]="formData.firstName"
+          required
+        />
+        <input
+          type="text"
+          placeholder="Last Name"
+          name="lastName"
+          [(ngModel)]="formData.lastName"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <input
+          type="email"
+          placeholder="Your Email Address"
+          name="email"
+          [(ngModel)]="formData.email"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <input
+          type="text"
+          placeholder="Looking for a developer..."
+          name="subject"
+          [(ngModel)]="formData.subject"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <textarea
+          placeholder="Write your message here..."
+          name="message"
+          [(ngModel)]="formData.message"
+          required
+        ></textarea>
+      </div>
+      <button type="submit" class="custom-bottom">
+        Send Message <i class="fa-sharp-duotone fa-solid fa-paper-plane"></i>
+      </button>
+    </form>
+  </div>
+  <div class="info-section">
+    <h2>What's next <span class="text-light-beige">?</span></h2>
+    <p>
+      I'm open to new job opportunities and freelance projects. If you have an
+      idea, a challenge, or just want to say hi, feel free to reach out!
+    </p>
+    <a target="_blank" href="mailto:mudar.shussain@gmail.com">
+      <i class="fa-solid fa-envelope"></i> mudar.shussain<span class="text-light-beige">@gmail.com</span>
+    </a>
+    <br />
+    <a
+      ><i class="fa-sharp-duotone fa-solid fa-location-dot"></i> Pune,
+      <span class="text-light-beige">India</span></a
+    >
+    <br />
+    <div class="social-links">
+      <a class="link" href="https://www.linkedin.com/in/mudar-hussain/"
+        ><i class="fa-brands fa-linkedin-in"></i
+      ></a>
+      <a class="link" href="https://github.com/mudar-hussain"
+        ><i class="fa-brands fa-github"></i
+      ></a>
+      <a class="link" href="https://leetcode.com/u/mudar_hussain/"
+        ><i class="fa-solid fa-code"></i
+      ></a>
+    </div>
+    <br />
+    <button class="custom-bottom">
+      <i class="fa-solid fa-download"></i> Resume
+    </button>
+  </div>
+</div>

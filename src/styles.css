@@ -14,10 +14,30 @@
   --terminal-yellow-dot: #e5bf3c;
   --terminal-green-dot: #57c038;
   --tw-shadow-color: #443626;
+  --dark-beige: rgb(94, 80, 63);
+  --light-beige: rgb(169 146 125);
 }
 
 .bg-rich-black {
   background-color: rgb(10 9 8);
+}
+
+.bg-dark-beige {
+  background-color: rgb(94, 80, 63);
+}
+
+.custom-bottom {
+  background-color: var(--dark-beige);
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.custom-bottom:hover {
+  background-color: var(--light-beige);
 }
 
 .text-light-beige {
