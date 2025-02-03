@@ -22,6 +22,7 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { RestrictUserActionsDirective } from './directives/restrict-user-actions.directive';
 import { ContactComponent } from './components/contact/contact.component';
 import { LoadingScreenComponent } from './components/loading-screen/loading-screen.component';
+import { HeroSectionComponent } from './components/hero-section/hero-section.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { LoadingScreenComponent } from './components/loading-screen/loading-scre
     FooterComponent,
     RestrictUserActionsDirective,
     ContactComponent,
-    LoadingScreenComponent
+    LoadingScreenComponent,
+    HeroSectionComponent
   ],
   imports: [
     BrowserModule,

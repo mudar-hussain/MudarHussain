@@ -1,0 +1,78 @@
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.info-section {
+    color: white;
+    font-family: 'Courier Prime', sans-serif;
+    flex: 1;  /* Allows flexible width */
+    max-width: 80%;  /* Prevents it from stretching too much */
+}
+
+/* Avatar Section - Visible only on large screens */
+.avatar-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+#avatar {
+    width: 450px;
+    height: 450px;
+    border-radius: 50%; /* Makes the container circular */
+    overflow: hidden; /* Ensures any extra parts of the image are cut */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image fills the circular container while cropping excess */
+}
+
+
+.dot {
+    border-radius: 50%;
+    margin-right: 6px; /* Reduce spacing */
+    font-size: 0.6em;  /* Ensures FontAwesome icon scales properly */
+}
+
+  
+  .orange-dot {
+    color: var(--terminal-orange-dot);
+  }
+  
+  .yellow-dot {
+    color: var(--terminal-yellow-dot);
+  }
+  
+  .green-dot {
+    color: var(--terminal-green-dot);
+  }
+
+
+
+
+
+
+/* Responsive Adjustments */
+@media (max-width: 1130px) {  
+    .hero-section {
+        flex-direction: column; /* Stack vertically */
+        text-align: center; /* Center align */
+    }
+    .info-section {
+        max-width: 100%; /* Full width */
+    }
+    .avatar-section {
+        display: none; /* Hide avatar section */
+    }
+}
