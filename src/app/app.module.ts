@@ -21,6 +21,7 @@ import { SafeHtmlPipe } from './shared/pipes/safe-html.pipe';
 import { FooterComponent } from './shared/footer/footer.component';
 import { RestrictUserActionsDirective } from './directives/restrict-user-actions.directive';
 import { ContactComponent } from './components/contact/contact.component';
+import { LoadingScreenComponent } from './components/loading-screen/loading-screen.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { ContactComponent } from './components/contact/contact.component';
     SafeHtmlPipe,
     FooterComponent,
     RestrictUserActionsDirective,
-    ContactComponent
+    ContactComponent,
+    LoadingScreenComponent
   ],
   imports: [
     BrowserModule,

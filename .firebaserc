@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "mudarhub"
-  }
+    "default": "mudar-hussain",
+    "mudar-hussain": "mudar-hussain"
+  },
+  "targets": {},
+  "etags": {}
 }
