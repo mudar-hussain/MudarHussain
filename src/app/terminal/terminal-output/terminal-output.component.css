@@ -1,5 +1,3 @@
-
-
 .terminal-prompt {
   color: var(--terminal-user);
   margin-left: 1.4em;
@@ -10,7 +8,7 @@
   font-weight: 500;
   margin-top: 1em;
   margin-bottom: 0.4em;
-  font-family: 'Courier Prime', sans-serif;
+  font-family: "Courier Prime", sans-serif;
   padding-bottom: 4px;
 }
 
@@ -18,12 +16,11 @@
   font-size: 1.1em;
   font-weight: 300;
   margin-left: 1.6em;
-  font-family: 'Courier Prime', sans-serif;
+  font-family: "Courier Prime", sans-serif;
   padding-bottom: 0.5em;
 }
 
 @media screen and (max-width: 600px) {
-
   .terminal-username {
     font-size: 1em;
   }

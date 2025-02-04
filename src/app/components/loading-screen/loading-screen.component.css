@@ -1,58 +1,58 @@
 /* Intro Screen */
 .introduction-screen {
-    width: 100%;
-    height: 100%;
-    background: #111;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    color: white;
-    font-size: 2.7em;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
-    /* Fade out animation */
-    animation: fadeOut 0.5s ease-in-out 2s forwards;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  color: white;
+  font-size: 2.7em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  /* Fade out animation */
+  animation: fadeOut 0.5s ease-in-out 2s forwards;
 }
 
 /* Intro Avatar (Bouncing Animation) */
 .intro-avatar {
-    border: 2px solid white;
-    border-radius: 50%;
-    width: 225px;
-    animation: bounce 0.7s infinite alternate;
+  border: 2px solid white;
+  border-radius: 50%;
+  width: 225px;
+  animation: bounce 0.7s infinite alternate;
 }
 
 /* Bounce Animation */
 @keyframes bounce {
-    from {
-        transform: translateY(0px);
-    }
-    to {
-        transform: translateY(-15px);
-    }
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-15px);
+  }
 }
 
 /* Fade Out Animation */
 @keyframes fadeOut {
-    from {
-        opacity: 1;
-    }
-    to {
-        opacity: 0;
-        visibility: hidden;
-    }
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
 }
 
 /* Mobile Responsive */
 @media (max-width: 480px) {
-    .intro-avatar {
-        width: 150px;
-    }
-    .introduction-screen {
-        font-size: 1.7em;
-    }
+  .intro-avatar {
+    width: 150px;
+  }
+  .introduction-screen {
+    font-size: 1.7em;
+  }
 }

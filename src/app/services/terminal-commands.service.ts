@@ -8,7 +8,7 @@ export class TerminalCommandsService {
   private commands!: TerminalConfig['commands'];
   private welcome_message: string = "";
 
-  constructor() {}
+  constructor() { }
 
   // Initialize the commands from the configuration
   initialize(terminalConfiguration: TerminalConfig): void {
@@ -21,41 +21,41 @@ export class TerminalCommandsService {
     switch (command.toLowerCase()) {
       case 'whoami':
         return this.formatResponse(this.commands.whoami);
-  
+
       case 'experience':
         return this.formatResponse(this.commands.experience);
-  
+
       case 'education':
         return this.formatResponse(this.commands.education);
-  
+
       case 'skills':
         return this.formatResponse(this.commands.skills);
-  
+
       case 'projects':
         return this.formatResponse(this.commands.projects);
-  
+
       case 'code':
         return this.formatResponse(this.commands.code);
-  
+
       case 'blogs':
         return this.formatResponse(this.commands.blogs);
-  
+
       case 'github':
         return this.formatResponse(this.commands.github);
-  
+
       case 'linkedin':
         return this.formatResponse(this.commands.linkedIn);
-  
+
       case 'contact':
         return this.formatResponse(this.commands.contact);
-  
-      case 'help':  
+
+      case 'help':
       case 'ls':
         return this.formatResponse(this.commands.help);
-  
+
       default:
-        return this.formatResponse('Command not found') 
-        + ` <br/><b style="font-size: 1em; font-weight: 450; color: var(--terminal-command); margin: 0.5em 1.4em;">${this.welcome_message}</b>`;
+        return this.formatResponse('Command not found')
+          + ` <br/><b style="font-size: 1em; font-weight: 450; color: var(--terminal-command); margin: 0.5em 1.4em;">${this.welcome_message}</b>`;
     }
   }
 
@@ -71,7 +71,7 @@ export class TerminalCommandsService {
           .map(item => this.formatObject(item))
           .join('<br/><br/>'); // Separate objects with extra spacing
       }
-  
+
       // Handle array of strings or other primitive types
       return data.map(val => this.formatValue(val)).join('<br/>');
     }
@@ -79,9 +79,9 @@ export class TerminalCommandsService {
     return Object.entries(data)
       .map(([key, value]) => {
         const formattedKey = this.formatKey(key);
-        const formattedValue = Array.isArray(value) 
-        ? value.map(val => this.formatValue(val)).join('<br/>') 
-        : this.formatValue(value);
+        const formattedValue = Array.isArray(value)
+          ? value.map(val => this.formatValue(val)).join('<br/>')
+          : this.formatValue(value);
         return `${formattedKey} <b style="color: var(--terminal-resp-heading)">:</b> ${formattedValue}`;
       })
       .join('<br/>');
@@ -100,7 +100,7 @@ export class TerminalCommandsService {
   }
 
   private formatObject(obj: Record<string, any>): string {
-    return Object.entries(obj) 
+    return Object.entries(obj)
       .map(([key, value]) => {
         const formattedKey = this.formatKey(key);
         const formattedValue = this.formatValue(value);

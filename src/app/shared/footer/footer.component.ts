@@ -8,11 +8,4 @@ import { Component } from '@angular/core';
 export class FooterComponent {
   linkedinProfileUrl: string = "#";
   currentYear: number=new Date().getFullYear();
-
-  // constructor(private configService: ConfigService){}
-  
-  // ngOnInit(): void {
-  //   this.linkedinProfileUrl = this.configService.getLinkedinProfileURL();
-  // }
-
 }

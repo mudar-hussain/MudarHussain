@@ -1,9 +1,9 @@
-  <div>
-    <div class="terminal-prompt">
-      <span class="terminal-username">
-        {{ terminalUsername }}
-        <span style="color: var(--terminal-command); font-weight: 400;">{{ command }}</span>
-      </span>
-    </div>
-    <div class="terminal-output" [innerHTML]="response | safeHtml"></div>
+<div>
+  <div class="terminal-prompt">
+    <span class="terminal-username">
+      {{ terminalUsername }}
+      <span style="color: var(--terminal-command); font-weight: 400;">{{ command }}</span>
+    </span>
   </div>
+  <div class="terminal-output" [innerHTML]="response | safeHtml"></div>
+</div>

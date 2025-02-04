@@ -4,46 +4,19 @@
     <p>Let's Build Something Amazing Together!</p>
     <form (ngSubmit)="sendMessage()">
       <div class="form-group">
-        <input
-          type="text"
-          placeholder="First Name"
-          name="firstName"
-          [(ngModel)]="formData.firstName"
-          required
-        />
-        <input
-          type="text"
-          placeholder="Last Name"
-          name="lastName"
-          [(ngModel)]="formData.lastName"
-          required
-        />
+        <input type="text" placeholder="First Name" name="firstName" [(ngModel)]="formData.firstName" required />
+        <input type="text" placeholder="Last Name" name="lastName" [(ngModel)]="formData.lastName" required />
       </div>
       <div class="form-group">
-        <input
-          type="email"
-          placeholder="Your Email Address"
-          name="email"
-          [(ngModel)]="formData.email"
-          required
-        />
+        <input type="email" placeholder="Your Email Address" name="email" [(ngModel)]="formData.email" required />
       </div>
       <div class="form-group">
-        <input
-          type="text"
-          placeholder="Looking for a developer..."
-          name="subject"
-          [(ngModel)]="formData.subject"
-          required
-        />
+        <input type="text" placeholder="Looking for a developer..." name="subject" [(ngModel)]="formData.subject"
+          required />
       </div>
       <div class="form-group">
-        <textarea
-          placeholder="Write your message here..."
-          name="message"
-          [(ngModel)]="formData.message"
-          required
-        ></textarea>
+        <textarea placeholder="Write your message here..." name="message" [(ngModel)]="formData.message"
+          required></textarea>
       </div>
       <button type="submit" class="custom-bottom">
         Send Message <i class="fa-sharp-duotone fa-solid fa-paper-plane"></i>
@@ -60,21 +33,13 @@
       <i class="fa-solid fa-envelope"></i> mudar.shussain<span class="text-light-beige">@gmail.com</span>
     </a>
     <br />
-    <a
-      ><i class="fa-sharp-duotone fa-solid fa-location-dot"></i> Pune,
-      <span class="text-light-beige">India</span></a
-    >
+    <a><i class="fa-sharp-duotone fa-solid fa-location-dot"></i> Pune,
+      <span class="text-light-beige">India</span></a>
     <br />
     <div class="social-links">
-      <a class="link" href="https://www.linkedin.com/in/mudar-hussain/"
-        ><i class="fa-brands fa-linkedin-in"></i
-      ></a>
-      <a class="link" href="https://github.com/mudar-hussain"
-        ><i class="fa-brands fa-github"></i
-      ></a>
-      <a class="link" href="https://leetcode.com/u/mudar_hussain/"
-        ><i class="fa-solid fa-code"></i
-      ></a>
+      <a class="link" href="https://www.linkedin.com/in/mudar-hussain/"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a class="link" href="https://github.com/mudar-hussain"><i class="fa-brands fa-github"></i></a>
+      <a class="link" href="https://leetcode.com/u/mudar_hussain/"><i class="fa-solid fa-code"></i></a>
     </div>
     <br />
     <a target="_blank" href="https://drive.google.com/file/d/1CGDxOqyZ5HcaQ0Gu0INWaWwrgTjYm-KS/view">
@@ -82,6 +47,6 @@
         <i class="fa-solid fa-download"></i> Resume
       </button>
     </a>
-    
+
   </div>
 </div>

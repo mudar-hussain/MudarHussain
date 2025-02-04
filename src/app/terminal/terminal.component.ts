@@ -1,4 +1,10 @@
-import { ChangeDetectorRef, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import {
+  ChangeDetectorRef,
+  Component,
+  ElementRef,
+  OnInit,
+  ViewChild,
+} from '@angular/core';
 import { TerminalConfig } from '../models/terminal-configuration.model';
 import TerminalConfiguration from 'src/assets/developer_data/terminalconfiguration';
 import { TerminalCommandsService } from '../services/terminal-commands.service';
@@ -6,9 +12,9 @@ import { TerminalCommandsService } from '../services/terminal-commands.service';
 @Component({
   selector: 'app-terminal',
   templateUrl: './terminal.component.html',
-  styleUrls: ['./terminal.component.css']
+  styleUrls: ['./terminal.component.css'],
 })
-export class TerminalComponent implements OnInit{
+export class TerminalComponent implements OnInit {
   @ViewChild('inputRef') inputElement!: ElementRef<HTMLInputElement>;
   @ViewChild('terminal') terminalElement!: ElementRef<HTMLDivElement>;
 
@@ -16,8 +22,10 @@ export class TerminalComponent implements OnInit{
   input: string = '';
   output: { command: string; response: string | string[] }[] = [];
 
-  constructor(private commandService: TerminalCommandsService,
-    private cdr: ChangeDetectorRef) {}
+  constructor(
+    private commandService: TerminalCommandsService,
+    private cdr: ChangeDetectorRef
+  ) {}
 
   ngOnInit(): void {
     // Initialize the command service with terminal configuration
@@ -39,7 +47,9 @@ export class TerminalComponent implements OnInit{
       this.output = [];
     } else {
       // Find response for the command or display "Command not found"
-      const response = this.commandService.getResponseForCommand(command.toLowerCase());
+      const response = this.commandService.getResponseForCommand(
+        command.toLowerCase()
+      );
       this.output.push({ command, response });
     }
   }

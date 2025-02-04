@@ -5,24 +5,12 @@
       <div class="terminal-welcome-messages">
         {{ terminalConfiguration.welcome_message }}
       </div>
-      <app-terminal-output
-        *ngFor="let cmd of output"
-        [terminalUsername]="terminalConfiguration.terminal_username"
-        [command]="cmd.command"
-        [response]="cmd.response"
-      ></app-terminal-output>
+      <app-terminal-output *ngFor="let cmd of output" [terminalUsername]="terminalConfiguration.terminal_username"
+        [command]="cmd.command" [response]="cmd.response"></app-terminal-output>
       <div class="terminal-prompt">
-        <span class="terminal-username"
-          >{{ terminalConfiguration.terminal_username }}
-          <input
-            #inputRef
-            type="text"
-            aria-label="input-form"
-            autoFocus
-            [(ngModel)]="input"
-            (keypress)="handleKeyPress($event)"
-            class="input"
-          />
+        <span class="terminal-username">{{ terminalConfiguration.terminal_username }}
+          <input #inputRef type="text" aria-label="input-form" autoFocus [(ngModel)]="input"
+            (keypress)="handleKeyPress($event)" class="input" />
         </span>
       </div>
     </div>
