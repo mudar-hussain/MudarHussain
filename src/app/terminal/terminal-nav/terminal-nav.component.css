@@ -45,9 +45,9 @@
   background-color: var(--terminal-green-dot);
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
   .text-inside-container {
-    font-size: 0.7em;
+    font-size: 1em;
   }
 
   .dot {

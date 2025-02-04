@@ -13,6 +13,13 @@
   max-width: 80%; /* Prevents it from stretching too much */
 }
 
+.hero-button {
+  display: flex;
+  align-items: flex-start;
+  justify-items: auto;
+  flex-wrap: wrap;
+}
+
 /* Avatar Section - Visible only on large screens */
 .avatar-section {
   flex: 1;
