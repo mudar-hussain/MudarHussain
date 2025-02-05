@@ -11,6 +11,11 @@
   font-family: "Courier Prime", sans-serif;
   flex: 1; /* Allows flexible width */
   max-width: 80%; /* Prevents it from stretching too much */
+  line-height: 1.5; /* Improves readability */
+}
+
+.desc {
+  color: #f1f1f1;
 }
 
 .hero-button {

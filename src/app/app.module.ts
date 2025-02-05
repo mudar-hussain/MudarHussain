@@ -23,6 +23,7 @@ import { RestrictUserActionsDirective } from './directives/restrict-user-actions
 import { ContactComponent } from './components/contact/contact.component';
 import { LoadingScreenComponent } from './components/loading-screen/loading-screen.component';
 import { HeroSectionComponent } from './components/hero-section/hero-section.component';
+import { WorkExperienceComponent } from './components/work-experience/work-experience.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { HeroSectionComponent } from './components/hero-section/hero-section.com
     RestrictUserActionsDirective,
     ContactComponent,
     LoadingScreenComponent,
-    HeroSectionComponent
+    HeroSectionComponent,
+    WorkExperienceComponent
   ],
   imports: [
     BrowserModule,
