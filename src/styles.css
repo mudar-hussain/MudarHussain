@@ -1,5 +1,4 @@
 /* You can add global styles to this file, and also import other style files */
-/* @import '~bootstrap/dist/css/bootstrap.min.css'; */
 @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Roboto&display=swap");
 
@@ -69,17 +68,17 @@
 
 .custom-bottom-shadow {
   box-shadow: var(--tw-shadow-color) 0px 1px 0px;
-  z-index: 1;
+  z-index: 5;
 }
 
 .custom-top-shadow {
   box-shadow: var(--tw-shadow-color) 0px -1px 0px;
-  z-index: 1;
+  z-index: 5;
 }
 
 .custom-top-bottom-shadow {
   box-shadow: var(--tw-shadow-color) 0px 1px 0px, var(--tw-shadow-color) 0px -1px 0px;
-  z-index: 1;
+  z-index: 5;
 }
 
 
