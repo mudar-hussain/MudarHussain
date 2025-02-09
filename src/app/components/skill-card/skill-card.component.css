@@ -1,0 +1,28 @@
+.skill-card {
+    padding: 16px;
+  }
+  .skill-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    width: 80%;
+    margin: 20px;
+  }
+
+  
+  .skill-title {
+    display: flex;
+    align-items: center;
+
+  }
+  .skill-title i  {
+    position: relative;
+    left: -34px; 
+    transform: translateY(-20%);
+    background-color: var(--background-color); 
+    color: var(--light-beige);
+    font-size: smaller;
+  }
+  

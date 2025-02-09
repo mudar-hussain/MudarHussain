@@ -1,19 +1,56 @@
-import { Injectable } from '@angular/core';
+import { Injectable, OnInit } from '@angular/core';
 import { TerminalConfig } from '../models/terminal-configuration.model';
+// import { doc, getDoc } from 'firebase/firestore';
+import { Firestore, doc, getDoc } from '@angular/fire/firestore';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
-export class TerminalCommandsService {
+export class TerminalCommandsService implements OnInit {
+  // config_instance = collection(this.firestore, 'config');
   private commands!: TerminalConfig['commands'];
-  private welcome_message: string = "";
+  private welcome_message: string = '';
 
-  constructor() { }
+  constructor(private firestore: Firestore) {
+    // this.config_instance = collection(this.firestore, 'config');
+  }
+
+  ngOnInit() {
+  }
 
   // Initialize the commands from the configuration
   initialize(terminalConfiguration: TerminalConfig): void {
     this.commands = terminalConfiguration.commands;
     this.welcome_message = terminalConfiguration.welcome_message;
+    this.fetchCommands();
+  }
+
+  async fetchCommands() {
+    const devDataInstance = doc(this.firestore, 'config', 'developer_data');
+    try {
+      const docRef = await getDoc(devDataInstance);
+      if (docRef.exists()) {
+        console.log(docRef.data());
+        this.commands = this.parseTerminalConfig(docRef.data()['terminal']); // Assign the resolved value
+      }
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
+  /**
+   * Generic function to parse a JSON string and return a typed object.
+   * @param jsonString - The JSON string to parse.
+   * @returns {TerminalConfig | null} - Parsed object or null if error occurs.
+   */
+  parseTerminalConfig(jsonString: string): TerminalConfig['commands'] {
+    try {
+      const parsedData: TerminalConfig['commands'] = JSON.parse(jsonString);
+      return parsedData;
+    } catch (error) {
+      console.error('Error parsing JSON:', error);
+      return this.commands;
+    }
   }
 
   // Get the response for a specific command
@@ -54,8 +91,10 @@ export class TerminalCommandsService {
         return this.formatResponse(this.commands.help);
 
       default:
-        return this.formatResponse('Command not found')
-          + ` <br/><b style="font-size: 1em; font-weight: 450; color: var(--terminal-command); margin: 0.5em 1.4em;">${this.welcome_message}</b>`;
+        return (
+          this.formatResponse('Command not found') +
+          ` <br/><b style="font-size: 1em; font-weight: 450; color: var(--terminal-command); margin: 0.5em 1.4em;">${this.welcome_message}</b>`
+        );
     }
   }
 
@@ -66,26 +105,25 @@ export class TerminalCommandsService {
 
     if (Array.isArray(data)) {
       // Handle array of objects (like projects)
-      if (data.every(item => typeof item === 'object' && !Array.isArray(item))) {
-        return data
-          .map(item => this.formatObject(item))
-          .join('<br/><br/>'); // Separate objects with extra spacing
+      if (
+        data.every((item) => typeof item === 'object' && !Array.isArray(item))
+      ) {
+        return data.map((item) => this.formatObject(item)).join('<br/><br/>'); // Separate objects with extra spacing
       }
 
       // Handle array of strings or other primitive types
-      return data.map(val => this.formatValue(val)).join('<br/>');
+      return data.map((val) => this.formatValue(val)).join('<br/>');
     }
 
     return Object.entries(data)
       .map(([key, value]) => {
         const formattedKey = this.formatKey(key);
         const formattedValue = Array.isArray(value)
-          ? value.map(val => this.formatValue(val)).join('<br/>')
+          ? value.map((val) => this.formatValue(val)).join('<br/>')
           : this.formatValue(value);
         return `${formattedKey} <b style="color: var(--terminal-resp-heading)">:</b> ${formattedValue}`;
       })
       .join('<br/>');
-
   }
 
   private formatKey(key: string): string {

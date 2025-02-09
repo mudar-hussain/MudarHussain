@@ -16,10 +16,10 @@
           <a class="nav-link" href="#terminal">Terminal</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#experience">Experience</a>
+          <a class="nav-link" [href]="this.isWindow ? '#skillExp' : '#skill'">Skills</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#skills">Skills</a>
+          <a class="nav-link" [href]="this.isWindow ? '#skillExp' : '#exp'">Experience</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#projects">Projects</a>

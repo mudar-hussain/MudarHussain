@@ -1,0 +1,9 @@
+<div class="skill-card">
+  <div class="skill-title">
+    <i class="fa-solid fa-circle"></i>
+    <h3 class="title-font"><span class="text-light-beige">{{ title }}</span></h3>
+  </div>
+  <div class="skill-items">
+    <app-skill-icon *ngFor="let item of items" [icon]="item.icon" [name]="item.name"></app-skill-icon>
+  </div>
+</div>

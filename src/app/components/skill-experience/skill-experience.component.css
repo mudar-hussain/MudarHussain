@@ -1,0 +1,48 @@
+.skills-experience {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.skills, .experiences {
+  padding-left: 10px;
+}
+
+.skills {
+  padding-right: 20px;
+  width: 40%;
+  margin-right: 5px;
+  border-left: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.experiences {
+  width: 60%;
+}
+
+#skill, #exp {
+  display: none;
+}
+#skillExp {
+  padding-top: 20px;
+}
+
+@media screen and (max-width: 1130px) {
+  .skills-experience {
+    flex-direction: column; /* Stack vertically */
+  }
+
+  .skills, .experiences {
+    width: 100%;
+  }
+
+  #skill, #exp {
+    display: flex;
+    padding-top: 20px;
+  }
+  #skillExp {
+    display: none;
+  }
+  #exp {
+    margin-top: 20px;
+  }
+}

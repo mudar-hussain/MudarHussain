@@ -23,7 +23,10 @@ import { RestrictUserActionsDirective } from './directives/restrict-user-actions
 import { ContactComponent } from './components/contact/contact.component';
 import { LoadingScreenComponent } from './components/loading-screen/loading-screen.component';
 import { HeroSectionComponent } from './components/hero-section/hero-section.component';
-import { WorkExperienceComponent } from './components/work-experience/work-experience.component';
+import { SkillExperienceComponent } from './components/skill-experience/skill-experience.component';
+import { SkillIconComponent } from './components/skill-icon/skill-icon.component';
+import { SkillCardComponent } from './components/skill-card/skill-card.component';
+import { ExperienceCardComponent } from './components/experience-card/experience-card.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +42,10 @@ import { WorkExperienceComponent } from './components/work-experience/work-exper
     ContactComponent,
     LoadingScreenComponent,
     HeroSectionComponent,
-    WorkExperienceComponent
+    SkillExperienceComponent,
+    SkillIconComponent,
+    SkillCardComponent,
+    ExperienceCardComponent
   ],
   imports: [
     BrowserModule,
