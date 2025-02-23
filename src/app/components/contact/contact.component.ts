@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ConfigService } from 'src/app/services/config.service';
 
 @Component({
   selector: 'app-contact',
@@ -13,6 +14,17 @@ export class ContactComponent {
     subject: '',
     message: ''
   };
+  resume: string;
+  linkedin: string;
+  github: string;
+  leetcode: string;
+
+  constructor(private configService: ConfigService) {
+    this.resume = this.configService.getResume();
+    this.linkedin = this.configService.getLinkedIn();
+    this.github = this.configService.getGithub();
+    this.leetcode = this.configService.getLeetcode();
+  }
 
   sendMessage() {
     if (this.formData.firstName && this.formData.email && this.formData.message) {

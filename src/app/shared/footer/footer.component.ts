@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ConfigService } from 'src/app/services/config.service';
 
 @Component({
   selector: 'app-footer',
@@ -6,6 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./footer.component.css']
 })
 export class FooterComponent {
-  linkedinProfileUrl: string = "#";
-  currentYear: number=new Date().getFullYear();
+  linkedin: string;
+  currentYear: number = new Date().getFullYear();
+  
+  constructor(private configService: ConfigService) {
+    this.linkedin = this.configService.getLinkedIn();
+  }
 }

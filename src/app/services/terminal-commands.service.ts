@@ -1,94 +1,55 @@
 import { Injectable, OnInit } from '@angular/core';
-import { TerminalConfig } from '../models/terminal-configuration.model';
-// import { doc, getDoc } from 'firebase/firestore';
-import { Firestore, doc, getDoc } from '@angular/fire/firestore';
+import { ConfigService } from './config.service';
+import { TerminalCommand } from '../models/terminal-command.model';
 
 @Injectable({
   providedIn: 'root',
 })
-export class TerminalCommandsService implements OnInit {
-  // config_instance = collection(this.firestore, 'config');
-  private commands!: TerminalConfig['commands'];
-  private welcome_message: string = '';
+export class TerminalCommandsService {
+  private term_commands: TerminalCommand;
+  private welcome_message: string;
 
-  constructor(private firestore: Firestore) {
-    // this.config_instance = collection(this.firestore, 'config');
-  }
-
-  ngOnInit() {
-  }
-
-  // Initialize the commands from the configuration
-  initialize(terminalConfiguration: TerminalConfig): void {
-    this.commands = terminalConfiguration.commands;
-    this.welcome_message = terminalConfiguration.welcome_message;
-    this.fetchCommands();
-  }
-
-  async fetchCommands() {
-    const devDataInstance = doc(this.firestore, 'config', 'developer_data');
-    try {
-      const docRef = await getDoc(devDataInstance);
-      if (docRef.exists()) {
-        console.log(docRef.data());
-        this.commands = this.parseTerminalConfig(docRef.data()['terminal']); // Assign the resolved value
-      }
-    } catch (err) {
-      console.log(err);
-    }
-  }
-
-  /**
-   * Generic function to parse a JSON string and return a typed object.
-   * @param jsonString - The JSON string to parse.
-   * @returns {TerminalConfig | null} - Parsed object or null if error occurs.
-   */
-  parseTerminalConfig(jsonString: string): TerminalConfig['commands'] {
-    try {
-      const parsedData: TerminalConfig['commands'] = JSON.parse(jsonString);
-      return parsedData;
-    } catch (error) {
-      console.error('Error parsing JSON:', error);
-      return this.commands;
-    }
+  constructor(private configService: ConfigService) {
+    this.term_commands = this.configService.getTerminalCommands();
+    this.welcome_message = this.configService.getWelcomeMessage();
   }
 
   // Get the response for a specific command
   getResponseForCommand(command: string): string | string[] {
     switch (command.toLowerCase()) {
       case 'whoami':
-        return this.formatResponse(this.commands.whoami);
+        return this.formatResponse(this.term_commands.whoami);
 
       case 'experience':
-        return this.formatResponse(this.commands.experience);
+        return this.formatResponse(this.term_commands.experience);
 
       case 'education':
-        return this.formatResponse(this.commands.education);
+        return this.formatResponse(this.term_commands.education);
 
       case 'skills':
-        return this.formatResponse(this.commands.skills);
+        return this.formatResponse(this.term_commands.skills);
 
       case 'projects':
-        return this.formatResponse(this.commands.projects);
+        return this.formatResponse(this.term_commands.projects);
 
       case 'code':
-        return this.formatResponse(this.commands.code);
+        return this.formatResponse(this.term_commands.code);
 
       case 'blogs':
-        return this.formatResponse(this.commands.blogs);
+        return this.formatResponse(this.term_commands.blogs);
 
       case 'github':
-        return this.formatResponse(this.commands.github);
+        return this.formatResponse(this.term_commands.github);
 
       case 'linkedin':
-        return this.formatResponse(this.commands.linkedIn);
+        return this.formatResponse(this.term_commands.linkedIn);
 
       case 'contact':
-        return this.formatResponse(this.commands.contact);
+        return this.formatResponse(this.term_commands.contact);
 
       case 'help':
       case 'ls':
-        return this.formatResponse(this.commands.help);
+        return this.formatResponse(this.term_commands.help);
 
       default:
         return (

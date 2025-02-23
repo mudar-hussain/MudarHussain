@@ -1,4 +1,5 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
+import { ConfigService } from 'src/app/services/config.service';
 
 @Component({
   selector: 'app-navbar',
@@ -7,6 +8,11 @@ import { Component, HostListener } from '@angular/core';
 })
 export class NavbarComponent {
   isWindow: boolean = window.innerWidth > 1130 ? true : false;
+  resume!: string;
+
+  constructor(private configService: ConfigService) {
+    this.resume = this.configService.getResume();
+  }
 
   @HostListener('window:resize', ['$event'])
   onResize(event: any) {

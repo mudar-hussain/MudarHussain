@@ -1,15 +1,15 @@
 import { Component } from '@angular/core';
-import styles from 'src/app/models/terminal-configuration.model';
-import { fadeInAnimation } from 'src/app/services/animation.service';
+import { SkillCardComponent } from "../skill-card/skill-card.component";
+// import styles from 'src/app/models/terminal-configuration.model';
 
 @Component({
   selector: 'app-skill-experience',
   templateUrl: './skill-experience.component.html',
   styleUrls: ['./skill-experience.component.css'],
-  animations: [fadeInAnimation]
+  // imports: [SkillCardComponent]
 })
 export class SkillExperienceComponent {
-  styles = styles;
+  // styles = styles;
   skills = [
     {
       title: "Programming Languages",

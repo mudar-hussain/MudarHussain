@@ -8,28 +8,29 @@ import {
 import { TerminalConfig } from '../models/terminal-configuration.model';
 import TerminalConfiguration from 'src/assets/developer_data/terminalconfiguration';
 import { TerminalCommandsService } from '../services/terminal-commands.service';
+import { ConfigService } from '../services/config.service';
 
 @Component({
   selector: 'app-terminal',
   templateUrl: './terminal.component.html',
   styleUrls: ['./terminal.component.css'],
 })
-export class TerminalComponent implements OnInit {
+export class TerminalComponent {
   @ViewChild('inputRef') inputElement!: ElementRef<HTMLInputElement>;
   @ViewChild('terminal') terminalElement!: ElementRef<HTMLDivElement>;
 
-  terminalConfiguration: TerminalConfig = TerminalConfiguration;
+  term_username: string;
+  term_welcome_message: string;
   input: string = '';
   output: { command: string; response: string | string[] }[] = [];
 
   constructor(
     private commandService: TerminalCommandsService,
-    private cdr: ChangeDetectorRef
-  ) {}
-
-  ngOnInit(): void {
-    // Initialize the command service with terminal configuration
-    this.commandService.initialize(this.terminalConfiguration);
+    private cdr: ChangeDetectorRef,
+    private configService: ConfigService
+  ) {
+    this.term_username = this.configService.getTerminalUsername();
+    this.term_welcome_message = this.configService.getWelcomeMessage();
   }
 
   handleKeyPress(event: KeyboardEvent): void {
