@@ -27,6 +27,9 @@ import { SkillExperienceComponent } from './components/skill-experience/skill-ex
 import { SkillIconComponent } from './components/skill-icon/skill-icon.component';
 import { SkillCardComponent } from './components/skill-card/skill-card.component';
 import { ExperienceCardComponent } from './components/experience-card/experience-card.component';
+import { RotatingSphereComponent } from './components/rotating-sphere/rotating-sphere.component';
+import { ProjectComponent } from './components/project/project.component';
+import { TechnicalExpertiseComponent } from './components/technical-expertise/technical-expertise.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +48,10 @@ import { ExperienceCardComponent } from './components/experience-card/experience
     SkillExperienceComponent,
     SkillIconComponent,
     SkillCardComponent,
-    ExperienceCardComponent
+    ExperienceCardComponent,
+    RotatingSphereComponent,
+    ProjectComponent,
+    TechnicalExpertiseComponent
   ],
   imports: [
     BrowserModule,

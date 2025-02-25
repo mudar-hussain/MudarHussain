@@ -5,8 +5,6 @@ import {
   OnInit,
   ViewChild,
 } from '@angular/core';
-import { TerminalConfig } from '../models/terminal-configuration.model';
-import TerminalConfiguration from 'src/assets/developer_data/terminalconfiguration';
 import { TerminalCommandsService } from '../services/terminal-commands.service';
 import { ConfigService } from '../services/config.service';
 

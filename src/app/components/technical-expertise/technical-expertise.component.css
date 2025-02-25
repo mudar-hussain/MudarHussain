@@ -1,0 +1,47 @@
+.tech-expertise {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  #expertise {
+    padding-top: 20px;
+  }
+  .content, .sphere {
+    padding-left: 10px;
+  }
+  
+  .content {
+    padding-right: 20px;
+    width: 65%;
+    margin-right: 5px;
+    line-height: 1.7; /* Improves readability */
+    letter-spacing: 1.7px;
+    font-size: large;
+    text-align: justify;
+    /* border-left: 2px solid rgba(255, 255, 255, 0.1); */
+  }
+  
+  .sphere {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  button {
+    padding: 10px 15px;
+  }
+  
+  @media screen and (max-width: 1300px) {
+    .tech-expertise {
+      flex-direction: column; /* Stack vertically */
+    }
+  
+    .content, .sphere {
+      width: 100%;
+      text-align: center;
+    }
+    p {
+        text-align: justify;
+    }
+  }

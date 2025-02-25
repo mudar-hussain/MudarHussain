@@ -4,6 +4,7 @@
   justify-content: space-between;
   flex-wrap: wrap;
   margin-top: 50px;
+  text-align: justify;
 }
 
 .info-section {
@@ -67,7 +68,7 @@
 }
 
 /* Responsive Adjustments */
-@media (max-width: 1130px) {
+@media (max-width: 1300px) {
   .hero-section {
     flex-direction: column; /* Stack vertically */
     text-align: center; /* Center align */

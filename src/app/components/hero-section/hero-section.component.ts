@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ConfigService } from 'src/app/services/config.service';
 
 @Component({
   selector: 'app-hero-section',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./hero-section.component.css']
 })
 export class HeroSectionComponent {
-
+  resume: string;
+  
+  constructor(private configService: ConfigService) {
+      this.resume = this.configService.getResume();
+  }
 }
