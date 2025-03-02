@@ -1,6 +1,6 @@
 export interface ProjectStack {
   id: string;
-  icon: any; // Replace 'any' with a more specific type if available (e.g., a custom Icon type)
+  icon: any; 
   name: string;
 }
 
@@ -8,8 +8,9 @@ export interface Project {
   id: string;
   title: string;
   github: string;
-  link: string;
+  url?: string;
   image: any; // This could be a string (URL) or an imported asset reference
+  tagline: string;
   content: string;
   stack: ProjectStack[];
 }

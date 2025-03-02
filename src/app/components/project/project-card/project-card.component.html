@@ -1,0 +1,39 @@
+<div class="project-card">
+  <div class="dots-inside-container">
+    <span class="dot orange-dot"></span>
+    <span class="dot yellow-dot"></span>
+    <span class="dot green-dot"></span>
+  </div>
+  <div class="project-card-image" (click)="openUrl(project.url)">
+    <div class="project-card-image-wrapper">
+      <img [src]="project.image" [alt]="project.title" loading="lazy" decoding="async" />
+    </div>
+  </div>
+  <div class="project-card-title title-font" (click)="openUrl(project.url)">
+    <h3>{{ project.title }}</h3>
+  </div>
+  <div class="project-card-desc font-sec" (click)="openUrl(project.url)">
+    <p>{{ project.tagline }}</p>
+  </div>
+  <div class="project-card-stack">
+    <div *ngFor="let stackItem of stackItems" class="chip" (click)="expandShrinkStackItems(stackItem)">
+      <span>{{ stackItem }}</span>
+    </div>
+  </div>
+  <div class="project-card-actions">
+    <!-- <div *ngIf="project.deleted" class="project-card-deleted">
+        <span>Delisted</span>
+      </div> -->
+    <a *ngIf="project.url" [href]="project.url" target="_blank" rel="noreferrer">
+      <button class="custom-bottom-sec" type="button">
+        Visit <i class="fa-solid fa-arrow-up-right-from-square"></i>
+      </button>
+    </a>
+    <a *ngIf="project.github" [href]="project.github" target="_blank" rel="noreferrer">
+      <button class="custom-bottom" type="button">
+        Github <i class="fa-brands fa-github"></i>
+      </button>
+
+    </a>
+  </div>
+</div>

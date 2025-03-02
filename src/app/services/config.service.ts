@@ -4,7 +4,7 @@ import { TerminalCommand } from '../models/terminal-command.model';
 import TerminalConfiguration from 'src/assets/developer_data/terminalconfiguration';
 import { Skill } from '../models/skill.model';
 import { Experience } from '../models/experience.model';
-import { Experiences, Github, Leetcode, LinkedIn, Resume, Skills, SphereTags } from 'src/assets/developer_data/dev_data';
+import { Experiences, Github, Leetcode, LinkedIn, Projects, Resume, Skills, SphereTags } from 'src/assets/developer_data/dev_data';
 import { Project } from '../models/project.model';
 
 @Injectable({
@@ -20,7 +20,7 @@ export class ConfigService {
   private leetcode: string = Leetcode;
   private skills: Skill[] = Skills;
   private experiences: Experience[] = Experiences;
-  private projects?: Project;
+  private projects: Project[] = Projects;
   private sphereTags: string[] = SphereTags;
 
   getResume(): string {

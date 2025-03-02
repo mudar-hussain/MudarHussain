@@ -8,9 +8,12 @@
       <div *ngFor="let position of positions">
         <div class="position-title">
           <i class="fa-solid fa-circle"></i>
-          <h5>{{ position.title }}</h5>
+          <h5 style="font-weight: normal;">{{ position.title }}</h5>
         </div>
-        <p>{{ position.duration }}</p>
+        <div class="position-details">
+          <p><i class="link fa-solid fa-calendar-days"></i>  {{ position.duration }}</p>
+          <p><i class="link fa-solid fa-location-dot"></i> {{position.location }}</p>
+        </div>
         <ul>
           <li class="font-sec" *ngFor="let content of position.content" style="color: #f1f1f1; text-align: justify;">{{ content.text }}</li>
         </ul>

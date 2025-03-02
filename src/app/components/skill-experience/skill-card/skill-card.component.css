@@ -25,4 +25,11 @@
     color: var(--light-beige);
     font-size: smaller;
   }
+
+  @media screen and (max-width: 1130px) {
+    .skill-items {
+      width: 100%;
+      margin: 0px;
+    }
+  }
   

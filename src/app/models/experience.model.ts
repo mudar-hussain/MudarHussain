@@ -1,6 +1,7 @@
 export interface Position {
   title: string;
   duration: string;
+  location: string;
   content: { text: string; link: string }[];
 }
 

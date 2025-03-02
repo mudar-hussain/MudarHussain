@@ -1,6 +1,6 @@
 const TerminalConfiguration = {
   welcome_message: "Type 'help' to get started !",
-  terminal_username: "[Mudar-term:~$]",
+  terminal_username: "[Mudar@Terminal:~]$",
   commands: {
     whoami: {
       Name: "Mudar Hussain",

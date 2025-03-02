@@ -41,7 +41,7 @@
 
 .terminal-welcome-messages {
   font-size: 1.2em;
-  font-weight: 550;
+  font-weight: 500;
   color: var(--terminal-command);
   margin: 0.5em 1.4em;
 }

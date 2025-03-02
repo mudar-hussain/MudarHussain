@@ -5,8 +5,8 @@ import {
   OnInit,
   ViewChild,
 } from '@angular/core';
-import { TerminalCommandsService } from '../services/terminal-commands.service';
-import { ConfigService } from '../services/config.service';
+import { TerminalCommandsService } from '../../services/terminal-commands.service';
+import { ConfigService } from '../../services/config.service';
 
 @Component({
   selector: 'app-terminal',

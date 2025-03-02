@@ -18,7 +18,7 @@ export class RotatingSphereComponent implements AfterViewInit {
     const container = document.getElementById('tag-cloud-container');
     if (container) {
       const options = {
-        radius: 200,
+        radius: 180,
         maxSpeed: 'fast' as "fast",
         initSpeed: 'normal' as "normal",
         keep: true,

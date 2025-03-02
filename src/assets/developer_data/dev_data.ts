@@ -153,14 +153,18 @@ export const Experiences = [
     organisation: "The Bank of New York",
     logo: "https://drive.google.com/thumbnail?id=19l96QqqLTM7pCh5ydQs4bB9gxVuGVxak&sz=s1000",
     link: "https://www.bny.com/",
-    location: "Pune, India",
     positions: [
       {
         title: "Full Stack Developer",
-        duration: "Sept 2023 - Present",
+        duration: "Sep '23 - Present",
+        location: "Pune, India",
         content: [
           {
-            text: "Developed scalable sales app (React, Spring Boot, Microservices) to enhance customer experience and streamline workflows",
+            text: "Engineered a customer data validation feature by integrating D&B and Google API, reducing manual validation time by 80%",
+            link: ""
+          },
+          {
+            text: "Mitigated security risks by implementing user entitlements & multi-level auth in Spring, resolving ethical hacking findings.",
             link: ""
           },
           {
@@ -179,18 +183,18 @@ export const Experiences = [
     organisation: "Tata Consultancy Services",
     logo: "https://drive.google.com/thumbnail?id=19X9qP7uWDFKbBHDAsLHCe4zYYfw3fbvu&sz=s1000",
     link: "https://www.tcs.com/",
-    location: "Nagpur, India",
     positions: [
       {
         title: "Systems Engineer",
-        duration: "April 2022 - Sept 2023",
+        duration: "Apr '22 - Sep '23",
+        location: "Nagpur, India",
         content: [
           {
-            text: "Developed scalable sales app (React, Spring Boot, Microservices) to enhance customer experience and streamline workflows",
+            text: "Engineered a customer data validation feature by integrating D&B and Google API, reducing manual validation time by 80%",
             link: ""
           },
           {
-            text: "Designed and developed RESTful APIs for seamless interaction between frontend and backend services.",
+            text: "Mitigated security risks by implementing user entitlements & multi-level auth in Spring, resolving ethical hacking findings.",
             link: ""
           },
           {
@@ -201,43 +205,40 @@ export const Experiences = [
       },
       {
         title: "Assistant System Engineer",
-        duration: "April 2021 - March 2022",
+        duration: "Apr '21 - Mar '22",
+        location: "Nagpur, India",
         content: [
           {
-            text: "Utilized RPA to efficiently validate and transform logistics data, cutting daily team workload by 3 hrs and enhancing accuracy",
+            text: "Built an RPA-driven feature to automated logistics raw data transformation, saving 5 hrs/day and minimizing errors.",
             link: ""
           },
           {
-            text: "Built Power BI dashboards for fast data visualization from SQL Server, empowering actionable insights for stakeholders.",
+            text: "Built Power BI dashboards on sales & lead trends, empowering actionable insights for stakeholders.",
             link: ""
           },
           {
-            text: "Conducted several Microsoft Power Platform workshops, enhancing proficiency and expertise for over 70 developers.",
+            text: "Led multiple Microsoft Power Platform Workshops and trained 70+ developers enhancing their proficiency and expertise.",
             link: ""
           }
-        ],
-      },
-    ],
+        ]
+      }
+    ]
   },
   {
     organisation: "H. M. Construction",
     logo: "https://drive.google.com/thumbnail?id=1eyyu5xDiCDzTC03GCuMHxnSChmDkfinl&sz=s1000",
     link: "https://www.justdial.com/Nagpur/H-M-Construction-OPP-to-Namak-Karkhana-Mahatma-Fule-Market/0712PX712-X712-170919181646-W8Z8_BZDET",
-    location: "Nagpur, India",
     positions: [
       {
         title: "Site Execution Engineer",
-        duration: "June 2019 - March 2021",
+        duration: "Jun '19 - Mar '21",
+        location: "Nagpur, India",
         content: [
           {
-            text: "Supervised and organized on-site work schedule and inventory utilization to maintain quality control and safety compliance.",
+            text: "Streamlined scheduling & inventory for quality & safety, cutting project costs by 7% via design improvements & waste control.",
             link: "",
-          },
-          {
-            text: "Achieved 7\% reduction in ongoing project billing costs through strategic design modifications and material wastage analysis.",
-            link: "",
-          },
-        ],
+          }
+        ]
       }
     ],
   },
@@ -245,17 +246,17 @@ export const Experiences = [
     organisation: "Balaji Structural Consultancy",
     logo: "https://drive.google.com/thumbnail?id=1_yLGZoHITxSkMydekYYI9_EHF_R5aLYC&sz=s1000",
     link: "http://www.bscstructuralrcc.com/",
-    location: "Amravati, India",
     positions: [
       {
         title: "AutoCAD Draftsman (2D \& 3D) [Intern]",
-        duration: "July 2017 - Sept 2017",
+        duration: "Jul '17 - Sep '17",
+        location: "Amravati, India",
         content: [
           {
             text: "Created multiple line plans, Bar Bending Schedule \& Structural drawings along with the 3D work of the G+1 Building.",
             link: "",
           }
-        ],
+        ]
       }
     ],
   }
@@ -266,10 +267,10 @@ export const Projects = [
     id: "project-1",
     title: "Comicify.ai",
     github: "https://github.com/ayush4345/Comicify.ai",
-    link: "https://comicify-ai.vercel.app/",
-    image: "comicify_ai",
-    content:
-      "Convert any academic/news/boring text into cool comic strips using GPT-3.5 and Stable Diffusion!",
+    url: "",
+    image: "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png",
+    tagline: "Convert any academic/news/boring text into cool comic strips using GPT-3.5 and Stable Diffusion!",
+    content: "Convert any academic/news/boring text into cool comic strips using GPT-3.5 and Stable Diffusion!",
     stack: [
       {
         id: "java",
@@ -317,8 +318,222 @@ export const Projects = [
     id: "project-2",
     title: "GreenTrust",
     github: "https://github.com/mittal-parth/GreenTrust",
-    link: "https://green-trust-fantom.netlify.app/",
-    image: "greentrust",
+    url: "https://green-trust-fantom.netlify.app/",
+    image: "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png",
+    tagline:
+      "Winning project at 3 hackathons, GreenTrust offers a novel solution for obtaining certification",
+    content:
+      "Winning project at 3 hackathons, GreenTrust offers a novel solution for obtaining certification in organic farming by organizing credible and decentralized Participatory Guarantee Systems (PGSs).",
+    stack: [
+      {
+        id: "java",
+        icon: "fa-brands fa-java",
+        name: "Java",
+      },
+      {
+        id: "python",
+        icon: "fa-brands fa-python",
+        name: "Python",
+      },
+      {
+        id: "sql",
+        icon: "fa-solid fa-database",
+        name: "SQL",
+      },
+      {
+        id: "cpp",
+        icon: "fa-brands fa-c",
+        name: "C/C++",
+      },
+      {
+        id: "html",
+        icon: "fa-brands fa-html5",
+        name: "HTML",
+      },
+      {
+        id: "css",
+        icon: "fa-brands fa-css3-alt",
+        name: "CSS",
+      },
+      {
+        id: "javaScript",
+        icon: "fa-brands fa-js",
+        name: "JavaScript",
+      },
+      {
+        id: "typescript",
+        icon: "fa-brands fa-js",
+        name: "TypeScript",
+      }
+    ]
+  },
+  {
+    id: "project-2",
+    title: "GreenTrust",
+    github: "https://github.com/mittal-parth/GreenTrust",
+    url: "https://green-trust-fantom.netlify.app/",
+    image: "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png",
+    tagline:
+      "Winning project at 3 hackathons, GreenTrust offers a novel solution for obtaining certification",
+    content:
+      "Winning project at 3 hackathons, GreenTrust offers a novel solution for obtaining certification in organic farming by organizing credible and decentralized Participatory Guarantee Systems (PGSs).",
+    stack: [
+      {
+        id: "java",
+        icon: "fa-brands fa-java",
+        name: "Java",
+      },
+      {
+        id: "python",
+        icon: "fa-brands fa-python",
+        name: "Python",
+      },
+      {
+        id: "sql",
+        icon: "fa-solid fa-database",
+        name: "SQL",
+      },
+      {
+        id: "cpp",
+        icon: "fa-brands fa-c",
+        name: "C/C++",
+      },
+      {
+        id: "html",
+        icon: "fa-brands fa-html5",
+        name: "HTML",
+      },
+      {
+        id: "css",
+        icon: "fa-brands fa-css3-alt",
+        name: "CSS",
+      },
+      {
+        id: "javaScript",
+        icon: "fa-brands fa-js",
+        name: "JavaScript",
+      },
+      {
+        id: "typescript",
+        icon: "fa-brands fa-js",
+        name: "TypeScript",
+      }
+    ]
+  },
+  {
+    id: "project-2",
+    title: "GreenTrust",
+    github: "https://github.com/mittal-parth/GreenTrust",
+    url: "https://green-trust-fantom.netlify.app/",
+    image: "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png",
+    tagline:
+      "Winning project at 3 hackathons, GreenTrust offers a novel solution for obtaining certification",
+    content:
+      "Winning project at 3 hackathons, GreenTrust offers a novel solution for obtaining certification in organic farming by organizing credible and decentralized Participatory Guarantee Systems (PGSs).",
+    stack: [
+      {
+        id: "java",
+        icon: "fa-brands fa-java",
+        name: "Java",
+      },
+      {
+        id: "python",
+        icon: "fa-brands fa-python",
+        name: "Python",
+      },
+      {
+        id: "sql",
+        icon: "fa-solid fa-database",
+        name: "SQL",
+      },
+      {
+        id: "cpp",
+        icon: "fa-brands fa-c",
+        name: "C/C++",
+      },
+      {
+        id: "html",
+        icon: "fa-brands fa-html5",
+        name: "HTML",
+      },
+      {
+        id: "css",
+        icon: "fa-brands fa-css3-alt",
+        name: "CSS",
+      },
+      {
+        id: "javaScript",
+        icon: "fa-brands fa-js",
+        name: "JavaScript",
+      },
+      {
+        id: "typescript",
+        icon: "fa-brands fa-js",
+        name: "TypeScript",
+      }
+    ]
+  },
+  {
+    id: "project-2",
+    title: "GreenTrust",
+    github: "https://github.com/mittal-parth/GreenTrust",
+    url: "https://green-trust-fantom.netlify.app/",
+    image: "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png",
+    tagline:
+      "Winning project at 3 hackathons, GreenTrust offers a novel solution for obtaining certification",
+    content:
+      "Winning project at 3 hackathons, GreenTrust offers a novel solution for obtaining certification in organic farming by organizing credible and decentralized Participatory Guarantee Systems (PGSs).",
+    stack: [
+      {
+        id: "java",
+        icon: "fa-brands fa-java",
+        name: "Java",
+      },
+      {
+        id: "python",
+        icon: "fa-brands fa-python",
+        name: "Python",
+      },
+      {
+        id: "sql",
+        icon: "fa-solid fa-database",
+        name: "SQL",
+      },
+      {
+        id: "cpp",
+        icon: "fa-brands fa-c",
+        name: "C/C++",
+      },
+      {
+        id: "html",
+        icon: "fa-brands fa-html5",
+        name: "HTML",
+      },
+      {
+        id: "css",
+        icon: "fa-brands fa-css3-alt",
+        name: "CSS",
+      },
+      {
+        id: "javaScript",
+        icon: "fa-brands fa-js",
+        name: "JavaScript",
+      },
+      {
+        id: "typescript",
+        icon: "fa-brands fa-js",
+        name: "TypeScript",
+      }
+    ]
+  },
+  {
+    id: "project-2",
+    title: "GreenTrust",
+    github: "https://github.com/mittal-parth/GreenTrust",
+    url: "https://green-trust-fantom.netlify.app/",
+    image: "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png",
+    tagline:
+      "Winning project at 3 hackathons, GreenTrust offers a novel solution for obtaining certification",
     content:
       "Winning project at 3 hackathons, GreenTrust offers a novel solution for obtaining certification in organic farming by organizing credible and decentralized Participatory Guarantee Systems (PGSs).",
     stack: [
@@ -368,10 +583,12 @@ export const Projects = [
     id: "project-3",
     title: "ChargeSwap",
     github: "https://github.com/CommanderAstern/ChargeSwap",
-    link: "https://devfolio.co/projects/chargeswap-3527",
-    image: "chargeswap",
-    content:
+    url: "https://devfolio.co/projects/chargeswap-3527",
+    image: "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png",
+    tagline:
       "A Blockchain-based EV-Battery swapping solution - winning project at ETHIndia'22, the world's largest Ethereum Hackathon",
+      content:
+        "A Blockchain-based EV-Battery swapping solution - winning project at ETHIndia'22, the world's largest Ethereum Hackathon",
     stack: [
       {
         id: "java",

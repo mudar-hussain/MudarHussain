@@ -16,4 +16,10 @@
   .skill-icon:hover {
     color: var(--light-beige);
   }
+
+  @media screen and (max-width: 1130px) {
+    .skill-icon {
+      margin: 10px 20px;
+    }
+  }
   

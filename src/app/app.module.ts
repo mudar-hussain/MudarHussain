@@ -11,9 +11,9 @@ import { environment } from 'src/environments/environment.prod';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TerminalComponent } from './terminal/terminal.component';
-import { TerminalNavComponent } from './terminal/terminal-nav/terminal-nav.component';
-import { TerminalOutputComponent } from './terminal/terminal-output/terminal-output.component';
+import { TerminalComponent } from './components/terminal/terminal.component';
+import { TerminalNavComponent } from './components/terminal/terminal-nav/terminal-nav.component';
+import { TerminalOutputComponent } from './components/terminal/terminal-output/terminal-output.component';
 import { FormsModule } from '@angular/forms';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { MenuIconComponent } from './shared/menu-icon/menu-icon.component';
@@ -24,12 +24,13 @@ import { ContactComponent } from './components/contact/contact.component';
 import { LoadingScreenComponent } from './components/loading-screen/loading-screen.component';
 import { HeroSectionComponent } from './components/hero-section/hero-section.component';
 import { SkillExperienceComponent } from './components/skill-experience/skill-experience.component';
-import { SkillIconComponent } from './components/skill-icon/skill-icon.component';
-import { SkillCardComponent } from './components/skill-card/skill-card.component';
-import { ExperienceCardComponent } from './components/experience-card/experience-card.component';
-import { RotatingSphereComponent } from './components/rotating-sphere/rotating-sphere.component';
+import { SkillIconComponent } from './components/skill-experience/skill-icon/skill-icon.component';
+import { SkillCardComponent } from './components/skill-experience/skill-card/skill-card.component';
+import { ExperienceCardComponent } from './components/skill-experience/experience-card/experience-card.component';
+import { RotatingSphereComponent } from './components/technical-expertise/rotating-sphere/rotating-sphere.component';
 import { ProjectComponent } from './components/project/project.component';
 import { TechnicalExpertiseComponent } from './components/technical-expertise/technical-expertise.component';
+import { ProjectCardComponent } from './components/project/project-card/project-card.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import { TechnicalExpertiseComponent } from './components/technical-expertise/te
     ExperienceCardComponent,
     RotatingSphereComponent,
     ProjectComponent,
-    TechnicalExpertiseComponent
+    TechnicalExpertiseComponent,
+    ProjectCardComponent
   ],
   imports: [
     BrowserModule,

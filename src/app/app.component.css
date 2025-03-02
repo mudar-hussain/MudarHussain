@@ -1,9 +1,7 @@
 .container-window {
-  padding-left: 10%;
-  padding-right: 10%;
+  padding: 0% 8%;
 }
 
 .container-mobile {
-  padding-left: 2%;
-  padding-right: 2%;
+  padding: 0% 2%;
 }

@@ -31,8 +31,14 @@
     flex-direction: column; /* Stack vertically */
   }
 
-  .skills, .experiences {
+  .skills {
     width: 100%;
+    padding-right: 0px;
+  }
+
+  .experiences {
+    width: 100%;
+    padding-left: 0px;
   }
 
   #skill, #exp {
