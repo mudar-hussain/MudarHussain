@@ -1,8 +1,6 @@
 import {
-  ChangeDetectorRef,
   Component,
   ElementRef,
-  OnInit,
   ViewChild,
 } from '@angular/core';
 import { TerminalCommandsService } from '../../services/terminal-commands.service';
@@ -24,7 +22,6 @@ export class TerminalComponent {
 
   constructor(
     private commandService: TerminalCommandsService,
-    private cdr: ChangeDetectorRef,
     private configService: ConfigService
   ) {
     this.term_username = this.configService.getTerminalUsername();

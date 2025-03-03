@@ -160,19 +160,19 @@ export const Experiences = [
         location: "Pune, India",
         content: [
           {
-            text: "Engineered a customer data validation feature by integrating D&B and Google API, reducing manual validation time by 80%",
+            text: "Developed a Billing & Accounting system for Trade Finance in TIA, eliminating AFS dependency and cutting licensing costs.",
             link: ""
           },
           {
-            text: "Mitigated security risks by implementing user entitlements & multi-level auth in Spring, resolving ethical hacking findings.",
+            text: "Boosted BNY Ops efficiency by automating accrual calculations & billing workflows, reducing manual effort by 4 hrs/day.",
             link: ""
           },
           {
-            text: "Designed and developed RESTful APIs for seamless interaction between frontend and backend services.",
+            text: "Built Trade Monitoring Dashboard for real-time tracking of transactions, errors, alerts, costs, and volume trends.",
             link: ""
           },
           {
-            text: "Worked alongside diverse teams to gather requirements, strategize milestones, and ensure timely, high-quality solutions.",
+            text: "Improved code quality by raising test coverage to 90%, fixing SonarQube reported issues, & ensuring smooth prod releases.",
             link: ""
           }
         ],
