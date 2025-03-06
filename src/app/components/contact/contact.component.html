@@ -2,27 +2,39 @@
   <div class="form-section">
     <h1 class="title-font">Contact <span class="text-light-beige">Me</span></h1>
     <p class="font-sec">Let's Build Something Amazing Together!</p>
-    <form (ngSubmit)="sendMessage()">
+
+    <form [formGroup]="contactForm" (ngSubmit)="sendMessage()">
+      
       <div class="form-group">
-        <input type="text" placeholder="First Name" name="firstName" [(ngModel)]="formData.firstName" required />
-        <input type="text" placeholder="Last Name" name="lastName" [(ngModel)]="formData.lastName" required />
+        <input type="text" placeholder="First Name" formControlName="firstName" 
+          [class.invalid]="submitted && contactForm.get('firstName')?.invalid" />
+        <input type="text" placeholder="Last Name" formControlName="lastName" />
       </div>
+
       <div class="form-group">
-        <input type="email" placeholder="Your Email Address" name="email" [(ngModel)]="formData.email" required />
+        <input type="email" placeholder="Your Email Address" formControlName="email" 
+          [class.invalid]="submitted && contactForm.get('email')?.invalid" />
+        <div *ngIf="submitted && contactForm.get('email')?.invalid" class="error">
+          Please enter a valid email.
+        </div>
       </div>
+
       <div class="form-group">
-        <input type="text" placeholder="Looking for a developer..." name="subject" [(ngModel)]="formData.subject"
-          required />
+        <input type="text" placeholder="Looking for a developer..." formControlName="subject" />
       </div>
+
       <div class="form-group">
-        <textarea placeholder="Write your message here..." name="message" [(ngModel)]="formData.message"
-          required></textarea>
+        <textarea placeholder="Write your message here..." formControlName="message" 
+          [class.invalid]="submitted && contactForm.get('message')?.invalid"></textarea>
       </div>
+
       <button type="submit" class="custom-bottom">
         Send Message <i class="fa-sharp-duotone fa-solid fa-paper-plane"></i>
       </button>
+      
     </form>
-  </div>
+</div>
+
   <div class="info-section">
     <h1 class="title-font">What's next <span class="text-light-beige">?</span></h1>
     <p class="font-sec">

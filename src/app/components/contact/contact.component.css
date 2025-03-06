@@ -74,6 +74,16 @@ a:hover {
   color: inherit; /* Keeps the same color on hover */
 }
 
+.invalid {
+  border: 1px solid rgb(165, 47, 47) !important; 
+  background-color: #ffe6e6; /* Light red background for visibility */
+}
+.error {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
 /* Responsive for smaller screens */
 @media screen and (max-width: 1300px) {
   .contact-container {

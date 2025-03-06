@@ -3,6 +3,10 @@ export const Resume = "https://drive.google.com/file/d/1CGDxOqyZ5HcaQ0Gu0INWaWwr
 export const LinkedIn = "https://www.linkedin.com/in/mudar-hussain/";
 export const Github = "https://github.com/mudar-hussain/";
 export const Leetcode = "https://leetcode.com/u/mudar_hussain/";
+export const CodeForces = "https://codeforces.com/profile/mudar_hussain/";
+export const HackerRank = "https://www.hackerrank.com/profile/Mudar_Hussain";
+export const GeeksForGeeks = "https://www.geeksforgeeks.org/user/mudar_hussain/";
+export const placeholderImg = 'assets/img/post-placeholder-image.png';
 
 export const SphereTags = [
   "Java", "Python", "SQL", "Figma", "LLD", "NoSQL", "C/C++", "HTML", "Github", "CSS", "TypeScript", "HLD", "Spring", "Hibernate", "Git", "Angular", "JavaScript", "ReactJS", "Bootstrap", "Gitlab", 

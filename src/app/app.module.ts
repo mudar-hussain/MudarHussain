@@ -14,7 +14,7 @@ import { AppComponent } from './app.component';
 import { TerminalComponent } from './components/terminal/terminal.component';
 import { TerminalNavComponent } from './components/terminal/terminal-nav/terminal-nav.component';
 import { TerminalOutputComponent } from './components/terminal/terminal-output/terminal-output.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { MenuIconComponent } from './shared/menu-icon/menu-icon.component';
 import { SafeHtmlPipe } from './shared/pipes/safe-html.pipe';
@@ -60,7 +60,8 @@ import { ProjectCardComponent } from './components/project/project-card/project-
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     importProvidersFrom(
