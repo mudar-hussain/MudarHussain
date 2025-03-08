@@ -4,7 +4,7 @@
   justify-content: space-between;
   align-items: center;
   background-color: rgb(24 24 27);
-  color: #fff;
+  color: #fff !important;
   padding: 20px;
   border-radius: 2%;
   gap: 20px;
@@ -51,7 +51,7 @@ form textarea {
   border: 1px solid #333;
   border-radius: 5px;
   background-color: #333;
-  color: #fff;
+  color: #fff !important;
 }
 
 textarea {
@@ -83,6 +83,21 @@ a:hover {
   font-size: 14px;
   margin-top: 5px;
 }
+
+/* Override autofill background color */
+form input:-webkit-autofill, 
+form input:-webkit-autofill:hover, 
+form input:-webkit-autofill:focus, 
+form textarea:-webkit-autofill, 
+form textarea:-webkit-autofill:hover, 
+form textarea:-webkit-autofill:focus {
+    background-color: inherit !important;
+    transition: background-color 5000s ease-in-out 0s;
+    -webkit-box-shadow: 0 0 0px 1000px inherit inset !important;
+    -webkit-text-fill-color: #fff !important;
+    caret-color: #fff !important;
+}
+
 
 /* Responsive for smaller screens */
 @media screen and (max-width: 1300px) {
