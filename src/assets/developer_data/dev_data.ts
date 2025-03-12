@@ -377,7 +377,7 @@ export const Projects = [
     image: "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png",
     tagline: "Full Stack Application",
       content: [
-        "Built with server, client, \& security features.",
+        "Built with server, client, & security features.",
         "Designed a secure API for user auth, posts, interactions, followers, search, and user feeds."
       ],
     stack: [
@@ -470,7 +470,7 @@ export const Projects = [
     image: "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png",
     tagline: "Full Stack Application",
       content: [
-        "Developed with CRUD, search \& pagination.",
+        "Developed with CRUD, search & pagination.",
         "Enhanced security with Spring and two-factor authentication for secure access."
       ],
     stack: [
@@ -518,15 +518,13 @@ export const Projects = [
   },
   {
     id: "project-6",
-    title: "Water Supply Scheme",
-    github: "https://github.com/mudar-hussain/Smart_Contact_Manager/",
+    title: "The Hungry Mind",
+    github: "https://github.com/mudar-hussain/The-Hungry-Mind",
     url: "",
     image: "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png",
-    tagline: "Sipna College Campus, Amravati",
+    tagline: "Full Stack Application",
       content: [
-        "Led a 6-member team in the installation of a 150,000 L Elevated Surface Reservoir, addressing low water pressure.",
-        "Successfully redesigned the water distribution system, effectively resolving low water pressure issue.",
-        "Led team of 6 to install 1,50,000 L Elevated Surface Reservoir and redesign water distribution system, resolving low water pressure issue."
+        "The Hungry Mind is a Library Management System built using Java Spring Boot in Backend and ReactJS in Frontend"
       ],
     stack: [
       {
@@ -535,9 +533,9 @@ export const Projects = [
         name: "Java",
       },
       {
-        id: "Thyme-leaf",
+        id: "React",
         icon: "fa-brands fa-python",
-        name: "Thyme-leaf",
+        name: "React",
       },
       {
         id: "Spring",
@@ -568,6 +566,36 @@ export const Projects = [
         id: "JavaScript",
         icon: "fa-brands fa-js",
         name: "JavaScript",
+      }
+    ]
+  },
+  {
+    id: "project-7",
+    title: "Water Supply Scheme",
+    github: "https://github.com/mudar-hussain",
+    url: "",
+    image: "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png",
+    tagline: "Sipna College Campus, Amravati",
+      content: [
+        "Led a 6-member team in the installation of a 150,000 L Elevated Surface Reservoir, addressing low water pressure.",
+        "Successfully redesigned the water distribution system, effectively resolving low water pressure issue.",
+        "Led team of 6 to install 1,50,000 L Elevated Surface Reservoir and redesign water distribution system, resolving low water pressure issue."
+      ],
+    stack: [
+      {
+        id: "autocad",
+        icon: "fa-brands fa-java",
+        name: "AutoCAD",
+      },
+      {
+        id: "Revit",
+        icon: "fa-brands fa-python",
+        name: "Revit",
+      },
+      {
+        id: "Civil",
+        icon: "fa-brands fa-python",
+        name: "Civil Engineering",
       }
     ]
   }

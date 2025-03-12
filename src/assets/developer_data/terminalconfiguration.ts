@@ -47,14 +47,15 @@ const TerminalConfiguration = {
         Period: "Jul '17 - Sep '17",
         Location: "Amravati, India",
         Experience: [
-          "Created multiple line plans, Bar Bending Schedule \& Structural drawings along with the 3D work of the G+1 Building."
+          "Created multiple line plans, Bar Bending Schedule & Structural drawings along with the 3D work of the G+1 Building."
         ]
       }
     ],
     education: {
-      University: "Sant Gadge Baba Amravati University, Amravati",
-      Degree: "Bachelor of Engineering - BE",
-      Period: "2015 - 2019",
+      University: "Amravati University, India",
+      Degree: "Bachelor of Engineering (Civil)",
+      Batch: "May 2019",
+      Location: "Amravati, India"
     },
     help: {
       whoami: "General information",
@@ -80,17 +81,55 @@ const TerminalConfiguration = {
       Other_Tools: "Microsoft Dynamics 365, Postman, Visual Studio 2022, VSCode",
     },
     projects:[
-      {Name: "Social App",
-        Category: "Full Stack Web Application",
-        Description: "Created a feature-rich Instagram-inspired app covering server, client and security aspects. </br>Built RESTful APIs to handle user auth, post, likes, comments, and follower relationships. Crafted responsive UI (Chakra UI), optimized state via Redux, and built an engaging user feed for seamless interactions",
-        TechStack: "Java, Spring Boot, React JS, RESTful APIs, Security, JPA, Hibernate, MySQL",
-        URL: "https://github.com/mudar-hussain/SocialApp/"
+      {
+        Name: "Logic In Layers",
+        Category: "Web Application",
+        URL: "https://logicinlayers.web.app/",
+        TechStack: "Node, Figma, Angular, Typescript",
+        Description: [
+          "Developed a blogging platform to share technical insights through structured posts.",
+          "Built an admin dashboard with Firebase for hosting, auth, storage, and CRUD operations."
+        ]
       },
-      {Name: "Smart Contact Manager",
+      {
+        Name: "Sticky Linkz",
+        Category: "Web Application",
+        URL: "https://stickylinkz.web.app/",
+        TechStack: "Typescript, Angular, CLI, Firebase",
+        Description: [
+          "Developed a URL shortener with QR code, link activation / deactivation, & sharing capabilities.",
+          "Implemented auth and optimized redirection for secure access with edit / delete features."
+        ]
+      },
+      {
+        Name: "Social App",
         Category: "Full Stack Web Application",
-        Description: "Built contact management site for easy storing, viewing, editing, and deleting contacts. Improved security protocols by incorporating Spring and adding two-factor authentication. Elevated user experience by incorporating streamlined search and dashboard pagination, optimizing usability.",
-        TechStack: "Java, Thyme-leaf, JavaScript, Spring Boot, MySQL",
-        URL: "https://github.com/mudar-hussain/Smart_Contact_Manager/"
+        URL: "https://github.com/mudar-hussain/SocialApp/",
+        TechStack: "Java, Spring, React, Hibernate, SQL",
+        Description: [
+          "Built with server, client, & security features.",
+          "Designed a secure API for user auth, posts, interactions, followers, search, and user feeds."
+        ]
+      },
+      {
+        Name: "Sticky Notes",
+        Category: "Web Application",
+        URL: "https://react-sticky-notes-app.netlify.app/",
+        TechStack: "React Js, HTML, CSS, JavaScript",
+        Description: [
+          "Optimized modularity with React hooks.",
+          "Implemented keyword-based search and local storage API for better UX and data retention."
+        ]
+      },
+      {
+        Name: "Smart Contact Manager",
+        Category: "Full Stack Web Application",
+        URL: "https://github.com/mudar-hussain/Smart_Contact_Manager/",
+        TechStack: "Java, Thyme-leaf, Spring Boot, SQL, JavaScript",
+        Description: [
+          "Developed with CRUD, search & pagination.",
+          "Enhanced security with Spring and two-factor authentication for secure access."
+        ]
       }
     ],
     code: [
