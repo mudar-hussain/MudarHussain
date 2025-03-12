@@ -4,6 +4,7 @@ export const LinkedIn = "https://www.linkedin.com/in/mudar-hussain/";
 export const Github = "https://github.com/mudar-hussain/";
 export const Leetcode = "https://leetcode.com/u/mudar_hussain/";
 export const CodeForces = "https://codeforces.com/profile/mudar_hussain/";
+export const CodeChef = "https://www.codechef.com/users/mudar_hussain";
 export const HackerRank = "https://www.hackerrank.com/profile/Mudar_Hussain";
 export const GeeksForGeeks = "https://www.geeksforgeeks.org/user/mudar_hussain/";
 export const placeholderImg = 'assets/img/post-placeholder-image.png';

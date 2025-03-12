@@ -4,7 +4,7 @@ import { TerminalCommand } from '../models/terminal-command.model';
 import TerminalConfiguration from 'src/assets/developer_data/terminalconfiguration';
 import { Skill } from '../models/skill.model';
 import { Experience } from '../models/experience.model';
-import { CodeForces, Experiences, GeeksForGeeks, Github, HackerRank, Leetcode, LinkedIn, Projects, Resume, Skills, SphereTags } from 'src/assets/developer_data/dev_data';
+import { CodeForces, CodeChef, Experiences, GeeksForGeeks, Github, HackerRank, Leetcode, LinkedIn, Projects, Resume, Skills, SphereTags } from 'src/assets/developer_data/dev_data';
 import { Project } from '../models/project.model';
 
 @Injectable({
@@ -19,6 +19,7 @@ export class ConfigService {
   private github: string = Github;
   private leetcode: string = Leetcode;
   private codeforces: string = CodeForces;
+  private codechef: string = CodeChef;
   private hackerrank: string = HackerRank;
   private geeksforgeeks: string = GeeksForGeeks;
   private skills: Skill[] = Skills;
@@ -52,6 +53,10 @@ export class ConfigService {
 
   getGeeksForGeeks(): string {
     return this.geeksforgeeks;
+  }
+
+  getCodeChef(): string {
+    return this.codechef;
   }
 
   getTerminalUsername(): string {

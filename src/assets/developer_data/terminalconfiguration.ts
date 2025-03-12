@@ -144,6 +144,11 @@ const TerminalConfiguration = {
         Handle: "https://codeforces.com/profile/mudar_hussain"
       },
       {
+        Coding_Platform: "CodeChef",
+        Insights: "400+ Problems Solved",
+        Handle: "https://www.codechef.com/users/mudar_hussain"
+      },
+      {
         Coding_Platform: "HackerRank",
         Insights: "Rated 5* in Problem Solving",
         Handle: "https://www.hackerrank.com/profile/Mudar_Hussain"

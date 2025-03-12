@@ -11,15 +11,13 @@ export class TechnicalExpertiseComponent {
   github: string;
   leetcode: string;
   codeforces: string;
-  hackerrank: string;
-  geeksforgeeks: string;
+  codechef: string;
 
   constructor(private configService: ConfigService) {
     this.linkedin = this.configService.getLinkedIn();
     this.github = this.configService.getGithub();
     this.leetcode = this.configService.getLeetcode();
     this.codeforces = this.configService.getCodeForces();
-    this.hackerrank = this.configService.getHackerRank();
-    this.geeksforgeeks = this.configService.getGeeksForGeeks();
+    this.codechef = this.configService.getCodeChef();
   }
 }
