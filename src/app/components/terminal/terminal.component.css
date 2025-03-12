@@ -3,22 +3,22 @@
   justify-content: center;
   align-items: center;
   margin-top: 1%;
-  height: 50vh;
+  height: 60vh;
   font-family: "Courier Prime", sans-serif;
 }
 
 .terminal {
   scroll-behavior: smooth;
-  max-height: 400px;
+  height: 55vh;
   overflow-y: auto;
 }
 
 .term-container {
   width: 80%;
-  height: 45vh;
+  height: 55vh;
   background: var(--terminal-background-color);
   border-radius: 2%;
-  overflow-y: auto;
+  overflow-y: scroll;
   overflow-x: hidden;
 }
 
@@ -55,7 +55,7 @@
 
 @media screen and (max-width: 700px) {
   .term-container {
-    height: 40vh;
+    height: 50vh;
     width: 100%;
   }
 

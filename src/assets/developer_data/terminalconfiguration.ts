@@ -9,25 +9,46 @@ const TerminalConfiguration = {
     },
     experience: [
       {
+        Company: "The Bank of New York",
+        Role: "Full Stack Developer",
+        Period: "Sep '23 - Present",
+        Location: "Pune, India",
+        Experience: [
+          "Developed a Billing & Accounting system for Trade Finance in TIA, eliminating AFS dependency and cutting licensing costs.",
+          "Boosted BNY Ops efficiency by automating accrual calculations & billing workflows, reducing manual effort by 4 hrs/day.",
+          "Built Trade Monitoring Dashboard for real-time tracking of transactions, errors, alerts, costs, and volume trends.",
+          "Improved code quality by raising test coverage to 90%, fixing SonarQube reported issues, & ensuring smooth prod releases."        
+        ]
+      },
+      {
         Company: "Tata Consultancy Services",
-        Role: "System Engineer",
-        Period: "April 2021 – Sept 2023",
+        Role: "Systems Engineer",
+        Period: "Apr '22 - Sep '23",
         Location: "Nagpur, India",
-        Experience: "Developed scalable sales app (React, Spring Boot, Microservices) to enhance customer experience and streamline workflows. Designed and developed RESTful APIs for seamless interaction between frontend and backend services.",
+        Experience: [
+          "Engineered a customer data validation feature by integrating D&B and Google API, reducing manual validation time by 80%",
+          "Mitigated security risks by implementing user entitlements & multi-level auth in Spring, resolving ethical hacking findings.",
+          "Built an RPA-driven feature to automated logistics raw data transformation, saving 5 hrs/day and minimizing errors.",
+          "Built Power BI DBs on sales & lead trends, driving insights."
+        ]
       },
       {
         Company: "H. M. Construction",
         Role: "Site Execution Engineer",
-        Period: "June 2019 - March 2021",
+        Period: "Jun '19 - Mar '21",
         Location: "Nagpur, India",
-        Experience: "Supervised and organized on-site work schedule and inventory utilization to maintain quality control and safety compliance. Achieved 7% reduction in ongoing project billing costs through strategic design modifications and material wastage analysis.",
+        Experience: [
+          "Streamlined scheduling & inventory for quality & safety, cutting project costs by 7% via design improvements & waste control."
+        ]
       },
       {
         Company: "Balaji Structural Consultancy",
         Role: "AutoCAD Draftsman (2D & 3D) [Intern]",
-        Period: "July 2017 - Sept 2017",
+        Period: "Jul '17 - Sep '17",
         Location: "Amravati, India",
-        Experience: "Created multiple line plans, Bar Bending Schedule & Structural drawings along with the 3D work of the G+1 Building.",
+        Experience: [
+          "Created multiple line plans, Bar Bending Schedule \& Structural drawings along with the 3D work of the G+1 Building."
+        ]
       }
     ],
     education: {

@@ -47,6 +47,7 @@ export class TerminalComponent {
         command.toLowerCase()
       );
       this.output.push({ command, response });
+      this.scrollToBottom();
     }
   }
 

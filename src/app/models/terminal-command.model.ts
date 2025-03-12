@@ -9,7 +9,7 @@ export interface TerminalCommand {
       Role: string,
       Period: string,
       Location: string,
-      Experience: string,
+      Experience: string[],
     }[];
     education: {
       University: string;

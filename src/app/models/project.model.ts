@@ -11,6 +11,6 @@ export interface Project {
   url?: string;
   image: any; // This could be a string (URL) or an imported asset reference
   tagline: string;
-  content: string;
+  content: string[];
   stack: ProjectStack[];
 }

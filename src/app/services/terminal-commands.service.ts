@@ -21,20 +21,24 @@ export class TerminalCommandsService {
         return this.formatResponse(this.term_commands.whoami);
 
       case 'experience':
+      case 'experiences':
         return this.formatResponse(this.term_commands.experience);
 
       case 'education':
         return this.formatResponse(this.term_commands.education);
 
+      case 'skill':
       case 'skills':
         return this.formatResponse(this.term_commands.skills);
 
+      case 'project':
       case 'projects':
         return this.formatResponse(this.term_commands.projects);
 
       case 'code':
         return this.formatResponse(this.term_commands.code);
 
+      case 'blog':
       case 'blogs':
         return this.formatResponse(this.term_commands.blogs);
 
@@ -82,18 +86,20 @@ export class TerminalCommandsService {
         const formattedValue = Array.isArray(value)
           ? value.map((val) => this.formatValue(val)).join('<br/>')
           : this.formatValue(value);
-        return `${formattedKey} <b style="color: var(--terminal-resp-heading)">:</b> ${formattedValue}`;
+        return `${formattedKey} ${formattedValue}`;
       })
       .join('<br/>');
   }
 
   private formatKey(key: string): string {
-    return `<b><b style="color: var(--terminal-resp-heading)">${key}</b></b>`;
+    return `<b><b style="color: var(--terminal-resp-heading)">${key} : </b></b>`;
   }
 
   private formatValue(value: any): string {
     if (typeof value === 'string' && this.isValidUrl(value)) {
       return `<a href="${value}" target="_blank">${value}</a>`;
+    } else if (Array.isArray(value)) {
+      return '<br/>' + value.map((val) => '<b style="color: var(--terminal-resp-heading)">></b> ' + this.formatValue(val)).join('<br/>');
     }
     return `<b style="color: var(--terminal-resp)"> ${value}</b>`;
   }
@@ -103,7 +109,7 @@ export class TerminalCommandsService {
       .map(([key, value]) => {
         const formattedKey = this.formatKey(key);
         const formattedValue = this.formatValue(value);
-        return `${formattedKey} <b style="color: var(--terminal-resp-heading)">:</b> ${formattedValue}`;
+        return `${formattedKey} ${formattedValue}`;
       })
       .join('<br/>');
   }

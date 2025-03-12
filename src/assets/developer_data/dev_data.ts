@@ -151,7 +151,6 @@ export const Skills = [
   },
 ];
 
-
 export const Experiences = [
   {
     organisation: "The Bank of New York",
@@ -252,7 +251,7 @@ export const Experiences = [
     link: "http://www.bscstructuralrcc.com/",
     positions: [
       {
-        title: "AutoCAD Draftsman (2D \& 3D) [Intern]",
+        title: "AutoCAD Draftsman (2D & 3D) [Intern]",
         duration: "Jul '17 - Sep '17",
         location: "Amravati, India",
         content: [
@@ -262,39 +261,47 @@ export const Experiences = [
           }
         ]
       }
-    ],
+    ]
   }
 ]; 
 
 export const Projects = [
   {
     id: "project-1",
-    title: "Comicify.ai",
-    github: "https://github.com/ayush4345/Comicify.ai",
-    url: "",
+    title: "Logic In Layers",
+    github: "https://github.com/mudar-hussain/Logic-In-Layers",
+    url: "https://logicinlayers.web.app/",
     image: "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png",
-    tagline: "Convert any academic/news/boring text into cool comic strips using GPT-3.5 and Stable Diffusion!",
-    content: "Convert any academic/news/boring text into cool comic strips using GPT-3.5 and Stable Diffusion!",
+    tagline: "Responsive Web Application",
+    content: [
+      "Developed a blogging platform to share technical insights through structured posts.",
+      "Built an admin dashboard with Firebase for hosting, auth, storage, and CRUD operations."
+    ],
     stack: [
       {
-        id: "java",
+        id: "Node",
         icon: "fa-brands fa-java",
-        name: "Java",
+        name: "Node",
       },
       {
-        id: "python",
+        id: "Figma",
         icon: "fa-brands fa-python",
-        name: "Python",
+        name: "Figma",
       },
       {
-        id: "sql",
+        id: "Angular",
         icon: "fa-solid fa-database",
-        name: "SQL",
+        name: "Angular",
       },
       {
-        id: "cpp",
+        id: "Firebase",
+        icon: "fa-solid fa-database",
+        name: "Firebase",
+      },
+      {
+        id: "Typescript",
         icon: "fa-brands fa-c",
-        name: "C/C++",
+        name: "Typescript",
       },
       {
         id: "html",
@@ -305,49 +312,35 @@ export const Projects = [
         id: "css",
         icon: "fa-brands fa-css3-alt",
         name: "CSS",
-      },
-      {
-        id: "javaScript",
-        icon: "fa-brands fa-js",
-        name: "JavaScript",
-      },
-      {
-        id: "typescript",
-        icon: "fa-brands fa-js",
-        name: "TypeScript",
       }
     ]
   },
   {
     id: "project-2",
-    title: "GreenTrust",
-    github: "https://github.com/mittal-parth/GreenTrust",
-    url: "https://green-trust-fantom.netlify.app/",
+    title: "Sticky Linkz",
+    github: "https://github.com/mudar-hussain/StickyLinkz",
+    url: "https://stickylinkz.web.app/",
     image: "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png",
-    tagline:
-      "Winning project at 3 hackathons, GreenTrust offers a novel solution for obtaining certification",
-    content:
-      "Winning project at 3 hackathons, GreenTrust offers a novel solution for obtaining certification in organic farming by organizing credible and decentralized Participatory Guarantee Systems (PGSs).",
+    tagline: "Web Application",
+    content: [
+      "Developed a URL shortener with QR code, link activation / deactivation, \& sharing capabilities.",
+      "Implemented auth and optimized redirection for secure access with edit / delete features."
+    ],
     stack: [
       {
-        id: "java",
-        icon: "fa-brands fa-java",
-        name: "Java",
-      },
-      {
-        id: "python",
-        icon: "fa-brands fa-python",
-        name: "Python",
-      },
-      {
-        id: "sql",
+        id: "Angular",
         icon: "fa-solid fa-database",
-        name: "SQL",
+        name: "Angular",
       },
       {
-        id: "cpp",
-        icon: "fa-brands fa-c",
-        name: "C/C++",
+        id: "CLI",
+        icon: "fa-solid fa-database",
+        name: "Node CLI",
+      },
+      {
+        id: "Firebase",
+        icon: "fa-solid fa-database",
+        name: "Firebase",
       },
       {
         id: "html",
@@ -355,244 +348,38 @@ export const Projects = [
         name: "HTML",
       },
       {
-        id: "css",
-        icon: "fa-brands fa-css3-alt",
-        name: "CSS",
-      },
-      {
-        id: "javaScript",
-        icon: "fa-brands fa-js",
-        name: "JavaScript",
-      },
-      {
-        id: "typescript",
-        icon: "fa-brands fa-js",
-        name: "TypeScript",
-      }
-    ]
-  },
-  {
-    id: "project-2",
-    title: "GreenTrust",
-    github: "https://github.com/mittal-parth/GreenTrust",
-    url: "https://green-trust-fantom.netlify.app/",
-    image: "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png",
-    tagline:
-      "Winning project at 3 hackathons, GreenTrust offers a novel solution for obtaining certification",
-    content:
-      "Winning project at 3 hackathons, GreenTrust offers a novel solution for obtaining certification in organic farming by organizing credible and decentralized Participatory Guarantee Systems (PGSs).",
-    stack: [
-      {
-        id: "java",
+        id: "Node",
         icon: "fa-brands fa-java",
-        name: "Java",
+        name: "Node",
       },
       {
-        id: "python",
+        id: "Figma",
         icon: "fa-brands fa-python",
-        name: "Python",
+        name: "Figma",
       },
       {
-        id: "sql",
-        icon: "fa-solid fa-database",
-        name: "SQL",
-      },
-      {
-        id: "cpp",
+        id: "Typescript",
         icon: "fa-brands fa-c",
-        name: "C/C++",
-      },
-      {
-        id: "html",
-        icon: "fa-brands fa-html5",
-        name: "HTML",
+        name: "Typescript",
       },
       {
         id: "css",
         icon: "fa-brands fa-css3-alt",
         name: "CSS",
-      },
-      {
-        id: "javaScript",
-        icon: "fa-brands fa-js",
-        name: "JavaScript",
-      },
-      {
-        id: "typescript",
-        icon: "fa-brands fa-js",
-        name: "TypeScript",
-      }
-    ]
-  },
-  {
-    id: "project-2",
-    title: "GreenTrust",
-    github: "https://github.com/mittal-parth/GreenTrust",
-    url: "https://green-trust-fantom.netlify.app/",
-    image: "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png",
-    tagline:
-      "Winning project at 3 hackathons, GreenTrust offers a novel solution for obtaining certification",
-    content:
-      "Winning project at 3 hackathons, GreenTrust offers a novel solution for obtaining certification in organic farming by organizing credible and decentralized Participatory Guarantee Systems (PGSs).",
-    stack: [
-      {
-        id: "java",
-        icon: "fa-brands fa-java",
-        name: "Java",
-      },
-      {
-        id: "python",
-        icon: "fa-brands fa-python",
-        name: "Python",
-      },
-      {
-        id: "sql",
-        icon: "fa-solid fa-database",
-        name: "SQL",
-      },
-      {
-        id: "cpp",
-        icon: "fa-brands fa-c",
-        name: "C/C++",
-      },
-      {
-        id: "html",
-        icon: "fa-brands fa-html5",
-        name: "HTML",
-      },
-      {
-        id: "css",
-        icon: "fa-brands fa-css3-alt",
-        name: "CSS",
-      },
-      {
-        id: "javaScript",
-        icon: "fa-brands fa-js",
-        name: "JavaScript",
-      },
-      {
-        id: "typescript",
-        icon: "fa-brands fa-js",
-        name: "TypeScript",
-      }
-    ]
-  },
-  {
-    id: "project-2",
-    title: "GreenTrust",
-    github: "https://github.com/mittal-parth/GreenTrust",
-    url: "https://green-trust-fantom.netlify.app/",
-    image: "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png",
-    tagline:
-      "Winning project at 3 hackathons, GreenTrust offers a novel solution for obtaining certification",
-    content:
-      "Winning project at 3 hackathons, GreenTrust offers a novel solution for obtaining certification in organic farming by organizing credible and decentralized Participatory Guarantee Systems (PGSs).",
-    stack: [
-      {
-        id: "java",
-        icon: "fa-brands fa-java",
-        name: "Java",
-      },
-      {
-        id: "python",
-        icon: "fa-brands fa-python",
-        name: "Python",
-      },
-      {
-        id: "sql",
-        icon: "fa-solid fa-database",
-        name: "SQL",
-      },
-      {
-        id: "cpp",
-        icon: "fa-brands fa-c",
-        name: "C/C++",
-      },
-      {
-        id: "html",
-        icon: "fa-brands fa-html5",
-        name: "HTML",
-      },
-      {
-        id: "css",
-        icon: "fa-brands fa-css3-alt",
-        name: "CSS",
-      },
-      {
-        id: "javaScript",
-        icon: "fa-brands fa-js",
-        name: "JavaScript",
-      },
-      {
-        id: "typescript",
-        icon: "fa-brands fa-js",
-        name: "TypeScript",
-      }
-    ]
-  },
-  {
-    id: "project-2",
-    title: "GreenTrust",
-    github: "https://github.com/mittal-parth/GreenTrust",
-    url: "https://green-trust-fantom.netlify.app/",
-    image: "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png",
-    tagline:
-      "Winning project at 3 hackathons, GreenTrust offers a novel solution for obtaining certification",
-    content:
-      "Winning project at 3 hackathons, GreenTrust offers a novel solution for obtaining certification in organic farming by organizing credible and decentralized Participatory Guarantee Systems (PGSs).",
-    stack: [
-      {
-        id: "java",
-        icon: "fa-brands fa-java",
-        name: "Java",
-      },
-      {
-        id: "python",
-        icon: "fa-brands fa-python",
-        name: "Python",
-      },
-      {
-        id: "sql",
-        icon: "fa-solid fa-database",
-        name: "SQL",
-      },
-      {
-        id: "cpp",
-        icon: "fa-brands fa-c",
-        name: "C/C++",
-      },
-      {
-        id: "html",
-        icon: "fa-brands fa-html5",
-        name: "HTML",
-      },
-      {
-        id: "css",
-        icon: "fa-brands fa-css3-alt",
-        name: "CSS",
-      },
-      {
-        id: "javaScript",
-        icon: "fa-brands fa-js",
-        name: "JavaScript",
-      },
-      {
-        id: "typescript",
-        icon: "fa-brands fa-js",
-        name: "TypeScript",
       }
     ]
   },
   {
     id: "project-3",
-    title: "ChargeSwap",
-    github: "https://github.com/CommanderAstern/ChargeSwap",
-    url: "https://devfolio.co/projects/chargeswap-3527",
+    title: "Social App",
+    github: "https://github.com/mudar-hussain/SocialApp",
+    url: "",
     image: "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png",
-    tagline:
-      "A Blockchain-based EV-Battery swapping solution - winning project at ETHIndia'22, the world's largest Ethereum Hackathon",
-      content:
-        "A Blockchain-based EV-Battery swapping solution - winning project at ETHIndia'22, the world's largest Ethereum Hackathon",
+    tagline: "Full Stack Application",
+      content: [
+        "Built with server, client, \& security features.",
+        "Designed a secure API for user auth, posts, interactions, followers, search, and user feeds."
+      ],
     stack: [
       {
         id: "java",
@@ -600,9 +387,9 @@ export const Projects = [
         name: "Java",
       },
       {
-        id: "python",
+        id: "Spring",
         icon: "fa-brands fa-python",
-        name: "Python",
+        name: "Spring",
       },
       {
         id: "sql",
@@ -610,9 +397,9 @@ export const Projects = [
         name: "SQL",
       },
       {
-        id: "cpp",
+        id: "React",
         icon: "fa-brands fa-c",
-        name: "C/C++",
+        name: "React",
       },
       {
         id: "html",
@@ -625,14 +412,162 @@ export const Projects = [
         name: "CSS",
       },
       {
-        id: "javaScript",
+        id: "Hibernate",
         icon: "fa-brands fa-js",
-        name: "JavaScript",
+        name: "Hibernate",
       },
       {
         id: "typescript",
         icon: "fa-brands fa-js",
         name: "TypeScript",
+      }
+    ]
+  },
+  {
+    id: "project-4",
+    title: "Sticky Notes",
+    github: "https://github.com/mudar-hussain/Sticky_Notes/",
+    url: "https://react-sticky-notes-app.netlify.app/",
+    image: "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png",
+    tagline: "Web Application",
+      content: [
+        "Optimized modularity with React hooks.",
+        "Implemented keyword-based search and local storage API for better UX and data retention."
+      ],
+    stack: [
+      {
+        id: "React",
+        icon: "fa-brands fa-java",
+        name: "React Js",
+      },
+      {
+        id: "JavaScript",
+        icon: "fa-brands fa-js",
+        name: "JavaScript",
+      },
+      {
+        id: "html",
+        icon: "fa-brands fa-html5",
+        name: "HTML",
+      },
+      {
+        id: "css",
+        icon: "fa-brands fa-css3-alt",
+        name: "CSS",
+      },
+      {
+        id: "typescript",
+        icon: "fa-brands fa-js",
+        name: "TypeScript",
+      }
+    ]
+  },
+  {
+    id: "project-5",
+    title: "Contacts Vault",
+    github: "https://github.com/mudar-hussain/Smart_Contact_Manager/",
+    url: "",
+    image: "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png",
+    tagline: "Full Stack Application",
+      content: [
+        "Developed with CRUD, search \& pagination.",
+        "Enhanced security with Spring and two-factor authentication for secure access."
+      ],
+    stack: [
+      {
+        id: "java",
+        icon: "fa-brands fa-java",
+        name: "Java",
+      },
+      {
+        id: "Thyme-leaf",
+        icon: "fa-brands fa-python",
+        name: "Thyme-leaf",
+      },
+      {
+        id: "Spring",
+        icon: "fa-brands fa-python",
+        name: "Spring",
+      },
+      {
+        id: "sql",
+        icon: "fa-solid fa-database",
+        name: "SQL",
+      },
+      {
+        id: "html",
+        icon: "fa-brands fa-html5",
+        name: "HTML",
+      },
+      {
+        id: "css",
+        icon: "fa-brands fa-css3-alt",
+        name: "CSS",
+      },
+      {
+        id: "Hibernate",
+        icon: "fa-brands fa-js",
+        name: "Hibernate",
+      },
+      {
+        id: "JavaScript",
+        icon: "fa-brands fa-js",
+        name: "JavaScript",
+      }
+    ]
+  },
+  {
+    id: "project-6",
+    title: "Water Supply Scheme",
+    github: "https://github.com/mudar-hussain/Smart_Contact_Manager/",
+    url: "",
+    image: "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png",
+    tagline: "Sipna College Campus, Amravati",
+      content: [
+        "Led a 6-member team in the installation of a 150,000 L Elevated Surface Reservoir, addressing low water pressure.",
+        "Successfully redesigned the water distribution system, effectively resolving low water pressure issue.",
+        "Led team of 6 to install 1,50,000 L Elevated Surface Reservoir and redesign water distribution system, resolving low water pressure issue."
+      ],
+    stack: [
+      {
+        id: "java",
+        icon: "fa-brands fa-java",
+        name: "Java",
+      },
+      {
+        id: "Thyme-leaf",
+        icon: "fa-brands fa-python",
+        name: "Thyme-leaf",
+      },
+      {
+        id: "Spring",
+        icon: "fa-brands fa-python",
+        name: "Spring",
+      },
+      {
+        id: "sql",
+        icon: "fa-solid fa-database",
+        name: "SQL",
+      },
+      {
+        id: "html",
+        icon: "fa-brands fa-html5",
+        name: "HTML",
+      },
+      {
+        id: "css",
+        icon: "fa-brands fa-css3-alt",
+        name: "CSS",
+      },
+      {
+        id: "Hibernate",
+        icon: "fa-brands fa-js",
+        name: "Hibernate",
+      },
+      {
+        id: "JavaScript",
+        icon: "fa-brands fa-js",
+        name: "JavaScript",
       }
     ]
   }
