@@ -3,6 +3,7 @@
   top: 0;
   z-index: 1000;
 }
+
 .navbar-brand {
   font-family: "Caveat", serif;
   font-size: 2rem;
@@ -30,6 +31,15 @@
 
 .navbar-nav {
   text-align: right;
+}
+
+.nav-icons {
+  display: flex;
+
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
 }
 
 body {

@@ -17,7 +17,7 @@
           <a class="nav-link" href="#terminal">Terminal</a>
         </li> -->
         <li class="nav-item">
-          <a class="nav-link" href="#expertise">Expertise</a>
+          <a class="nav-link" href="#expertise">About</a>
         </li>
         <!-- <li class="nav-item">
           <a class="nav-link" [href]="this.isWindow ? '#skillExp' : '#skill'">Skills</a>
@@ -28,14 +28,30 @@
         <li class="nav-item">
           <a class="nav-link" href="#projects">Projects</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#contact">Contact</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" target="_blank" [href]="this.resume">
-            <i class="fa-solid fa-download" *ngIf="this.isWindow"></i> Resume
+        <li class="nav-item nav-icons" style="margin-right: 1rem;">
+          <a class="nav-link" target="_blank" [href]="this.blogs" title="Blogs">
+            <i class="fa-solid fa-blog" style="font-size: 1.3em; vertical-align: middle;"></i>
+          </a>
+          <a class="nav-link" target="_blank" [href]="this.github" title="Github">
+            <i class="fa-brands fa-github" style="font-size: 1.3em; vertical-align: middle;"></i>
+          </a>
+          <a class="nav-link" target="_blank" [href]="this.linkedIn" title="LinkedIn">
+            <i class="fa-brands fa-linkedin-in" style="font-size: 1.3em; vertical-align: middle;"></i>
+          </a>
+          <a class="nav-link" target="_blank" [href]="this.resume" title="Resume">
+            <img src="../../../assets/img/cv.png" style="height: 1.7em; width: 1.7em; vertical-align: middle;"
+              alt="{Mudar Hussain}">
           </a>
         </li>
+        <li class="nav-item">
+            <a href="#contact">
+          <button class="custom-bottom" type="button">
+            Contact
+          </button>
+          </a>
+
+        </li>
+
       </ul>
     </div>
   </div>

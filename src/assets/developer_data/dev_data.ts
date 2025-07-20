@@ -7,6 +7,7 @@ export const CodeForces = "https://codeforces.com/profile/mudar_hussain/";
 export const CodeChef = "https://www.codechef.com/users/mudar_hussain";
 export const HackerRank = "https://www.hackerrank.com/profile/Mudar_Hussain";
 export const GeeksForGeeks = "https://www.geeksforgeeks.org/user/mudar_hussain/";
+export const Blogs = "https://logicinlayers.web.app/";
 export const placeholderImg = 'assets/img/post-placeholder-image.png';
 
 export const SphereTags = [
