@@ -31,6 +31,7 @@ import { RotatingSphereComponent } from './components/technical-expertise/rotati
 import { ProjectComponent } from './components/project/project.component';
 import { TechnicalExpertiseComponent } from './components/technical-expertise/technical-expertise.component';
 import { ProjectCardComponent } from './components/project/project-card/project-card.component';
+import { ProjectDetailsComponent } from './components/project/project-details/project-details.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { ProjectCardComponent } from './components/project/project-card/project-
     RotatingSphereComponent,
     ProjectComponent,
     TechnicalExpertiseComponent,
-    ProjectCardComponent
+    ProjectCardComponent,
+    ProjectDetailsComponent
   ],
   imports: [
     BrowserModule,

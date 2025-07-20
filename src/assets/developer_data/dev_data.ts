@@ -272,7 +272,9 @@ export const Projects = [
     title: "Logic In Layers",
     github: "https://github.com/mudar-hussain/Logic-In-Layers",
     url: "https://logicinlayers.web.app/",
-    image: "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png",
+    images: [
+      "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
+    ],
     tagline: "Responsive Web Application",
     content: [
       "Developed a blogging platform to share technical insights through structured posts.",
@@ -321,7 +323,9 @@ export const Projects = [
     title: "Sticky Linkz",
     github: "https://github.com/mudar-hussain/StickyLinkz",
     url: "https://stickylinkz.web.app/",
-    image: "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png",
+    images: [
+      "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
+    ],
     tagline: "Web Application",
     content: [
       "Developed a URL shortener with QR code, link activation / deactivation, \& sharing capabilities.",
@@ -375,7 +379,9 @@ export const Projects = [
     title: "Social App",
     github: "https://github.com/mudar-hussain/SocialApp",
     url: "",
-    image: "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png",
+    images: [
+      "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
+    ],
     tagline: "Full Stack Application",
       content: [
         "Built with server, client, & security features.",
@@ -429,7 +435,9 @@ export const Projects = [
     title: "Sticky Notes",
     github: "https://github.com/mudar-hussain/Sticky_Notes/",
     url: "https://react-sticky-notes-app.netlify.app/",
-    image: "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png",
+    images: [
+      "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
+    ],
     tagline: "Web Application",
       content: [
         "Optimized modularity with React hooks.",
@@ -468,7 +476,9 @@ export const Projects = [
     title: "Contacts Vault",
     github: "https://github.com/mudar-hussain/Smart_Contact_Manager/",
     url: "",
-    image: "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png",
+    images: [
+      "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
+    ],
     tagline: "Full Stack Application",
       content: [
         "Developed with CRUD, search & pagination.",
@@ -522,7 +532,9 @@ export const Projects = [
     title: "The Hungry Mind",
     github: "https://github.com/mudar-hussain/The-Hungry-Mind",
     url: "",
-    image: "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png",
+    images: [
+      "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
+    ],
     tagline: "Full Stack Application",
       content: [
         "The Hungry Mind is a Library Management System built using Java Spring Boot in Backend and ReactJS in Frontend"
@@ -575,7 +587,9 @@ export const Projects = [
     title: "Water Supply Scheme",
     github: "https://github.com/mudar-hussain",
     url: "",
-    image: "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png",
+    images: [
+      "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
+    ],
     tagline: "Sipna College Campus, Amravati",
       content: [
         "Led a 6-member team in the installation of a 150,000 L Elevated Surface Reservoir, addressing low water pressure.",

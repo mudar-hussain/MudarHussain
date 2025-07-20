@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import {  } from 'firebase/firestore';
 import { TerminalCommand } from '../models/terminal-command.model';
 import TerminalConfiguration from 'src/assets/developer_data/terminalconfiguration';
 import { Skill } from '../models/skill.model';

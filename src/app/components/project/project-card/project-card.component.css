@@ -14,7 +14,7 @@
 .project-card:hover {
   box-shadow: var(--tw-shadow-color);
 }
-.project-title h1 {
+.project-card-title h3 {
   color: #fff;
   width: fit-content;
   margin: 0 auto;

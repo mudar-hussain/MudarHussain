@@ -1,0 +1,80 @@
+<div class="modal fade show d-block" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+        <!-- <div class="project-card"> -->
+        <div class="modal-content project-card" *ngIf="project">
+            <div class="modal-header">
+                <div class="dots-inside-container">
+                    <span class="dot orange-dot"></span>
+                    <span class="dot yellow-dot"></span>
+                    <span class="dot green-dot"></span>
+                </div>
+                <!-- <h5 class="modal-title title-font">{{ project.title }} </h5> -->
+                <!-- <h3 class="project-card-title title-font">{{ project.title }} </h3> -->
+
+                <!-- <div class="project-card-title title-font">
+                    <h3 class="project-card-title title-font">{{ project.title }}</h3>
+                </div>
+                <div class="project-card-desc font-sec">
+                    <p>{{ project.tagline }}</p>
+                </div> -->
+                <button type="button" class="btn-close custom-bottom" (click)="onClose()"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Image Carousel -->
+                <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item" *ngFor="let img of project.images; let idx = index"
+                            [class.active]="idx === 0">
+                            <img [src]="img" class="d-block w-100" alt="Project image">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                        <span class="visually-hidden">Prev</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                <!-- Content -->
+                <div class="project-card-title title-font">
+                    <h3 class="text-light-beige">{{ project.title }}</h3>
+                </div>
+                <div class="project-card-desc font-sec">
+                    <p>{{ project.tagline }}</p>
+                </div>
+
+                <div class="project-card-stack">
+                    <div *ngFor="let stackItem of stackItems" class="chip" (click)="expandShrinkStackItems(stackItem)">
+                        <span>{{ stackItem }}</span>
+                    </div>
+                </div>
+                <ul class="mt-3">
+                    <li *ngFor="let d of project.content">{{ d }}</li>
+                </ul>
+                <div class="project-card-actions">
+                    <!-- <div *ngIf="project.deleted" class="project-card-deleted">
+        <span>Delisted</span>
+      </div> -->
+                    <a *ngIf="project.url" [href]="project.url" target="_blank" rel="noreferrer">
+                        <button class="custom-bottom-sec" type="button">
+                            Visit <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </button>
+                    </a>
+                    <a *ngIf="project.github" [href]="project.github" target="_blank" rel="noreferrer">
+                        <button class="custom-bottom" type="button">
+                            Github <i class="fa-brands fa-github"></i>
+                        </button>
+
+                    </a>
+                </div>
+            </div>
+
+            <!-- </div> -->
+        </div>
+    </div>
+</div>
+<div class="modal-backdrop fade show"></div>

@@ -9,7 +9,7 @@ export interface Project {
   title: string;
   github: string;
   url?: string;
-  image: any; // This could be a string (URL) or an imported asset reference
+  images: string[]; // This could be a string (URL) or an imported asset reference
   tagline: string;
   content: string[];
   stack: ProjectStack[];

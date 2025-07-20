@@ -9,6 +9,7 @@ import { Project, ProjectStack } from 'src/app/models/project.model';
 export class ProjectCardComponent {
   @Input() project!: Project;
   stackItems: string[] = [];
+  selectedProject: Project | null = null;
 
   ngOnInit() {
     this.setStackItems(this.project.stack.slice(0, 2));
@@ -33,6 +34,14 @@ export class ProjectCardComponent {
     if (url) {
       window.open(url, '_blank');
     }
+  }
+
+  openProjectDetails() {
+    this.selectedProject = this.project;
+  }
+
+  onClose() {
+    this.selectedProject = null;
   }
 
 }

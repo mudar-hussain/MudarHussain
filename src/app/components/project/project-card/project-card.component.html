@@ -4,15 +4,15 @@
     <span class="dot yellow-dot"></span>
     <span class="dot green-dot"></span>
   </div>
-  <div class="project-card-image" (click)="openUrl(project.url)">
+  <div class="project-card-image" (click)="openProjectDetails()">
     <div class="project-card-image-wrapper">
-      <img [src]="project.image" [alt]="project.title" loading="lazy" decoding="async" />
+      <img [src]="project.images[0]" [alt]="project.title" loading="lazy" decoding="async" />
     </div>
   </div>
-  <div class="project-card-title title-font" (click)="openUrl(project.url)">
+  <div class="project-card-title title-font" (click)="openProjectDetails()">
     <h3>{{ project.title }}</h3>
   </div>
-  <div class="project-card-desc font-sec" (click)="openUrl(project.url)">
+  <div class="project-card-desc font-sec" (click)="openProjectDetails()">
     <p>{{ project.tagline }}</p>
   </div>
   <div class="project-card-stack">
@@ -37,3 +37,7 @@
     </a>
   </div>
 </div>
+
+<app-project-details *ngIf="selectedProject" [project]="selectedProject" (close)="onClose()">
+
+</app-project-details>
