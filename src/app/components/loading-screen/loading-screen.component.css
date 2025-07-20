@@ -21,8 +21,8 @@
 
 /* Intro Avatar (Bouncing Animation) */
 .intro-avatar {
-  border: 2px solid white;
-  border-radius: 50%;
+  /* border: 2px solid white; */
+  /* border-radius: 50%; */
   width: 225px;
   animation: bounce 0.7s infinite alternate;
 }
