@@ -71,18 +71,19 @@
 /* Responsive Adjustments */
 @media (max-width: 1300px) {
   .hero-section {
-    flex-direction: column; /* Stack vertically */
-    text-align: center; /* Center align */
+    flex-direction: column; 
+    text-align: center; 
     padding: 0%;
   }
   .info-section {
-    max-width: 100%; /* Full width */
+    max-width: 100%; 
     font-size: smaller;
   }
   .avatar-section {
-    display: none; /* Hide avatar section */
+    display: none;
   }
   .desc {
     font-size: medium;
   }
 }
+

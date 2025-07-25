@@ -2,28 +2,35 @@
     <div class="info-section">
         <h1 class="title-font">Hey! I'm <strong><span class="text-light-beige">Mudar Hussain</span></strong></h1>
         <br />
-        <h4 class="descH4">
-            <i class="dot orange-dot fa-solid fa-circle"></i>
-            <span class="text-light-beige">Full</span> Stack
-            <i class="dot yellow-dot fa-solid fa-circle"></i>
-            <span class="text-light-beige">System</span> Architect
-            <i class="dot green-dot fa-solid fa-circle"></i>
-            <span class="text-light-beige">Tech</span> Enthusiast
-        </h4>
+        <app-typewriter 
+            [strings]="[
+                'Full Stack Developer',
+                'System Architect',
+                'Open Source Contributor',
+                'Front End Developer',
+                'UI / UX Designer',
+                'Back End Developer',
+                'Software Engineer',
+                'Tech Enthusiast'
+            ]" 
+            [typingSpeed]="80" [deleteSpeed]="50" [loop]="true">
+        </app-typewriter>
         <br />
-        <h5 class="desc"><i class="fa-solid fa-terminal"></i>
+        <h5 class="desc">
+            <i class="dot orange-dot fa-solid fa-circle"></i>
             Whether it's designing a scalable systems, optimizing code, or crushing a
             <span class="text-light-beige">LeetCode</span> problem, I love what I do!
         </h5>
         <br />
         <h5 class="desc">
-            <i class="fa-solid fa-terminal"></i>
+            <i class="dot yellow-dot fa-solid fa-circle"></i>
             I specialize in <span class="text-light-beige">Angular</span>,
             <span class="text-light-beige">Java</span>, and backend development and
             have a passion for <span class="text-light-beige">System Design</span>.
         </h5>
         <br />
-        <h5 class="desc"> <i class="fa-solid fa-terminal"></i>
+        <h5 class="desc">
+            <i class="dot green-dot fa-solid fa-circle"></i>
             When I'm not <span class="text-light-beige">coding</span>, you'll probably
             find me exploring new tech trends or competing in coding
             <span class="text-light-beige">contests</span>.
@@ -31,11 +38,13 @@
         <br />
         <div class="hero-buttons">
             <a href="#contact">
-                <button class="custom-bottom-sec" type="button">Let's Talk <i class="fa-regular fa-comment-dots"></i></button>
+                <button class="custom-bottom-sec" type="button">
+                    Let's Talk <i class="fa-regular fa-comment-dots"></i>
+                </button>
             </a>
             <a style="margin-left: 30px;" target="_blank" [href]="this.resume">
                 <button class="custom-bottom" type="button">
-                    Get Resume <i class="fa-solid fa-download"></i>
+                    My Resume <i class="fa-solid fa-download"></i>
                 </button>
             </a>
         </div>
@@ -43,7 +52,9 @@
     <div class="avatar-section">
         <div id="avatar">
             <!-- <img src="https://drive.google.com/thumbnail?id=18lUqrLfkYmb27sumCJnscG1xYx2xjQFF&sz=s2000" alt="Mudar Hussain" /> -->
-            <img src="https://drive.google.com/thumbnail?id=1o5GHF24qYXTZGjlGQguqkigz5rxx4A6L&sz=s2000" alt="Mudar Hussain" />
+            <!-- <img src="https://drive.google.com/thumbnail?id=1o5GHF24qYXTZGjlGQguqkigz5rxx4A6L&sz=s2000" -->
+            <img src="https://raw.githubusercontent.com/mudar-hussain/mudar-hussain/main/portfolio/assets/img/avatar/avatar-ghibli.png"
+                alt="Mudar Hussain"  loading="lazy" decoding="async"/>
         </div>
     </div>
 </div>

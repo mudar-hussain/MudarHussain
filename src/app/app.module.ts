@@ -32,6 +32,7 @@ import { ProjectComponent } from './components/project/project.component';
 import { TechnicalExpertiseComponent } from './components/technical-expertise/technical-expertise.component';
 import { ProjectCardComponent } from './components/project/project-card/project-card.component';
 import { ProjectDetailsComponent } from './components/project/project-details/project-details.component';
+import { TypewriterComponent } from './components/hero-section/TypewriterComponent';
 
 @NgModule({
   declarations: [
@@ -55,7 +56,8 @@ import { ProjectDetailsComponent } from './components/project/project-details/pr
     ProjectComponent,
     TechnicalExpertiseComponent,
     ProjectCardComponent,
-    ProjectDetailsComponent
+    ProjectDetailsComponent,
+    TypewriterComponent
   ],
   imports: [
     BrowserModule,
