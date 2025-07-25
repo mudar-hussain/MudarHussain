@@ -148,6 +148,11 @@ export const Skills = [
         id: "figma",
         icon: "fa-brands fa-figma",
         name: "Figma",
+      },
+      {
+        id: "Power BI",
+        icon: "fa-solid fa-chart-simple",
+        name: "Power BI",
       }
     ]
   },
@@ -156,7 +161,7 @@ export const Skills = [
 export const Experiences = [
   {
     organisation: "The Bank of New York",
-    logo: "https://drive.google.com/thumbnail?id=19l96QqqLTM7pCh5ydQs4bB9gxVuGVxak&sz=s1000",
+    logo: "https://raw.githubusercontent.com/mudar-hussain/mudar-hussain/main/portfolio/assets/img/logo/bny.png",
     link: "https://www.bny.com/",
     positions: [
       {
@@ -186,7 +191,7 @@ export const Experiences = [
   },
   {
     organisation: "Tata Consultancy Services",
-    logo: "https://drive.google.com/thumbnail?id=19X9qP7uWDFKbBHDAsLHCe4zYYfw3fbvu&sz=s1000",
+    logo: "https://raw.githubusercontent.com/mudar-hussain/mudar-hussain/main/portfolio/assets/img/logo/tcs.png",
     link: "https://www.tcs.com/",
     positions: [
       {
@@ -231,7 +236,7 @@ export const Experiences = [
   },
   {
     organisation: "H. M. Construction",
-    logo: "https://drive.google.com/thumbnail?id=1eyyu5xDiCDzTC03GCuMHxnSChmDkfinl&sz=s1000",
+    logo: "https://raw.githubusercontent.com/mudar-hussain/mudar-hussain/main/portfolio/assets/img/logo/hmc.jpeg",
     link: "https://www.justdial.com/Nagpur/H-M-Construction-OPP-to-Namak-Karkhana-Mahatma-Fule-Market/0712PX712-X712-170919181646-W8Z8_BZDET",
     positions: [
       {
@@ -249,7 +254,7 @@ export const Experiences = [
   },
   {
     organisation: "Balaji Structural Consultancy",
-    logo: "https://drive.google.com/thumbnail?id=1_yLGZoHITxSkMydekYYI9_EHF_R5aLYC&sz=s1000",
+    logo: "https://raw.githubusercontent.com/mudar-hussain/mudar-hussain/main/portfolio/assets/img/logo/bsc.png",
     link: "http://www.bscstructuralrcc.com/",
     positions: [
       {
@@ -274,7 +279,15 @@ export const Projects = [
     github: "https://github.com/mudar-hussain/Logic-In-Layers",
     url: "https://logicinlayers.web.app/",
     images: [
-      "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
+      "https://raw.githubusercontent.com/mudar-hussain/mudar-hussain/main/portfolio/assets/img/project/logicinlayers/1.png",
+      "https://raw.githubusercontent.com/mudar-hussain/mudar-hussain/main/portfolio/assets/img/project/logicinlayers/2.png",
+      "https://raw.githubusercontent.com/mudar-hussain/mudar-hussain/main/portfolio/assets/img/project/logicinlayers/3.png",
+      "https://raw.githubusercontent.com/mudar-hussain/mudar-hussain/main/portfolio/assets/img/project/logicinlayers/4.png",
+      "https://raw.githubusercontent.com/mudar-hussain/mudar-hussain/main/portfolio/assets/img/project/logicinlayers/5.png",
+      "https://raw.githubusercontent.com/mudar-hussain/mudar-hussain/main/portfolio/assets/img/project/logicinlayers/6.png",
+      "https://raw.githubusercontent.com/mudar-hussain/mudar-hussain/main/portfolio/assets/img/project/logicinlayers/7.png",
+      "https://raw.githubusercontent.com/mudar-hussain/mudar-hussain/main/portfolio/assets/img/project/logicinlayers/8.png",
+      "https://raw.githubusercontent.com/mudar-hussain/mudar-hussain/main/portfolio/assets/img/project/logicinlayers/9.png",
     ],
     tagline: "Responsive Web Application",
     content: [
@@ -325,7 +338,15 @@ export const Projects = [
     github: "https://github.com/mudar-hussain/StickyLinkz",
     url: "https://stickylinkz.web.app/",
     images: [
-      "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
+      "https://raw.githubusercontent.com/mudar-hussain/mudar-hussain/main/portfolio/assets/img/project/stickylinkz/1.png",
+      "https://raw.githubusercontent.com/mudar-hussain/mudar-hussain/main/portfolio/assets/img/project/stickylinkz/2.png",
+      "https://raw.githubusercontent.com/mudar-hussain/mudar-hussain/main/portfolio/assets/img/project/stickylinkz/3.png",
+      "https://raw.githubusercontent.com/mudar-hussain/mudar-hussain/main/portfolio/assets/img/project/stickylinkz/4.png",
+      "https://raw.githubusercontent.com/mudar-hussain/mudar-hussain/main/portfolio/assets/img/project/stickylinkz/5.png",
+      "https://raw.githubusercontent.com/mudar-hussain/mudar-hussain/main/portfolio/assets/img/project/stickylinkz/6.png",
+      "https://raw.githubusercontent.com/mudar-hussain/mudar-hussain/main/portfolio/assets/img/project/stickylinkz/7.png",
+      "https://raw.githubusercontent.com/mudar-hussain/mudar-hussain/main/portfolio/assets/img/project/stickylinkz/8.png",
+      "https://raw.githubusercontent.com/mudar-hussain/mudar-hussain/main/portfolio/assets/img/project/stickylinkz/9.png"
     ],
     tagline: "Web Application",
     content: [
@@ -381,7 +402,7 @@ export const Projects = [
     github: "https://github.com/mudar-hussain/SocialApp",
     url: "",
     images: [
-      "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
+      "https://raw.githubusercontent.com/mudar-hussain/mudar-hussain/main/portfolio/assets/img/project/socialapp/1.png"
     ],
     tagline: "Full Stack Application",
       content: [
@@ -437,7 +458,9 @@ export const Projects = [
     github: "https://github.com/mudar-hussain/Sticky_Notes/",
     url: "https://react-sticky-notes-app.netlify.app/",
     images: [
-      "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
+      "https://raw.githubusercontent.com/mudar-hussain/mudar-hussain/main/portfolio/assets/img/project/stickynotes/1.png",
+      "https://raw.githubusercontent.com/mudar-hussain/mudar-hussain/main/portfolio/assets/img/project/stickynotes/2.png",
+      "https://raw.githubusercontent.com/mudar-hussain/mudar-hussain/main/portfolio/assets/img/project/stickynotes/3.png"
     ],
     tagline: "Web Application",
       content: [
@@ -478,7 +501,14 @@ export const Projects = [
     github: "https://github.com/mudar-hussain/Smart_Contact_Manager/",
     url: "",
     images: [
-      "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
+      "https://raw.githubusercontent.com/mudar-hussain/mudar-hussain/main/portfolio/assets/img/project/contactsvault/1.png",
+      "https://raw.githubusercontent.com/mudar-hussain/mudar-hussain/main/portfolio/assets/img/project/contactsvault/2.png",
+      "https://raw.githubusercontent.com/mudar-hussain/mudar-hussain/main/portfolio/assets/img/project/contactsvault/3.png",
+      "https://raw.githubusercontent.com/mudar-hussain/mudar-hussain/main/portfolio/assets/img/project/contactsvault/4.png",
+      "https://raw.githubusercontent.com/mudar-hussain/mudar-hussain/main/portfolio/assets/img/project/contactsvault/5.png",
+      "https://raw.githubusercontent.com/mudar-hussain/mudar-hussain/main/portfolio/assets/img/project/contactsvault/6.png",
+      "https://raw.githubusercontent.com/mudar-hussain/mudar-hussain/main/portfolio/assets/img/project/contactsvault/7.png",
+      "https://raw.githubusercontent.com/mudar-hussain/mudar-hussain/main/portfolio/assets/img/project/contactsvault/8.png"
     ],
     tagline: "Full Stack Application",
       content: [
@@ -534,7 +564,7 @@ export const Projects = [
     github: "https://github.com/mudar-hussain/The-Hungry-Mind",
     url: "",
     images: [
-      "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
+      "https://raw.githubusercontent.com/mudar-hussain/mudar-hussain/main/portfolio/assets/img/project/thehungrymind/1.png"
     ],
     tagline: "Full Stack Application",
       content: [
@@ -585,11 +615,64 @@ export const Projects = [
   },
   {
     id: "project-7",
+    title: "SuperStore Reporting System",
+    github: "https://github.com/mudar-hussain/SuperStore_Report",
+    url: "",
+    images: [
+      "https://raw.githubusercontent.com/mudar-hussain/mudar-hussain/main/portfolio/assets/img/project/superstorereport/1.png",
+      "https://raw.githubusercontent.com/mudar-hussain/mudar-hussain/main/portfolio/assets/img/project/superstorereport/2.png",
+      "https://raw.githubusercontent.com/mudar-hussain/mudar-hussain/main/portfolio/assets/img/project/superstorereport/3.png"
+    ],
+    tagline: "Power BI Dashboard",
+      content: [
+        "Power BI dashboard for SuperStore reporting system, providing insights into sales, inventory, and customer trends.",
+        "Designed to visualize key metrics and trends, enabling data-driven decision-making.",
+      ],
+    stack: [
+      {
+        id: "Power BI",
+        icon: "fa-solid fa-chart-simple",
+        name: "Power BI",
+      }
+    ]
+  },
+  {
+    id: "project-8",
+    title: "Coding Expert",
+    github: "https://github.com/mudar-hussain/Coding_Expert",
+    url: "",
+    images: [
+      "https://raw.githubusercontent.com/mudar-hussain/mudar-hussain/main/portfolio/assets/img/project/codingexpert/1.png"
+    ],
+    tagline: "Web Extension",
+      content: [
+        "Developed a Chrome extension to enhance coding skills with daily challenges, solutions, and progress tracking.",
+      ],
+    stack: [
+      {
+        id: "html",
+        icon: "fa-brands fa-html5",
+        name: "HTML",
+      },
+      {
+        id: "css",
+        icon: "fa-brands fa-css3-alt",
+        name: "CSS",
+      },
+      {
+        id: "JavaScript",
+        icon: "fa-brands fa-js",
+        name: "JavaScript",
+      }
+    ]
+  },
+  {
+    id: "project-9",
     title: "Water Supply Scheme",
     github: "https://github.com/mudar-hussain",
     url: "",
     images: [
-      "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
+      "https://raw.githubusercontent.com/mudar-hussain/mudar-hussain/main/portfolio/assets/img/project/watersupplyscheme/1.webp"
     ],
     tagline: "Sipna College Campus, Amravati",
       content: [
