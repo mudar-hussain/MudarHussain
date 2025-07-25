@@ -9,9 +9,3 @@
   justify-content: space-around;
   gap: 10px;
 }
-
-@media screen and (max-width: 700px) {
-  .projects {
-    flex-direction: column; /* Stack vertically */
-  }
-}

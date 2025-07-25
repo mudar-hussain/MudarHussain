@@ -1,5 +1,6 @@
 .skill-card {
     padding: 16px;
+    padding-right: 0px;
   }
   .skill-items {
     display: flex;

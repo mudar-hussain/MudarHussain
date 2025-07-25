@@ -46,7 +46,7 @@ export const Skills = [
       },
       {
         id: "css",
-        icon: "fa-brands fa-css3-alt",
+        icon: "fa-brands fa-css",
         name: "CSS",
       },
       {
@@ -62,7 +62,7 @@ export const Skills = [
     ]
   },
   {
-    title: "Frameworks/Libraries",
+    title: "Frameworks / Libraries",
     items: [
       {
         id: "spring",
@@ -107,7 +107,7 @@ export const Skills = [
     ]
   },
   {
-    title: "Tools",
+    title: "Development Tools",
     items: [
       {
         id: "git",
@@ -638,7 +638,7 @@ export const Projects = [
   },
   {
     id: "project-8",
-    title: "Coding Expert",
+    title: "Coding Expert Extension",
     github: "https://github.com/mudar-hussain/Coding_Expert",
     url: "",
     images: [
