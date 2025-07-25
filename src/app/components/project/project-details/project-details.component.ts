@@ -1,12 +1,14 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { AfterViewInit, Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Project, ProjectStack } from 'src/app/models/project.model';
+
+declare var bootstrap: any;
 
 @Component({
   selector: 'app-project-details',
   templateUrl: './project-details.component.html',
   styleUrls: ['./project-details.component.css']
 })
-export class ProjectDetailsComponent implements OnInit {
+export class ProjectDetailsComponent implements OnInit, AfterViewInit {
   @Input() project!: Project;
   @Output() close = new EventEmitter<void>();
   stackItems: string[] = [];
@@ -17,6 +19,15 @@ export class ProjectDetailsComponent implements OnInit {
     }
   }
 
+  ngAfterViewInit() {
+    const carouselEl = document.getElementById('carouselExample');
+    if (carouselEl) {
+      new bootstrap.Carousel(carouselEl, {
+        interval: 3000,
+        ride: 'carousel'
+      });
+    }
+  }
   
     setStackItems(stacks: ProjectStack[]) {
       this.stackItems = stacks.map(stack => stack.name);

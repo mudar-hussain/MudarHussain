@@ -18,14 +18,11 @@
 
 .modal-body {
   padding-top: 0px !important;
+  margin-top: 0px !important;
 }
 
 .modal-content {
   background-color: rgb(24 24 27);
-}
-
-.project-card-title {
-    margin-top: 10px;
 }
 
 .project-card-actions {
