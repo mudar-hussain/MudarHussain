@@ -3,7 +3,7 @@ name: Firebase CI/CD
 on:
   push:
     branches:
-      - main   # Run only on main branch
+      - master   # Run only on main branch
 
 jobs:
 
