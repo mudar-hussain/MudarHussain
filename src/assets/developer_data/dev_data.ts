@@ -21,44 +21,49 @@ export const Skills = [
     items: [
       {
         id: "java",
-        icon: "fa-brands fa-java",
+        icon: "icon-java-bold",
         name: "Java",
       },
       {
         id: "python",
-        icon: "fa-brands fa-python",
+        icon: "icon-python",
         name: "Python",
       },
       {
         id: "sql",
-        icon: "fa-solid fa-database",
+        icon: "icon-database-alt2",
         name: "SQL",
       },
       {
-        id: "cpp",
-        icon: "fa-brands fa-c",
-        name: "C/C++",
-      },
-      {
         id: "html",
-        icon: "fa-brands fa-html5",
+        icon: "icon-html5",
         name: "HTML",
       },
-      {
-        id: "css",
-        icon: "fa-brands fa-css",
-        name: "CSS",
-      },
+      // {
+      //   id: "css",
+      //   icon: "icon-css3",
+      //   name: "CSS",
+      // },
       {
         id: "javaScript",
-        icon: "fa-brands fa-js",
+        icon: "icon-javascript",
         name: "JavaScript",
       },
       {
         id: "typescript",
         icon: "fa-brands fa-js",
         name: "TypeScript",
-      }
+      },
+      // {
+      //   id: "c",
+      //   icon: "icon-c",
+      //   name: "C",
+      // },
+      {
+        id: "cpp",
+        icon: "icon-cplusplus",
+        name: "C/C++",
+      },
     ]
   },
   {
@@ -66,8 +71,8 @@ export const Skills = [
     items: [
       {
         id: "spring",
-        icon: "fa-solid fa-leaf",
-        name: "Spring",
+        icon: "icon-spring",
+        name: "Spring Boot",
       },
       {
         id: "hibernate",
@@ -76,53 +81,113 @@ export const Skills = [
       },
       {
         id: "angular",
-        icon: "fa-brands fa-angular",
+        icon: "icon-angular",
         name: "Angular",
       },
       {
         id: "react",
-        icon: "fa-brands fa-react",
-        name: "ReactJS",
+        icon: "icon-reactjs",
+        name: "React.js",
       },
       {
         id: "node",
         icon: "fa-brands fa-node",
-        name: "NodeJS",
+        name: "Node.js",
       },
       {
         id: "bootstrap",
-        icon: "fa-brands fa-bootstrap",
+        icon: "icon-bootstrap",
         name: "Bootstrap",
       },
-      {
-        id: "tailwind",
-        icon: "fa-solid fa-t",
-        name: "Tailwind CSS",
-      },
-      {
-        id: "jquery",
-        icon: "fa-solid fa-j",
-        name: "jQuery",
-      }
+      // {
+      //   id: "tailwind",
+      //   icon: "fa-solid fa-t",
+      //   name: "Tailwind CSS",
+      // },
+      // {
+      //   id: "jquery",
+      //   icon: "icon-jquery",
+      //   name: "jQuery",
+      // }
     ]
   },
   {
-    title: "Development Tools",
+    title: "Databases",
+    items: [
+      {
+        id: "oracle",
+        icon: "icon-oracle",
+        name: "Oracle DB",
+      },
+      {
+        id: "postgresql",
+        icon: "icon-postgres-alt",
+        name: "PostgreSQL",
+      },
+      {
+        id: "mysql",
+        icon: "icon-mysql",
+        name: "MySQL",
+      },
+      {
+        id: "cassandra",
+        icon: "icon-cassandra",
+        name: "Cassandra",
+      },
+      {
+        id: "redis",
+        icon: "icon-redis",
+        name: "Redis",
+      },
+      {
+        id: "mongodb",
+        icon: "icon-mongodb",
+        name: "MongoDB",
+      },
+    ]
+  },
+  {
+    title: "DevOps & Cloud Tools",
     items: [
       {
         id: "git",
-        icon: "fa-brands fa-git-alt",
+        icon: "icon-git",
         name: "Git",
       },
       {
-        id: "vscode",
-        icon: "fa-solid fa-code",
-        name: "VS Code",
+        id: "docker",
+        icon: "icon-docker",
+        name: "Docker",
       },
       {
-        id: "intellij",
-        icon: "fa-solid fa-info",
-        name: "Intellij",
+        id: "kubernetes",
+        icon: "fa-solid fa-dharmachakra",
+        name: "Kubernetes",
+      },
+      {
+        id: "aws",
+        icon: "icon-aws",
+        name: "AWS",
+      },
+      {
+        id: "firebase",
+        icon: "fa-solid fa-fire",
+        name: "Firebase",
+      },
+    ]
+  },
+  {
+    title: "Build & Productivity Tools",
+    items: [
+      {
+        id: "maven",
+        icon: "icon-maven",
+        name: "Maven",
+      },
+      {
+        id: "npm",
+        icon: "icon-npm",
+        name: "NPM",
       },
       {
         id: "postman",
@@ -130,9 +195,14 @@ export const Skills = [
         name: "Postman",
       },
       {
-        id: "github",
-        icon: "fa-brands fa-github",
-        name: "GitHub",
+        id: "intellij",
+        icon: "fa-solid fa-info",
+        name: "IntelliJ IDEA",
+      },
+      {
+        id: "vscode",
+        icon: "fa-solid fa-code",
+        name: "VS Code",
       },
       {
         id: "gitlab",
@@ -140,9 +210,9 @@ export const Skills = [
         name: "Gitlab",
       },
       {
-        id: "firebase",
-        icon: "fa-solid fa-fire-flame-curved",
-        name: "Firebase",
+        id: "github",
+        icon: "fa-brands fa-github",
+        name: "GitHub",
       },
       {
         id: "figma",
@@ -150,10 +220,15 @@ export const Skills = [
         name: "Figma",
       },
       {
+        id: "canva",
+        icon: "fa-solid fa-c",
+        name: "Canva",
+      },
+      {
         id: "Power BI",
         icon: "fa-solid fa-chart-simple",
         name: "Power BI",
-      }
+      },
     ]
   },
 ];

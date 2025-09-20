@@ -1,0 +1,74 @@
+name: Firebase CI/CD
+
+on:
+  push:
+    branches:
+      - main   # Run only on main branch
+
+jobs:
+
+  # Build Angular App
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18  # Compatible with Angular 16
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Build Angular Production
+        run: npm run build -- --configuration production
+
+      - name: Upload Build Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: dist
+          path: dist/
+
+  # Run Tests
+  test:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Run Angular Tests
+        run: npm test -- --watch=false --browsers=ChromeHeadless
+
+  # Deploy to Firebase Hosting
+  deploy:
+    runs-on: ubuntu-latest
+    needs: [build, test]  # Deploy only if build & test pass
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Deploy to Firebase
+        uses: w9jds/firebase-action@v2.2.0
+        with:
+          args: deploy --only hosting
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}

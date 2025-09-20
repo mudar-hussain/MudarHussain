@@ -1,6 +1,10 @@
+.modal {
+  margin: 20px 5px;
+  width: 95%;
+}
 .project-card {
-  margin: 20px;
-  /* width: 300px; */
+  margin: 20px 5px;
+  width: 100%;
   flex: 1;
   background-color: rgb(24 24 27);
   padding: 0px 10px 10px 10px;
