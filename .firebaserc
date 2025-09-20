@@ -3,6 +3,14 @@
     "default": "mudar-hussain",
     "mudar-hussain": "mudar-hussain"
   },
-  "targets": {},
+  "targets": {
+    "mudar-hussain": {
+      "hosting": {
+        "mudar-hussain": [
+          "mudar-hussain"
+        ]
+      }
+    }
+  },
   "etags": {}
 }
