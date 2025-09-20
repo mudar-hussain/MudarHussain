@@ -3,13 +3,15 @@ name: Firebase CI/CD
 on:
   push:
     branches:
-      - master   # Run only on main branch
+      - master   # Run only on master branch
 
 jobs:
 
   # Build Angular App
   build:
     runs-on: ubuntu-latest
+    outputs:
+      dist-path: ${{ steps.upload-artifact.outputs.artifact-path }}
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
@@ -18,6 +20,14 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18  # Compatible with Angular 16
+
+      - name: Cache Node Modules
+        uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
 
       - name: Install Dependencies
         run: npm ci
@@ -56,13 +66,20 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: Setup Node
-        uses: actions/setup-node@v3
+      - name: Restore Node Modules Cache
+        uses: actions/cache@v3
         with:
-          node-version: 18
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
 
       - name: Install Dependencies
         run: npm ci
+
+      - name: Download Build Artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: dist/
 
       - name: Run Angular Tests
         run: npm test -- --watch=false --browsers=ChromeHeadless
@@ -75,13 +92,20 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: Setup Node
-        uses: actions/setup-node@v3
+      - name: Restore Node Modules Cache
+        uses: actions/cache@v3
         with:
-          node-version: 18
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
 
       - name: Install Dependencies
         run: npm ci
+
+      - name: Download Build Artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: dist/
 
       # Generate environment.prod.ts again for deploy step
       - name: Generate environment.prod.ts
@@ -100,9 +124,10 @@ jobs:
             }
           };" > src/environments/environment.prod.ts
 
-      - name: Deploy to Firebase
-        uses: w9jds/firebase-action@v2.2.0
+      - name: Deploy to Firebase Hosting
+        uses: FirebaseExtended/action-hosting-deploy@v1
         with:
-          args: deploy
-        env:
-          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+          repoToken: "${{ secrets.GITHUB_TOKEN }}"
+          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT }}"
+          channelId: live
+          projectId: "mudar-hussain"
