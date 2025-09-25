@@ -1,6 +1,7 @@
 import { Injectable, OnInit } from '@angular/core';
 import { ConfigService } from './config.service';
 import { TerminalCommand } from '../models/terminal-command.model';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -8,10 +9,33 @@ import { TerminalCommand } from '../models/terminal-command.model';
 export class TerminalCommandsService {
   private term_commands: TerminalCommand;
   private welcome_message: string;
+  private terminal_username = new BehaviorSubject<string>('root');
+
+  //Observable for components to subscribe to 
+  currentUsernameObservable = this.terminal_username.asObservable();
 
   constructor(private configService: ConfigService) {
     this.term_commands = this.configService.getTerminalCommands();
     this.welcome_message = this.configService.getWelcomeMessage();
+    this.getTerminalUsername();
+  }
+
+  // Current value (if you just need to read once)
+  getTerminalUsername() {
+    try {
+      let terminal_username = localStorage.getItem('terminal_username');
+      if (terminal_username) {
+        this.terminal_username.next(terminal_username);
+      }
+    } catch (e) {
+      this.terminal_username.next('root');
+    }
+  }
+
+  // Method to change username dynamically
+  changeTerminalUsername(newUsername: string) {
+    localStorage.setItem('terminal_username', newUsername);
+    this.terminal_username.next(newUsername);
   }
 
   // Get the response for a specific command

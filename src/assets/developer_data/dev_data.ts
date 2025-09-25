@@ -155,6 +155,11 @@ export const Skills = [
         name: "Git",
       },
       {
+        id: "gitactions",
+        icon: "fa-solid fa-diagram-project",
+        name: "Git Actions",
+      },
+      {
         id: "docker",
         icon: "icon-docker",
         name: "Docker",
@@ -173,6 +178,11 @@ export const Skills = [
         id: "firebase",
         icon: "fa-solid fa-fire",
         name: "Firebase",
+      },
+      {
+        id: "cicd",
+        icon: "fa-solid fa-code-merge",
+        name: "CI/CD Pipelines",
       },
     ]
   },
@@ -245,19 +255,23 @@ export const Experiences = [
         location: "Pune, India",
         content: [
           {
-            text: "Developed a Billing & Accounting system for Trade Finance in TIA, eliminating AFS dependency and cutting licensing costs.",
+            text: "Developed a Billing & Accounting system, streamlining cross-team operations by eliminating dependency on the AFS.",
             link: ""
           },
           {
-            text: "Boosted BNY Ops efficiency by automating accrual calculations & billing workflows, reducing manual effort by 4 hrs/day.",
+            text: "Automated accruals and billing with bank specific commission structure, saving 4+ hrs/day using Spring jobs and scheduler.",
             link: ""
           },
           {
-            text: "Built Trade Monitoring Dashboard for real-time tracking of transactions, errors, alerts, costs, and volume trends.",
+            text: "Spearheaded the architecture & development of a multi-tenant invoicing system, enabling partner banks to streamline the client invoicing via flexible, service-oriented design.",
             link: ""
           },
           {
-            text: "Improved code quality by raising test coverage to 90%, fixing SonarQube reported issues, & ensuring smooth prod releases.",
+            text: "Built a Trade Monitoring Dashboard for real-time tracking of global transactions, errors, alerts, costs, and volume trends.",
+            link: ""
+          },
+          {
+            text: "Improved code quality, ensuring smooth production releases via 90% test coverage and resolving SonarQube reported issues.",
             link: ""
           }
         ],
@@ -283,7 +297,11 @@ export const Experiences = [
             link: ""
           },
           {
-            text: "Worked alongside diverse teams to gather requirements, strategize milestones, and ensure timely, high-quality solutions.",
+            text: "Built an RPA-driven feature to automated logistics raw data transformation, saving 5+ hrs/day and minimizing errors.",
+            link: ""
+          },
+          {
+            text: "Built Power BI Dashboard on sales trends, driving insights.",
             link: ""
           }
         ],

@@ -2,6 +2,19 @@ const TerminalConfiguration = {
   welcome_message: "Type 'help' to get started !",
   terminal_username: "[Mudar@Terminal:~]$",
   commands: {
+    help: {
+      whoami: "General information",
+      experience: "Technical Experience",
+      projects: "Projects",
+      education: "Educational background",
+      skills: "Current SWE skills",
+      code: "Coding Profiles",
+      blogs: "Contributing programming tutorials for learners",
+      github: "Where I put my codes :P",
+      linkedIn: "LinkedIn handle of mine.",
+      contact: "Email for any thing",
+      clear: "clears everything from the terminal",
+    },
     whoami: {
       Name: "Mudar Hussain",
       Profession: "Full Stack Developer",
@@ -14,10 +27,11 @@ const TerminalConfiguration = {
         Period: "Sep '23 - Present",
         Location: "Pune, India",
         Experience: [
-          "Developed a Billing & Accounting system for Trade Finance in TIA, eliminating AFS dependency and cutting licensing costs.",
-          "Boosted BNY Ops efficiency by automating accrual calculations & billing workflows, reducing manual effort by 4 hrs/day.",
-          "Built Trade Monitoring Dashboard for real-time tracking of transactions, errors, alerts, costs, and volume trends.",
-          "Improved code quality by raising test coverage to 90%, fixing SonarQube reported issues, & ensuring smooth prod releases."        
+          "Developed a Billing & Accounting system, streamlining cross-team operations by eliminating dependency on the AFS.",
+          "Automated accruals and billing with bank specific commission structure, saving 4+ hrs/day using Spring jobs and scheduler.",
+          "Spearheaded the architecture & development of a multi-tenant invoicing system, enabling partner banks to streamline the client invoicing via flexible, service-oriented design.",
+          "Built a Trade Monitoring Dashboard for real-time tracking of global transactions, errors, alerts, costs, and volume trends.",
+          "Improved code quality, ensuring smooth production releases via 90% test coverage and resolving SonarQube reported issues."           
         ]
       },
       {
@@ -28,7 +42,7 @@ const TerminalConfiguration = {
         Experience: [
           "Engineered a customer data validation feature by integrating D&B and Google API, reducing manual validation time by 80%",
           "Mitigated security risks by implementing user entitlements & multi-level auth in Spring, resolving ethical hacking findings.",
-          "Built an RPA-driven feature to automated logistics raw data transformation, saving 5 hrs/day and minimizing errors.",
+          "Built an RPA-driven feature to automated logistics raw data transformation, saving 5+ hrs/day and minimizing errors.",
           "Built Power BI DBs on sales & lead trends, driving insights."
         ]
       },
@@ -51,35 +65,6 @@ const TerminalConfiguration = {
         ]
       }
     ],
-    education: {
-      University: "Amravati University, India",
-      Degree: "Bachelor of Engineering (Civil)",
-      Batch: "May 2019",
-      Location: "Amravati, India"
-    },
-    help: {
-      whoami: "General information",
-      experience: "Technical Experience",
-      projects: "Projects",
-      education: "Educational background",
-      skills: "Current SWE skills",
-      code: "Coding Profiles",
-      blogs: "Contributing programming tutorials for learners",
-      github: "Where I put my codes :P",
-      linkedIn: "LinkedIn handle of mine.",
-      contact: "Email for any thing",
-      clear: "clears everything from the terminal",
-    },
-    skills: {
-      Frontend: "Angular, React, HTML, CSS, Material UI, Styled component, Bootstrap",
-      Backend: "Java, Spring Framework, Rest architecture",
-      Database: "SQL, MongoDB(familiar)",
-      Programming_Languages: "Java, C#, JavaScript, TypeScript,",
-      Unit_Testing: "JUnit, Jest",
-      Version_Control: "Git",
-      Agile_Tool: "JIRA, SCRUM",
-      Other_Tools: "Microsoft Dynamics 365, Postman, Visual Studio 2022, VSCode",
-    },
     projects:[
       {
         Name: "Logic In Layers",
@@ -132,32 +117,46 @@ const TerminalConfiguration = {
         ]
       }
     ],
+    education: {
+      University: "Amravati University, India",
+      Degree: "Bachelor of Engineering (Civil)",
+      Batch: "May 2019",
+      Location: "Amravati, India"
+    },
+    skills: {
+      Programming_Language: "Java, SQL, JavaScript, TypeScript, Python, C++",
+      Frameworks_and_Libraries: "Spring, Hibernate, Angular, React, Node.js",
+      Database: "Oracle, PostgreSQL, MySQL, Cassandra, Redis",
+      DevOps_and_Cloud_Tools: "Git, GitHub Actions, Docker, Kubernetes, AWS, Firebase, CI/CD Pipelines",
+      Build_and_Productivity_Tools: "Maven, NPM, Postman, IntelliJ IDEA, VS Code, GitLab, GitHub, Figma, Canva, Power BI",
+      Computer_Science_Fundamentals: "Data Structures & Algorithms, Concurrency, Networking, Database Design & Transactions, Object-Oriented Design (SOLID Principles & Design Patterns), Microservices Architecture, Scalable System Design (Low & High Level)",
+    },
     code: [
       {
         Coding_Platform: "LeetCode",
         Insights: "400+ Problems Solved",
-        Handle: "https://leetcode.com/mudar_shussain/"
+        Handle: "https://leetcode.com/u/mudar_hussain/"
       },
       {
-        Coding_Platform: "CodeForces",
-        Insights: "400+ Problems Solved",
-        Handle: "https://codeforces.com/profile/mudar_hussain"
-      },
-      {
-        Coding_Platform: "CodeChef",
-        Insights: "400+ Problems Solved",
-        Handle: "https://www.codechef.com/users/mudar_hussain"
-      },
-      {
-        Coding_Platform: "HackerRank",
-        Insights: "Rated 5* in Problem Solving",
-        Handle: "https://www.hackerrank.com/profile/Mudar_Hussain"
-      },
-      {
-        Coding_Platform: "Geeks For Geeks",
+        Coding_Platform: "GeeksForGeeks",
         Insights: "120+ Problems Solved",
         Handle: "https://www.geeksforgeeks.org/user/mudar_hussain/"
       },
+      {
+        Coding_Platform: "CodeForces",
+        Insights: "Programming Contests",
+        Handle: "https://codeforces.com/profile/mudar_hussain"
+      },
+      // {
+      //   Coding_Platform: "CodeChef",
+      //   Insights: "400+ Problems Solved",
+      //   Handle: "https://www.codechef.com/users/mudar_hussain"
+      // },
+      // {
+      //   Coding_Platform: "HackerRank",
+      //   Insights: "Rated 5* in Problem Solving",
+      //   Handle: "https://www.hackerrank.com/profile/Mudar_Hussain"
+      // },
     ],
     blogs: {
       Blogs_Articles: "https://logicinlayers.web.app/",

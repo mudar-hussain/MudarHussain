@@ -21,14 +21,12 @@ export interface TerminalCommand {
       [key: string]: string
     };
     skills: {
-      Frontend: string,
-      Backend: string,
+      Programming_Language: string,
+      Frameworks_and_Libraries: string,
       Database: string,
-      Programming_Languages: string,
-      Unit_Testing: string,
-      Version_Control: string,
-      Agile_Tool: string,
-      Other_Tools: string
+      DevOps_and_Cloud_Tools: string,
+      Build_and_Productivity_Tools: string,
+      Computer_Science_Fundamentals: string
     };
     projects: {
       Name: string,
