@@ -4,13 +4,7 @@
   align-items: center;
   margin-top: 1%;
   height: 60vh;
-  font-family: "Courier Prime", sans-serif;
-}
-
-.terminal {
-  scroll-behavior: smooth;
-  height: 50vh;
-  overflow-y: auto;
+  font-family: "Courier New", monospace;
 }
 
 .term-container {
@@ -27,24 +21,23 @@
 }
 
 .terminal-prompt {
-  color: var(--terminal-user);
   margin-left: 1.4em;
 }
 
 .terminal-username {
-  font-size: 1.2em;
-  font-weight: 500;
   margin-top: 1em;
   margin-bottom: 0.4em;
   padding-bottom: 4px;
 }
 
 .terminal-welcome-messages {
-  font-size: 1.2em;
-  font-weight: 500;
-  color: var(--terminal-command);
-  margin: 0.5em 1.4em;
+  margin: 1em 1.4em;
 }
+
+.light-blue { color: #66d9ef; }    
+.blue { color: #033dfc; }       
+.green { color: #03fc98; }    
+.red { color: red; }
 
 .input {
   outline: none;
@@ -53,17 +46,47 @@
   color: var(--terminal-command);
 }
 
+.terminal {
+  scroll-behavior: smooth;
+  height: 50vh;
+  overflow-y: auto;
+
+  /* Optional for terminal-like feel */
+  background-color: var(--terminal-background-color);
+  color: #e5e5e5;
+  font-family: "Courier New", monospace;
+}
+
+/* For Chrome, Edge, Safari */
+.terminal::-webkit-scrollbar {
+  width: 8px;                 /* thin scrollbar */
+}
+
+.terminal::-webkit-scrollbar-track {
+  background: var(--terminal-background-color); 
+}
+
+.terminal::-webkit-scrollbar-thumb {
+  background: #1a1a1a;         /* dark thumb */
+  border-radius: 4px;
+  border: 1px solid #2b2b2b;   /* subtle border for contrast */
+}
+
+.terminal::-webkit-scrollbar-thumb:hover {
+  background: #2b2b2b;         /* slightly lighter on hover */
+}
+
+/* For Firefox */
+.terminal {
+  scrollbar-width: thin;
+  scrollbar-color: #1a1a1a var(--terminal-background-color);
+}
+
+
 @media screen and (max-width: 700px) {
   .term-container {
     height: 50vh;
     width: 100%;
   }
 
-  .terminal-welcome-messages {
-    font-size: 1em;
-  }
-
-  .terminal-username {
-    font-size: 1em;
-  }
 }

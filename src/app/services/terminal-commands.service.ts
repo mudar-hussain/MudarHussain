@@ -1,4 +1,4 @@
-import { Injectable, OnInit } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { ConfigService } from './config.service';
 import { TerminalCommand } from '../models/terminal-command.model';
 import { BehaviorSubject } from 'rxjs';
@@ -23,27 +23,27 @@ export class TerminalCommandsService {
   // Current value (if you just need to read once)
   getTerminalUsername() {
     try {
-      let terminal_username = localStorage.getItem('terminal_username');
-      if (terminal_username) {
-        this.terminal_username.next(terminal_username);
-      }
+      let stored_username = localStorage.getItem('terminal_username');
+      let terminal_username:string = stored_username ? JSON.parse(stored_username) : 'root';
+      this.changeTerminalUsername(terminal_username);
     } catch (e) {
-      this.terminal_username.next('root');
+        this.changeTerminalUsername('root');
     }
   }
 
   // Method to change username dynamically
   changeTerminalUsername(newUsername: string) {
-    localStorage.setItem('terminal_username', newUsername);
+    localStorage.setItem('terminal_username', JSON.stringify(newUsername));
     this.terminal_username.next(newUsername);
   }
 
   // Get the response for a specific command
-  getResponseForCommand(command: string): string | string[] {
+  getResponseForCommand(command: string): string {
     switch (command.toLowerCase()) {
       case 'whoami':
         return this.formatResponse(this.term_commands.whoami);
 
+      case 'exp':
       case 'experience':
       case 'experiences':
         return this.formatResponse(this.term_commands.experience);
@@ -80,9 +80,9 @@ export class TerminalCommandsService {
         return this.formatResponse(this.term_commands.help);
 
       default:
+        if (command.trim() === '') return '';
         return (
-          this.formatResponse('Command not found') +
-          ` <br/><b style="font-size: 1em; font-weight: 450; color: var(--terminal-command); margin: 0.5em 1.4em;">${this.welcome_message}</b>`
+          this.formatResponse({[command.toLocaleLowerCase()] : 'Command not found!'})
         );
     }
   }

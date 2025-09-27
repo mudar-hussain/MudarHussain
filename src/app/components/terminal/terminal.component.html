@@ -3,14 +3,17 @@
     <app-terminal-nav></app-terminal-nav>
     <div class="terminal">
       <div class="terminal-welcome-messages">
-        {{ this.term_welcome_message }}
+        Welcome to my interactive terminal portfolio!
+        <br/> <br/> 
+        Type '<span class="light-blue">help</span>' to see the available commands...
       </div>
-      <app-terminal-output *ngFor="let cmd of output" [terminalUsername]="this.term_username"
-        [command]="cmd.command" [response]="cmd.response"></app-terminal-output>
+      <app-terminal-output *ngFor="let response of responseHistory" [terminal_username]="this.terminal_username"
+        [response]="response"></app-terminal-output>
       <div class="terminal-prompt">
-        <span class="terminal-username">{{ this.term_username }}
-          <input #inputRef type="text" aria-label="input-form" [(ngModel)]="input"
-            (keypress)="handleKeyPress($event)" class="input" />
+        <span class="terminal-username">
+          <span [ngClass]="isRoot ? 'red' : 'light-blue'">{{terminal_username}}</span>💀<span class="red">Mudar</span><span class="green">:~{{ isRoot ? '# ' : '$ ' }}</span>
+          <input #inputRef type="text" aria-label="input-form" [(ngModel)]="input" (keypress)="handleKeyPress($event)"
+            class="input" />
         </span>
       </div>
     </div>

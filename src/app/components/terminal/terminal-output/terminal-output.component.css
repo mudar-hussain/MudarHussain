@@ -4,29 +4,37 @@
 }
 
 .terminal-username {
-  font-size: 1.2em;
-  font-weight: 500;
-  margin-top: 1em;
-  margin-bottom: 0.4em;
-  font-family: "Courier Prime", sans-serif;
-  padding-bottom: 4px;
+  font-family: "Courier New", monospace;
 }
 
 .terminal-output {
-  font-size: 1.1em;
-  font-weight: 300;
   margin-left: 1.6em;
-  font-family: "Courier Prime", sans-serif;
-  padding-bottom: 0.5em;
+  font-family: "Courier New", monospace;
+  padding-bottom: 1em;
 }
 
 @media screen and (max-width: 700px) {
-  .terminal-username {
-    font-size: 1em;
-  }
-
   .terminal-output {
-    font-size: 0.9em;
     margin-left: 1.9em;
   }
+}
+
+.light-blue {
+  color: #66d9ef;
+}
+
+.blue {
+  color: #033dfc;
+}
+
+.green {
+  color: #03fc98;
+}
+
+.red {
+  color: red;
+}
+
+.grey {
+  color: #f8f8f2;
 }

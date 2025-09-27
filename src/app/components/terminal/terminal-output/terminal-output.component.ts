@@ -6,7 +6,11 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./terminal-output.component.css']
 })
 export class TerminalOutputComponent {
-  @Input() terminalUsername: string = '';
-  @Input() command: string = '';
-  @Input() response: string | string[] = '';
+  @Input() terminal_username: string = 'root';
+  @Input() response: { command: string; response: string, isInvalidCommand: boolean; } = { command: '', response: '', isInvalidCommand: false };
+  
+  get isRoot(): boolean {
+  return this.terminal_username === 'root';
+}
+
 }

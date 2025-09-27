@@ -3,7 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Roboto&display=swap");
 
 :root {
-  --terminal-background-color: rgb(20, 20, 20);
+  --terminal-background-color: #0f0f0f;
   --terminal-nav-background-color: rgb(30, 30, 30);
   --terminal-user: #a917a8;
   --terminal-command: rgb(100, 149, 237);

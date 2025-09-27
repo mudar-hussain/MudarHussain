@@ -1,52 +1,50 @@
 .nav-inside-container {
   position: sticky;
-  top: 0;
   height: 2.5em;
-  background: #ccc;
+  background: var(--terminal-background-color);
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
   align-items: center;
   padding: 0 1em;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  box-shadow: 0 2px 4px #443626;
+  font-family: "Courier New", Courier, monospace;
 }
 
 .dots-inside-container {
   display: flex;
   align-items: center;
-  align-items: "center";
-  flex-wrap: "wrap";
 }
 
 .text-inside-container {
-  font-family: "Courier Prime", sans-serif;
-  font-size: 1.4em;
-  font-weight: 600;
-  font-size: "0.9em";
-  color: black !important;
+  font-size: 1.3em;
+  letter-spacing: 2px;
 }
 
 .dot {
-  content: '""';
-  width: 1em;
-  height: 1em;
+  width: 0.8em;
+  height: 0.8em;
   border-radius: 50%;
-  margin-right: 8px;
+  margin-right: 6px;
 }
 
 .orange-dot {
-  background-color: var(--terminal-orange-dot);
+  background-color: #ff5f56;
 }
 
 .yellow-dot {
-  background-color: var(--terminal-yellow-dot);
+  background-color: #ffbd2e;
 }
 
 .green-dot {
-  background-color: var(--terminal-green-dot);
+  background-color: #27c93f;
 }
 
+
+/* Terminal icon on right */
 .icon {
-  color: rgb(94, 80, 63);
+  font-size: 1em;
 }
 
 @media screen and (max-width: 700px) {
@@ -55,13 +53,37 @@
   }
 
   .dot {
-    width: 0.7em;
-    height: 0.7em;
-    margin-right: 5px;
+    width: 0.6em;
+    height: 0.6em;
+    margin-right: 4px;
+  }
+
+  .icon {
+    font-size: 0.8em;
   }
 
   .nav-inside-container {
     padding: 0 0.5em;
-    height: 1.8em;
+    height: 2em;
   }
+}
+
+.light-blue {
+  color: #66d9ef;
+}
+
+.blue {
+  color: #033dfc;
+}
+
+.green {
+  color: #03fc98;
+}
+
+.red {
+  color: red;
+}
+
+.grey {
+  color: #f8f8f2;
 }
