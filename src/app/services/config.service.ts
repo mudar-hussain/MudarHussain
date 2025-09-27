@@ -3,7 +3,7 @@ import { TerminalCommand } from '../models/terminal-command.model';
 import TerminalConfiguration from 'src/assets/developer_data/terminalconfiguration';
 import { Skill } from '../models/skill.model';
 import { Experience } from '../models/experience.model';
-import { CodeForces, CodeChef, Experiences, GeeksForGeeks, Github, HackerRank, Leetcode, LinkedIn, Projects, Resume, Skills, SphereTags, Blogs } from 'src/assets/developer_data/dev_data';
+import { CodeForces, CodeChef, Experiences, GeeksForGeeks, Github, HackerRank, Leetcode, LinkedIn, Projects, Resume, Skills, SphereTags, Blogs, Email } from 'src/assets/developer_data/dev_data';
 import { Project } from '../models/project.model';
 
 @Injectable({
@@ -26,6 +26,7 @@ export class ConfigService {
   private experiences: Experience[] = Experiences;
   private projects: Project[] = Projects;
   private sphereTags: string[] = SphereTags;
+  private email: string = Email;
 
   getResume(): string {
     return this.resume;
@@ -89,5 +90,9 @@ export class ConfigService {
 
   getSphereTags(): string[] {
     return this.sphereTags;
+  }
+
+  getEmail(): string {
+    return this.email;
   }
 }

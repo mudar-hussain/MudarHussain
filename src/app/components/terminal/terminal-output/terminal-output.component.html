@@ -1,7 +1,7 @@
 <div>
   <div class="terminal-prompt">
     <span class="terminal-username">
-      <span [ngClass]="isRoot ? 'red' : 'light-blue'">{{terminal_username}}</span>💀<span class="red">Mudar</span><span
+      <span [ngClass]="isRoot ? 'red' : 'light-blue'">{{ response.username }}</span>💀<span class="red">Mudar</span><span
         class="green">:~{{ isRoot ? '# ' : '$ ' }}</span>
       <span style="color: var(--terminal-command);">{{ response.command }}</span>
     </span>

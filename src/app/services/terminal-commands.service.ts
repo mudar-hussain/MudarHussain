@@ -7,16 +7,14 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root',
 })
 export class TerminalCommandsService {
-  private term_commands: TerminalCommand;
-  private welcome_message: string;
+  private term_commands!: TerminalCommand;
   private terminal_username = new BehaviorSubject<string>('root');
 
-  //Observable for components to subscribe to 
+  //Observable for components to subscribe to
   currentUsernameObservable = this.terminal_username.asObservable();
 
   constructor(private configService: ConfigService) {
     this.term_commands = this.configService.getTerminalCommands();
-    this.welcome_message = this.configService.getWelcomeMessage();
     this.getTerminalUsername();
   }
 
@@ -24,10 +22,12 @@ export class TerminalCommandsService {
   getTerminalUsername() {
     try {
       let stored_username = localStorage.getItem('terminal_username');
-      let terminal_username:string = stored_username ? JSON.parse(stored_username) : 'root';
+      let terminal_username: string = stored_username
+        ? JSON.parse(stored_username)
+        : 'root';
       this.changeTerminalUsername(terminal_username);
     } catch (e) {
-        this.changeTerminalUsername('root');
+      this.changeTerminalUsername('root');
     }
   }
 
@@ -39,107 +39,220 @@ export class TerminalCommandsService {
 
   // Get the response for a specific command
   getResponseForCommand(command: string): string {
-    switch (command.toLowerCase()) {
-      case 'whoami':
+    const cmd = command.trim();
+    if (!cmd) return '';
+
+    const lowerCmd = cmd.toLowerCase();
+
+    switch (true) {
+      case lowerCmd === 'whoami':
         return this.formatResponse(this.term_commands.whoami);
 
-      case 'exp':
-      case 'experience':
-      case 'experiences':
+      case lowerCmd === 'cv' || lowerCmd === 'resume':
+        return this.formatValueHtml(this.openLink(this.configService.getResume()));
+
+      case lowerCmd === 'exp' ||
+        lowerCmd === 'experience' ||
+        lowerCmd === 'experiences':
         return this.formatResponse(this.term_commands.experience);
 
-      case 'education':
+      case lowerCmd === 'edu' || lowerCmd === 'education':
         return this.formatResponse(this.term_commands.education);
 
-      case 'skill':
-      case 'skills':
+      case lowerCmd === 'skill' || lowerCmd === 'skills' || lowerCmd === 'techstack':
         return this.formatResponse(this.term_commands.skills);
 
-      case 'project':
-      case 'projects':
+      case lowerCmd === 'project' || lowerCmd === 'projects':
         return this.formatResponse(this.term_commands.projects);
 
-      case 'code':
+      case lowerCmd === 'code':
         return this.formatResponse(this.term_commands.code);
 
-      case 'blog':
-      case 'blogs':
-        return this.formatResponse(this.term_commands.blogs);
+      case lowerCmd === 'leetcode':
+        return this.openLink(this.configService.getLeetcode());
 
-      case 'github':
-        return this.formatResponse(this.term_commands.github);
+      case lowerCmd === 'codeforces':
+        return this.openLink(this.configService.getCodeForces());
 
-      case 'linkedin':
-        return this.formatResponse(this.term_commands.linkedIn);
+      case lowerCmd === 'email':
+        const mailToEmail = 'mailto:' + this.configService.getEmail();
+        return this.openLink(mailToEmail);
 
-      case 'contact':
-        return this.formatResponse(this.term_commands.contact);
+      case lowerCmd === 'blog' || lowerCmd === 'blogs':
+        return this.openLink(this.configService.getBlogs());
 
-      case 'help':
-      case 'ls':
+      case lowerCmd === 'git' || lowerCmd === 'github':
+        return this.openLink(this.configService.getGithub());
+
+      case lowerCmd === 'linkedin':
+        return this.openLink(this.configService.getLinkedIn());
+
+      case lowerCmd === 'help' || lowerCmd === 'ls':
         return this.formatResponse(this.term_commands.help);
 
+      case lowerCmd === 'date':
+        return this.formatResponse({ Date: new Date().toLocaleString() });
+        
+      case lowerCmd === 'tree':
+        return this.buildCommandTree(this.term_commands);
+        // return this.formatResponse(this.buildCommandTree(this.term_commands));
+
+
       default:
-        if (command.trim() === '') return '';
-        return (
-          this.formatResponse({[command.toLocaleLowerCase()] : 'Command not found!'})
-        );
+        // su <user>
+        if (lowerCmd.startsWith('su ')) {
+          const parts = cmd.split(/\s+/);
+          if (parts.length > 1) {
+            this.changeTerminalUsername(parts[1]);
+            return this.formatResponse({
+              [lowerCmd]: `Switched user to ${parts[1]}`,
+            });
+          }
+        }
+        // Unknown command
+        return this.formatResponse({ [lowerCmd]: 'Command not found!' });
     }
+  }
+
+  private openLink(url: string) {
+    setTimeout(() => window.open(url, '_blank')?.focus(), 1000);
+    return `Redirecting to ${this.formatValueHtml(url)} ...`;
   }
 
   private formatResponse(data: any): string {
     if (typeof data === 'string') {
-      return this.formatKey(data);
+      return this.formatValueHtml(data);
     }
 
     if (Array.isArray(data)) {
       // Handle array of objects (like projects)
       if (
+        data.length &&
         data.every((item) => typeof item === 'object' && !Array.isArray(item))
       ) {
-        return data.map((item) => this.formatObject(item)).join('<br/><br/>'); // Separate objects with extra spacing
+        return data.map((item) => this.formatObject(item)).join(''); // Separate objects with extra spacing
       }
 
       // Handle array of strings or other primitive types
-      return data.map((val) => this.formatValue(val)).join('<br/>');
+      return data.map((val) => this.formatValueHtml(val)).join('<br/>');
     }
 
-    return Object.entries(data)
-      .map(([key, value]) => {
-        const formattedKey = this.formatKey(key);
-        const formattedValue = Array.isArray(value)
-          ? value.map((val) => this.formatValue(val)).join('<br/>')
-          : this.formatValue(value);
-        return `${formattedKey} ${formattedValue}`;
-      })
-      .join('<br/>');
-  }
-
-  private formatKey(key: string): string {
-    return `<b><b style="color: var(--terminal-resp-heading)">${key} : </b></b>`;
-  }
-
-  private formatValue(value: any): string {
-    if (typeof value === 'string' && this.isValidUrl(value)) {
-      return `<a href="${value}" target="_blank">${value}</a>`;
-    } else if (Array.isArray(value)) {
-      return '<br/>' + value.map((val) => '<b style="color: var(--terminal-resp-heading)">></b> ' + this.formatValue(val)).join('<br/>');
+    // Objects => use formatObject to align keys & values
+    if (typeof data === 'object' && data !== null) {
+      return this.formatObject(data);
     }
-    return `<b style="color: var(--terminal-resp)"> ${value}</b>`;
+
+    // Fallback
+    return this.formatValueHtml(String(data));
+  }
+
+  private formatKeyHtml(key: string, widthCh: number): string {
+    // Use inline-block with ch units so keys align reliably in monospace
+    const safeKey = this.escapeHtml(key);
+    return `<span style="display:inline-block; min-width:${widthCh}ch; font-weight:bold; color:var(--terminal-resp-heading)">${safeKey}</span>`;
+  }
+
+  private formatValueHtml(value: any): string {
+    if (value === null || value === undefined)
+      return `<span style="color:var(--terminal-resp)">-</span>`;
+
+    // If it's an array, format each entry as bullet style
+    if (Array.isArray(value)) {
+      return (
+        value.map((val) => `<span style="color:var(--terminal-resp-heading)">-> </span>${this.formatValueHtml(val)}`)
+          .join('<br/>')
+      );
+    }
+
+    const str = String(value);
+
+    // Recognize URLs (http(s), mailto:, or protocol://)
+    if (this.isValidUrl(str)) {
+      // show clickable anchor
+      return `<a style="color: var(--light-blue)" href="${this.escapeAttr(str)}" target="_blank" rel="noreferrer noopener">${this.escapeHtml(str)}</a>`;
+    }
+
+    return `<span style="color: var(--terminal-resp)">${this.escapeHtml(str)}</span>`;
   }
 
   private formatObject(obj: Record<string, any>): string {
-    return Object.entries(obj)
-      .map(([key, value]) => {
-        const formattedKey = this.formatKey(key);
-        const formattedValue = this.formatValue(value);
-        return `${formattedKey} ${formattedValue}`;
-      })
-      .join('<br/>');
+    const entries = Object.entries(obj || {});
+
+    if (entries.length === 0) {
+      return `<span style="color:var(--terminal-resp)">-</span>`;
+    }
+
+    // Find the longest key to calculate padding
+    const maxKeyLength = Math.max(...entries.map(([key]) => key.length));
+
+    // Give keys some breathing room: +2 ch
+    const keyWidth = Math.max(1, maxKeyLength + 2);
+
+    // Build lines using \n inside a single <pre> for alignment and wrapping
+    const lines = entries.map(([key, value]) => {
+      const keyHtml = this.formatKeyHtml(key, keyWidth);
+      const valueHtml = this.formatValueHtml(value);
+      return `${keyHtml}: ${Array.isArray(value) ? '\n': ''}${valueHtml}`;
+    });
+    // return lines.join('\n');
+    return `<pre style="font-family: 'Courier New', monospace; font-size: 16px; white-space: pre-wrap;word-wrap: break-word;">${lines.join('\n')}</pre>`;
   }
 
-  private isValidUrl(url: string): boolean {
-    const urlPattern = /^(https?:\/\/)?([\w\-]+\.)+[a-z]{2,}\/?/i;
-    return urlPattern.test(url);
+  private isValidUrl(input: string): boolean {
+    if (!input) return false;
+    const trimmed = input.trim();
+    // Accept mailto:, http(s)://, or protocol-style (scheme:)
+    if (/^mailto:/i.test(trimmed)) return true;
+    if (/^https?:\/\//i.test(trimmed)) return true;
+    if (/^[a-z][a-z0-9+.-]*:\/\//i.test(trimmed)) return true; // scheme://
+    // fallback: try URL constructor for http/https
+    try {
+      const url = new URL(trimmed);
+      return url.protocol === 'http:' || url.protocol === 'https:';
+    } catch (e) {
+      return false;
+    }
   }
+
+  // Simple HTML escape for safety
+  private escapeHtml(input: string): string {
+    return input
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#039;');
+  }
+
+  private escapeAttr(input: string): string {
+    return input.replace(/"/g, '&quot;');
+  }
+
+  private buildCommandTree(obj: Record<string, any>, indent = '', isLast = true): string {
+  const keys = Object.keys(obj);
+  return keys
+    .map((key, index) => {
+      const isKeyLast = index === keys.length - 1;
+      const branch = '<span style="color:var(--light-blue)">' + (isKeyLast ? '└── ' : '├── ') + '</span>';
+      const nextIndent = indent + '<span style="color:var(--terminal-resp-heading)">'+(isKeyLast ? '.   ' : '│   ')+'</span>';
+
+      const value = obj[key];
+      if (Array.isArray(value)) {
+        // Show array length and recurse on first element if it is an object
+        if (value.length > 0 && typeof value[0] === 'object' && !Array.isArray(value[0])) {
+          return `${indent}${branch}${key} [${value.length} items]<br/>\n` +
+                 this.buildCommandTree(value[0], nextIndent, isKeyLast);
+        } else {
+          return `${indent}${branch}${key} [${value.length} items]<br/>\n`;
+        }
+      } else if (value && typeof value === 'object') {
+        return `${indent}${branch}${key}<br/>\n` +
+               this.buildCommandTree(value, nextIndent, isKeyLast);
+      } else {
+        return `${indent}${branch}${key}<br/>\n`;
+      }
+    })
+    .join('\n');
+}
+
 }

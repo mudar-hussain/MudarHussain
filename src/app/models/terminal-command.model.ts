@@ -40,16 +40,4 @@ export interface TerminalCommand {
       Insights: string,
       Handle: string
     }[];
-    blogs: {
-      Blogs_Articles: string
-    };
-    github: {
-      GitHub_Handle: string
-    };
-    linkedIn: {
-      LinkedIn_Profile: string
-    };
-    contact: {
-      Email_Address: string
-    };
   }

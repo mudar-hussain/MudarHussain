@@ -3,17 +3,24 @@ const TerminalConfiguration = {
   terminal_username: "[Mudar@Terminal:~]$",
   commands: {
     help: {
-      whoami: "General information",
-      experience: "Technical Experience",
-      projects: "Projects",
-      education: "Educational background",
-      skills: "Current SWE skills",
-      code: "Coding Profiles",
-      blogs: "Contributing programming tutorials for learners",
-      github: "Where I put my codes :P",
-      linkedIn: "LinkedIn handle of mine.",
-      contact: "Email for any thing",
-      clear: "clears everything from the terminal",
+      "su <name>":      "Switch user. Because why not?",
+      "whoami":         "Who I am, in case you forgot.",
+      "cv, resume":     "Open my résumé. Impressive, obviously.",
+      "skills, techstack": "My programming arsenal.",
+      "exp, experience": "Places that survived me.",
+      "projects":       "Software I delivered.",
+      "education":      "Proof I survived school.",
+      "code":           "Handle my code with care.",
+      "leetcode":       "Where I solve painful puzzles.",
+      "codeforces":     "Another leaderboard flex.",
+      "blogs":          "Teaching fellow devs a thing or two.",
+      "git, github":    "Public chaos repository.",
+      "linkedIn":       "Professional profile, polished.",
+      "email":          "Reach out if you dare.",
+      "clear":          "Wipe the terminal, start fresh.",
+      "echo":           "Repeats what you say.",
+      "date":           "Current date & time, obviously.",
+      "tree":           "View commands in a structured tree."
     },
     whoami: {
       Name: "Mudar Hussain",
@@ -158,18 +165,6 @@ const TerminalConfiguration = {
       //   Handle: "https://www.hackerrank.com/profile/Mudar_Hussain"
       // },
     ],
-    blogs: {
-      Blogs_Articles: "https://logicinlayers.web.app/",
-    },
-    github: {
-      GitHub_Handle: "https://github.com/mudar-hussain/",
-    },
-    linkedIn: {
-      LinkedIn_Profile: "https://www.linkedin.com/in/mudar-hussain/",
-    },
-    contact: {
-      Email_Address: "mudar.shussain@gmail.com",
-    },
   },
 };
 

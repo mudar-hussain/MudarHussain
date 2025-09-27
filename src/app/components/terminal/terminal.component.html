@@ -1,5 +1,5 @@
 <div class="container-div" id="terminal">
-  <div class="term-container" #terminal (click)="focusInput()">
+  <div class="term-container" #terminal (click)="focusInput(inputRef)">
     <app-terminal-nav></app-terminal-nav>
     <div class="terminal">
       <div class="terminal-welcome-messages">
@@ -7,8 +7,11 @@
         <br/> <br/> 
         Type '<span class="light-blue">help</span>' to see the available commands...
       </div>
-      <app-terminal-output *ngFor="let response of responseHistory" [terminal_username]="this.terminal_username"
-        [response]="response"></app-terminal-output>
+      <app-terminal-output *ngFor="let response of responseHistory" 
+        [terminal_username]="this.terminal_username"
+        [response]="response"
+        (focusInput)="focusInput(inputRef)">
+      </app-terminal-output>
       <div class="terminal-prompt">
         <span class="terminal-username">
           <span [ngClass]="isRoot ? 'red' : 'light-blue'">{{terminal_username}}</span>💀<span class="red">Mudar</span><span class="green">:~{{ isRoot ? '# ' : '$ ' }}</span>
