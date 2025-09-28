@@ -84,16 +84,8 @@
 
 
 @media screen and (max-width: 700px) {
-  .container-div {
-    height: 55vh;
-
-  }
   .term-container {
-    height: 50vh;
     width: 100%;
-  }
-  .terminal {
-    height: 45vh;
   }
 
 }
