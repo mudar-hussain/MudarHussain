@@ -1,13 +1,11 @@
-<div>
-  <div class="terminal-prompt">
-    <span class="terminal-username">
-      <span [ngClass]="isRoot ? 'red' : 'light-blue'">{{ response.username }}</span>💀<span class="red">Mudar</span><span
-        class="green">:~{{ isRoot ? '# ' : '$ ' }}</span>
-      <span style="color: var(--terminal-command);">{{ response.command }}</span>
-    </span>
-  </div>
-  <div class="terminal-output" [innerHTML]="response.response | safeHtml"></div>
-  <div class="terminal-output" *ngIf="response.isInvalidCommand">
-    Type '<span class="light-blue">help</span>' to see the available commands...
-  </div>
+<div class="terminal-prompt">
+  <span class="terminal-username">
+    <span [ngClass]="isRoot ? 'red' : 'light-blue'">{{ response.username }}</span>💀<span class="red">Mudar</span><span
+      class="green">:~{{ isRoot ? '# ' : '$ ' }}</span>
+    <span style="color: var(--terminal-command);">{{ response.command }}</span>
+  </span>
+</div>
+<div class="terminal-output" [innerHTML]="response.response | safeHtml"></div>
+<div class="terminal-output" style="padding-bottom: 1em;" *ngIf="response.isInvalidCommand">
+  Type '<span class="light-blue">help</span>' to see the available commands...
 </div>

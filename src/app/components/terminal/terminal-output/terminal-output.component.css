@@ -10,7 +10,6 @@
 .terminal-output {
   margin-left: 1.6em;
   font-family: "Courier New", monospace;
-  padding-bottom: 1em;
 }
 
 @media screen and (max-width: 700px) {
