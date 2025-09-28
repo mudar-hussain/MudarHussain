@@ -1,18 +1,16 @@
 import { Injectable } from '@angular/core';
 import { TerminalCommand } from '../models/terminal-command.model';
-import TerminalConfiguration from 'src/assets/developer_data/terminalconfiguration';
 import { Skill } from '../models/skill.model';
 import { Experience } from '../models/experience.model';
-import { CodeForces, CodeChef, Experiences, GeeksForGeeks, Github, HackerRank, Leetcode, LinkedIn, Projects, Resume, Skills, SphereTags, Blogs, Email } from 'src/assets/developer_data/dev_data';
+import { CodeForces, CodeChef, Experiences, GeeksForGeeks, Github, HackerRank, Leetcode, LinkedIn, Projects, Resume, Skills, SphereTags, Blogs, Email } from 'src/assets/data/developer_data';
 import { Project } from '../models/project.model';
+import TerminalCommands from 'src/assets/data/terminal_commands';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ConfigService {
-  private term_username: string = TerminalConfiguration.terminal_username;
-  private term_welcome_message: string = TerminalConfiguration.welcome_message;
-  private term_commands: TerminalCommand = TerminalConfiguration.commands;
+  private term_commands: TerminalCommand = TerminalCommands;
   private resume: string = Resume;
   private linkedIn: string = LinkedIn;
   private github: string = Github;
@@ -62,14 +60,6 @@ export class ConfigService {
 
   getCodeChef(): string {
     return this.codechef;
-  }
-
-  getTerminalUsername(): string {
-    return this.term_username;
-  }
-
-  getWelcomeMessage(): string {
-    return this.term_welcome_message;
   }
 
   getTerminalCommands(): TerminalCommand {
