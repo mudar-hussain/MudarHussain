@@ -3,8 +3,17 @@
     <app-terminal-nav></app-terminal-nav>
     <div class="terminal">
       <div class="terminal-welcome-messages">
-        Welcome to my interactive terminal portfolio!
-        <br/> <br/> 
+        <pre>
+ /$$      /$$                 /$$                    
+| $$$    /$$$                | $$                    
+| $$$$  /$$$$ /$$   /$$  /$$$$$$$  /$$$$$$   /$$$$$$ 
+| $$ $$/$$ $$| $$  | $$ /$$__  $$ |____  $$ /$$__  $$
+| $$  $$$| $$| $$  | $$| $$  | $$  /$$$$$$$| $$  \__/
+| $$\  $ | $$| $$  | $$| $$  | $$ /$$__  $$| $$      
+| $$ \/  | $$|  $$$$$$/|  $$$$$$$|  $$$$$$$| $$      
+|__/     |__/ \______/  \_______/ \_______/|__/ </pre>
+        Welcome to my interactive terminal portfolio! (v1.0.0)
+        <br/>-------<br/> 
         Type '<span class="light-blue">help</span>' to see the available commands...
       </div>
       <app-terminal-output *ngFor="let response of responseHistory" 

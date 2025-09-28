@@ -49,7 +49,7 @@ export class TerminalCommandsService {
         return this.formatResponse(this.term_commands.whoami);
 
       case lowerCmd === 'cv' || lowerCmd === 'resume':
-        return this.formatValueHtml(this.openLink(this.configService.getResume()));
+        return this.openLink(this.configService.getResume());
 
       case lowerCmd === 'exp' ||
         lowerCmd === 'experience' ||
@@ -105,9 +105,12 @@ export class TerminalCommandsService {
           if (parts.length > 1) {
             this.changeTerminalUsername(parts[1]);
             return this.formatResponse({
-              [lowerCmd]: `Switched user to ${parts[1]}`,
+              [cmd]: `Switched user to ${parts[1]}`,
             });
           }
+        } else if (lowerCmd.startsWith('echo ')) {
+          const echoText = cmd.slice(5).trim();
+          return this.formatResponse(echoText);
         }
         // Unknown command
         return this.formatResponse({ [lowerCmd]: 'Command not found!' });
@@ -134,7 +137,7 @@ export class TerminalCommandsService {
       }
 
       // Handle array of strings or other primitive types
-      return data.map((val) => this.formatValueHtml(val)).join('<br/>');
+      return data.map((item) => this.formatValueHtml(item)).join('<br/>');
     }
 
     // Objects => use formatObject to align keys & values
@@ -154,14 +157,14 @@ export class TerminalCommandsService {
 
   private formatValueHtml(value: any): string {
     if (value === null || value === undefined)
-      return `<span style="color:var(--terminal-resp)">-</span>`;
+      return `<span style="color:var(--terminal-resp)">-------</span>`;
 
     // If it's an array, format each entry as bullet style
     if (Array.isArray(value)) {
       return (
         value.map((val) => `<span style="color:var(--terminal-resp-heading)">-> </span>${this.formatValueHtml(val)}`)
           .join('<br/>')
-      );
+      ) + '<br/>-------';
     }
 
     const str = String(value);
@@ -179,14 +182,14 @@ export class TerminalCommandsService {
     const entries = Object.entries(obj || {});
 
     if (entries.length === 0) {
-      return `<span style="color:var(--terminal-resp)">-</span>`;
+      return `<span style="color:var(--terminal-resp)">-------</span>`;
     }
 
     // Find the longest key to calculate padding
     const maxKeyLength = Math.max(...entries.map(([key]) => key.length));
 
-    // Give keys some breathing room: +2 ch
-    const keyWidth = Math.max(1, maxKeyLength + 2);
+    // Give keys some breathing room: +1 ch
+    const keyWidth = Math.max(1, maxKeyLength + 1);
 
     // Build lines using \n inside a single <pre> for alignment and wrapping
     const lines = entries.map(([key, value]) => {

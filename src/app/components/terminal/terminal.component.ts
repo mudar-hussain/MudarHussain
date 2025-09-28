@@ -60,7 +60,7 @@ export class TerminalComponent implements OnInit, OnDestroy {
       const username: string = this.terminal_username;
       // Find response for the command or display "Command not found"
       const response = this.commandService.getResponseForCommand(
-        command.toLowerCase()
+        command
       );
       const isInvalidCommand = response.toString().toLowerCase().includes('command not found');
       this.addOutput({username, command, response, isInvalidCommand });
