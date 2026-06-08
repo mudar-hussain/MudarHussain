@@ -274,7 +274,7 @@ export const Experiences = [
           {
             text: "Designed a multi-level commission engine with hierarchical fee structures across Clients, Partner Banks & BNY Global.",
             link: ""
-          }
+          },
           {
             text: "Built a real-time trade monitoring dashboard tracking the global transactions, errors, alerts, cost, & volume trends.",
             link: ""
