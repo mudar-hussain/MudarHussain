@@ -12,7 +12,7 @@ export const Email = "mudar.shussain@gmail.com"
 export const placeholderImg = 'assets/img/post-placeholder-image.png';
 
 export const SphereTags = [
-  "Java", "Python", "SQL", "Figma", "LLD", "NoSQL", "C/C++", "HTML", "Github", "CSS", "TypeScript", "HLD", "Spring", "Hibernate", "Git", "Angular", "JavaScript", "ReactJS", "Bootstrap", "Gitlab", 
+  "Java", "Python", "SQL", "Figma", "LLD", "NoSQL", "C/C++", "HTML", "Github", "CSS", "TypeScript", "HLD", "Spring", "Hibernate", "Git", "Angular", "JavaScript", "ReactJS", "Bootstrap", "Gitlab",
   "Firebase", "REST API", "DSA"
 ]
 
@@ -251,30 +251,42 @@ export const Experiences = [
     link: "https://www.bny.com/",
     positions: [
       {
-        title: "Full Stack Developer",
+        title: "Full Stack Developer II",
         duration: "Sep '23 - Present",
         location: "Pune, India",
         content: [
           {
-            text: "Developed a Billing & Accounting system, streamlining cross-team operations by eliminating dependency on the AFS.",
+            text: "Lead developer for Trade Interface Application (TIA), a core trade finance platform supporting Import / Export LCs, Guarantees, Document Examination, Payments, and Billing workflows.",
             link: ""
           },
           {
-            text: "Automated accruals and billing with bank specific commission structure, saving 4+ hrs/day using Spring jobs and scheduler.",
+            text: "Architected an AI/LLM-based SWIFT MT700 enrichment pipeline using parallel prompt engineering & rule-based clause mapping, achieving 96% accuracy and eliminating manual processing.",
             link: ""
           },
           {
-            text: "Spearheaded the architecture & development of a multi-tenant invoicing system, enabling partner banks to streamline the client invoicing via flexible, service-oriented design.",
+            text: "Built an automated billing & accounting system for accruals, fees, & maturity cycles, eliminating Automated Financial Systems (AFS) dependency & reducing manual effort by 4+ hrs/day.",
             link: ""
           },
           {
-            text: "Built a Trade Monitoring Dashboard for real-time tracking of global transactions, errors, alerts, costs, and volume trends.",
+            text: "Developed a multi-tenant invoicing system enabling scalable, service-oriented client billing for partner banks.",
             link: ""
           },
           {
-            text: "Improved code quality, ensuring smooth production releases via 90% test coverage and resolving SonarQube reported issues.",
+            text: "Designed a multi-level commission engine with hierarchical fee structures across Clients, Partner Banks & BNY Global.",
             link: ""
           }
+          {
+            text: "Built a real-time trade monitoring dashboard tracking the global transactions, errors, alerts, cost, & volume trends.",
+            link: ""
+          },
+          {
+            text: "Resolved security vulnerabilities across five microservices and ensured compliance via dependency upgrades and code fixes.",
+            link: ""
+          },
+          {
+            text: "Improved code quality and release reliability by achieving 90% test coverage, resolving SonarQube issues, and implementing an AutoRFC CI/CD pipeline for seamless prod deployments.",
+            link: ""
+          },
         ],
       }
     ],
@@ -294,15 +306,7 @@ export const Experiences = [
             link: ""
           },
           {
-            text: "Mitigated security risks by implementing user entitlements & multi-level auth in Spring, resolving ethical hacking findings.",
-            link: ""
-          },
-          {
-            text: "Built an RPA-driven feature to automated logistics raw data transformation, saving 5+ hrs/day and minimizing errors.",
-            link: ""
-          },
-          {
-            text: "Built Power BI Dashboard on sales trends, driving insights.",
+            text: "Designed & implemented role-based access control & multi-level authentication, mitigating security risks identified in audits.",
             link: ""
           }
         ],
@@ -313,7 +317,7 @@ export const Experiences = [
         location: "Nagpur, India",
         content: [
           {
-            text: "Built an RPA-driven feature to automated logistics raw data transformation, saving 5 hrs/day and minimizing errors.",
+            text: "Built an RPA-driven data transformation pipeline for logistics workflows, reducing manual effort by 5+ hours/day.",
             link: ""
           },
           {
@@ -364,7 +368,7 @@ export const Experiences = [
       }
     ]
   }
-]; 
+];
 
 export const Projects = [
   {
