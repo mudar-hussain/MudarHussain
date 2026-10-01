@@ -1,4 +1,5 @@
-import { AfterViewInit, Component, OnDestroy } from '@angular/core';
+import { AfterViewInit, Component, OnDestroy, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
 import { ConfigService } from 'src/app/services/config.service';
 import TagCloud from 'TagCloud';
 
@@ -8,39 +9,48 @@ import TagCloud from 'TagCloud';
   templateUrl: './rotating-sphere.component.html',
   styleUrls: ['./rotating-sphere.component.css']
 })
-export class RotatingSphereComponent implements AfterViewInit, OnDestroy {
+export class RotatingSphereComponent implements OnInit, OnDestroy {
   private tagCloudInstance: any;
+  private subscription: Subscription | undefined;
 
-  tags: string[];
-  constructor(private configService: ConfigService) {
-    this.tags = this.formatTags(this.configService.getSphereTags());
-  }
+  constructor(private configService: ConfigService) {}
 
-  ngAfterViewInit(): void {
-    const container = document.getElementById('tag-cloud-container');
-    if (container) {
-      const options = {
-        radius: 180,
-        maxSpeed: 'fast' as "fast",
-        initSpeed: 'normal' as "normal",
-        keep: true,
-        useHTML: true
-      };
-
-      this.tagCloudInstance = TagCloud([container], this.tags, options);
-    } else {
-      console.error('Tag cloud container not found.');
-    }
+  ngOnInit(): void {
+    this.subscription = this.configService.getSphereTags().subscribe((tags: string[]) => {
+      if (tags && tags.length > 0) {
+        this.initializeTagCloud(this.formatTags(tags));
+      }
+    });
   }
 
   ngOnDestroy(): void {
+    if (this.subscription) {
+      this.subscription.unsubscribe();
+    }
     const container = document.getElementById('tag-cloud-container');
     if (container) {
-      container.innerHTML = ''; // Clear the container's content
+      container.innerHTML = '';
     }
-    if (this.tagCloudInstance) {
+    if (this.tagCloudInstance?.destroy) {
       this.tagCloudInstance.destroy();
     }
+  }
+
+  private initializeTagCloud(tags: string[]) {
+    const container = document.getElementById('tag-cloud-container');
+    if (!container) {
+      console.error('Tag cloud container not found.');
+      return;
+    }
+    container.innerHTML = '';
+    const options = {
+      radius: 180,
+      maxSpeed: 'fast' as "fast",
+      initSpeed: 'normal' as "normal",
+      keep: true,
+      useHTML: true
+    };
+    this.tagCloudInstance = TagCloud([container], tags, options);
   }
 
   formatTags(tags: string[]) {
@@ -59,7 +69,7 @@ export class RotatingSphereComponent implements AfterViewInit, OnDestroy {
         white-space: nowrap;
       ">${tag}</h5>`);
   }
-  
-  
+
+
 
 }

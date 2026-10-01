@@ -42,7 +42,7 @@
                     Let's Talk <i class="fa-regular fa-comment-dots"></i>
                 </button>
             </a>
-            <a style="margin-left: 30px;" target="_blank" [href]="this.resume">
+            <a style="margin-left: 30px;" target="_blank" [href]="this.resume | async">
                 <button class="custom-bottom" type="button">
                     My Resume <i class="fa-solid fa-download"></i>
                 </button>
@@ -51,8 +51,6 @@
     </div>
     <div class="avatar-section">
         <div id="avatar">
-            <!-- <img src="https://drive.google.com/thumbnail?id=18lUqrLfkYmb27sumCJnscG1xYx2xjQFF&sz=s2000" alt="Mudar Hussain" /> -->
-            <!-- <img src="https://drive.google.com/thumbnail?id=1o5GHF24qYXTZGjlGQguqkigz5rxx4A6L&sz=s2000" -->
             <img src="https://raw.githubusercontent.com/mudar-hussain/mudar-hussain/main/portfolio/assets/img/avatar/avatar-ghibli.png"
                 alt="Mudar Hussain"  loading="lazy" decoding="async"/>
         </div>

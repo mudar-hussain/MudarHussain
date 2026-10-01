@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { ConfigService } from './config.service';
 import { TerminalCommand } from '../models/terminal-command.model';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Observable, Subscription } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -10,12 +10,40 @@ export class TerminalCommandsService {
   private term_commands!: TerminalCommand;
   private terminal_username = new BehaviorSubject<string>('root');
 
+  private resume = '';
+  private leetcode = '';
+  private codeforces = '';
+  private blogs = '';
+  private github = '';
+  private linkedin = '';
+  private email = '';
+
+  private configSubscription!: Subscription;
+
   //Observable for components to subscribe to
   currentUsernameObservable = this.terminal_username.asObservable();
 
   constructor(private configService: ConfigService) {
     this.term_commands = this.configService.getTerminalCommands();
     this.getTerminalUsername();
+
+    this.configSubscription = this.configService.getConfig().subscribe((config) => {
+      if (config) {
+        this.resume = config.resume;
+        this.leetcode = config.leetcode;
+        this.codeforces = config.codeforces;
+        this.blogs = config.blogs;
+        this.github = config.github;
+        this.linkedin = config.linkedin;
+        this.email = config.email;
+      }
+    });
+  }
+
+  ngOnDestroy() {
+    if (this.configSubscription) {
+      this.configSubscription.unsubscribe();
+    }
   }
 
   // Current value (if you just need to read once)
@@ -49,7 +77,7 @@ export class TerminalCommandsService {
         return this.formatResponse(this.term_commands.whoami);
 
       case lowerCmd === 'cv' || lowerCmd === 'resume':
-        return this.openLink(this.configService.getResume());
+        return this.openLink(this.resume);
 
       case lowerCmd === 'exp' ||
         lowerCmd === 'experience' ||
@@ -69,23 +97,23 @@ export class TerminalCommandsService {
         return this.formatResponse(this.term_commands.code);
 
       case lowerCmd === 'leetcode':
-        return this.openLink(this.configService.getLeetcode());
+        return this.openLink(this.leetcode);
 
       case lowerCmd === 'codeforces':
-        return this.openLink(this.configService.getCodeForces());
+        return this.openLink(this.codeforces);
 
       case lowerCmd === 'email':
-        const mailToEmail = 'mailto:' + this.configService.getEmail();
+        const mailToEmail = 'mailto:' + this.email;
         return this.openLink(mailToEmail);
 
       case lowerCmd === 'blog' || lowerCmd === 'blogs':
-        return this.openLink(this.configService.getBlogs());
+        return this.openLink(this.blogs);
 
       case lowerCmd === 'git' || lowerCmd === 'github':
-        return this.openLink(this.configService.getGithub());
+        return this.openLink(this.github);
 
       case lowerCmd === 'linkedin':
-        return this.openLink(this.configService.getLinkedIn());
+        return this.openLink(this.linkedin);
 
       case lowerCmd === 'help' || lowerCmd === 'ls':
         return this.formatResponse(this.term_commands.help);
@@ -95,8 +123,6 @@ export class TerminalCommandsService {
         
       case lowerCmd === 'tree':
         return this.buildCommandTree(this.term_commands);
-        // return this.formatResponse(this.buildCommandTree(this.term_commands));
-
 
       default:
         // su <user>
@@ -117,7 +143,7 @@ export class TerminalCommandsService {
     }
   }
 
-  private openLink(url: string) {
+  private openLink(url: string): string {
     setTimeout(() => window.open(url, '_blank')?.focus(), 1000);
     return `Redirecting to ${this.formatValueHtml(url)} ...`;
   }

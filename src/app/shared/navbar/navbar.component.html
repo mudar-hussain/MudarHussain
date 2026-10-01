@@ -29,16 +29,16 @@
           <a class="nav-link" href="#projects">Projects</a>
         </li>
         <li class="nav-item nav-icons" style="margin-right: 1rem;">
-          <a class="nav-link" target="_blank" [href]="this.blogs" title="Blogs">
+          <a class="nav-link" target="_blank" [href]="this.blogs | async" title="Blogs">
             <i class="fa-solid fa-blog" style="font-size: 1.3em; vertical-align: middle;"></i>
           </a>
-          <a class="nav-link" target="_blank" [href]="this.github" title="Github">
+          <a class="nav-link" target="_blank" [href]="this.github | async" title="Github">
             <i class="fa-brands fa-github" style="font-size: 1.3em; vertical-align: middle;"></i>
           </a>
-          <a class="nav-link" target="_blank" [href]="this.linkedIn" title="LinkedIn">
+          <a class="nav-link" target="_blank" [href]="this.linkedIn | async" title="LinkedIn">
             <i class="fa-brands fa-linkedin-in" style="font-size: 1.3em; vertical-align: middle;"></i>
           </a>
-          <a class="nav-link" target="_blank" [href]="this.resume" title="Resume" style="padding: 0px;">
+          <a class="nav-link" target="_blank" [href]="this.resume | async" title="Resume" style="padding: 0px;">
             <img src="../../../assets/img/cv.png" style="height: 2.1em; width: 2.1em; vertical-align: middle;"
               alt="{Mudar Hussain}">
           </a>

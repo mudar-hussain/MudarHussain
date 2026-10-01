@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Observable } from 'rxjs';
 import { ConfigService } from 'src/app/services/config.service';
 
 @Component({
@@ -7,11 +8,11 @@ import { ConfigService } from 'src/app/services/config.service';
   styleUrls: ['./technical-expertise.component.css'],
 })
 export class TechnicalExpertiseComponent {
-  linkedin: string;
-  github: string;
-  leetcode: string;
-  codeforces: string;
-  codechef: string;
+  linkedin: Observable<string>;
+  github: Observable<string>;
+  leetcode: Observable<string>;
+  codeforces: Observable<string>;
+  codechef: Observable<string>;
 
   constructor(private configService: ConfigService) {
     this.linkedin = this.configService.getLinkedIn();

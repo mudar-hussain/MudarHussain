@@ -4,5 +4,10 @@
         </h1>
     </div>
     <div class="projects">
-        <app-project-card *ngFor="let project of projects" [project]="project"></app-project-card>
+        <ng-container *ngIf="projects | async as projects; else projectsLoading">
+            <app-project-card *ngFor="let project of projects" [project]="project"></app-project-card>
+        </ng-container>
+        <ng-template #projectsLoading>
+            <div class="font-sec">Loading projects...</div>
+        </ng-template>
     </div>

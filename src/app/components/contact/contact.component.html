@@ -33,7 +33,7 @@
       </button>
 
     </form>
-</div>
+  </div>
 
   <div class="info-section">
     <h1 class="title-font">What's next <span class="text-light-beige">?</span></h1>
@@ -41,15 +41,17 @@
       I'm open to new job opportunities and freelance projects. If you have an
       idea, a challenge, or just want to say hi, feel free to reach out!
     </p>
-    <a target="_blank" [href]="'mailto:' + this.emailWithoutDomain + '@gmail.com'">
-      <i class="fa-solid fa-envelope"></i> {{ this.emailWithoutDomain }}<span class="text-light-beige">@gmail.com</span>
+    <a target="_blank" [href]="'mailto:' + this.email">
+      <i class="fa-solid fa-envelope"></i> {{ this.emailUsername }}<span class="text-light-beige">@{{ this.emailDomain
+        }}</span>
     </a>
     <br />
     <a><i class="fa-sharp-duotone fa-solid fa-location-dot"></i> Pune,
       <span class="text-light-beige">India</span></a>
     <br />
     <div class="social-links">
-      <a class="link" [href]="this.linkedin" target="_blank" rel="noreferrer"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a class="link" [href]="this.linkedin" target="_blank" rel="noreferrer"><i
+          class="fa-brands fa-linkedin-in"></i></a>
       <a class="link" [href]="this.github" target="_blank" rel="noreferrer"><i class="fa-brands fa-github"></i></a>
       <a class="link" [href]="this.leetcode" target="_blank" rel="noreferrer"><i class="fa-solid fa-code"></i></a>
     </div>

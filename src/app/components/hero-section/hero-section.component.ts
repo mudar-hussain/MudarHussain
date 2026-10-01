@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Observable } from 'rxjs';
 import { ConfigService } from 'src/app/services/config.service';
 
 @Component({
@@ -7,7 +8,7 @@ import { ConfigService } from 'src/app/services/config.service';
   styleUrls: ['./hero-section.component.css']
 })
 export class HeroSectionComponent {
-  resume: string;
+  resume: Observable<string>;
   
   constructor(private configService: ConfigService) {
       this.resume = this.configService.getResume();

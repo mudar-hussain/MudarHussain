@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Observable } from 'rxjs';
 import { ConfigService } from 'src/app/services/config.service';
 
 @Component({
@@ -7,7 +8,7 @@ import { ConfigService } from 'src/app/services/config.service';
   styleUrls: ['./footer.component.css']
 })
 export class FooterComponent {
-  linkedin: string;
+  linkedin: Observable<string>;
   currentYear: number = new Date().getFullYear();
   
   constructor(private configService: ConfigService) {

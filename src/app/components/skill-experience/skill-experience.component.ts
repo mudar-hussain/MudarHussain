@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Experience } from 'src/app/models/experience.model';
 import { Skill } from 'src/app/models/skill.model';
 import { ConfigService } from 'src/app/services/config.service';
@@ -9,8 +10,8 @@ import { ConfigService } from 'src/app/services/config.service';
   styleUrls: ['./skill-experience.component.css']
 })
 export class SkillExperienceComponent {
-  skills: Skill[];
-  experiences: Experience[];
+  skills: Observable<Skill[]>;
+  experiences: Observable<Experience[]>;
 
   constructor(private configService: ConfigService) {
     this.skills = this.configService.getSkills();

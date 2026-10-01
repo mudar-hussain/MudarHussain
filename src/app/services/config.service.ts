@@ -5,12 +5,29 @@ import { Experience } from '../models/experience.model';
 import { CodeForces, CodeChef, Experiences, GeeksForGeeks, Github, HackerRank, Leetcode, LinkedIn, Projects, Resume, Skills, SphereTags, Blogs, Email } from 'src/assets/data/developer_data';
 import { Project } from '../models/project.model';
 import TerminalCommands from 'src/assets/data/terminal_commands';
+import { map, Observable, shareReplay } from 'rxjs';
+import { PortfolioConfig } from '../models/portfolio-config';
+import { Firestore, doc, docData } from '@angular/fire/firestore';
+import { PortfolioData } from '../models/portfolio-data';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ConfigService {
   private term_commands: TerminalCommand = TerminalCommands;
+
+  private config: Observable<PortfolioConfig> = (docData(
+        doc(this.firestore, 'portfolio', 'config')
+      ) as Observable<PortfolioConfig>).pipe(
+        shareReplay(1)
+      );
+
+  private data: Observable<PortfolioData> = (docData(
+    doc(this.firestore, 'portfolio', 'data')
+      ) as Observable<PortfolioData>).pipe(
+        shareReplay(1)
+      );
+
   private resume: string = Resume;
   private linkedIn: string = LinkedIn;
   private github: string = Github;
@@ -26,63 +43,69 @@ export class ConfigService {
   private sphereTags: string[] = SphereTags;
   private email: string = Email;
 
-  getResume(): string {
-    return this.resume;
+  constructor(private firestore: Firestore) {}
+
+  getConfig(): Observable<PortfolioConfig> {
+    return this.config;
   }
 
-  getLinkedIn(): string {
-    return this.linkedIn;
+  getResume(): Observable<string> {
+    return this.config.pipe(map(config => config?.resume ?? ''));
   }
 
-  getGithub(): string {
-    return this.github;
+  getLinkedIn(): Observable<string> {
+    return this.config.pipe(map(config => config?.linkedin ?? ''));
   }
 
-  getLeetcode(): string {
-    return this.leetcode;
+  getGithub(): Observable<string> {
+    return this.config.pipe(map(config => config?.github ?? ''));
   }
 
-  getCodeForces(): string {
-    return this.codeforces;
+  getLeetcode(): Observable<string> {
+    return this.config.pipe(map(config => config?.leetcode ?? ''));
   }
 
-  getHackerRank(): string {
-    return this.hackerrank;
+  getCodeForces(): Observable<string> {
+    return this.config.pipe(map(config => config?.codeforces ?? ''));
   }
 
-  getGeeksForGeeks(): string {
-    return this.geeksforgeeks;
+  getHackerRank(): Observable<string> {
+    return this.config.pipe(map(config => config?.hackerrank ?? ''));
   }
 
-  getBlogs(): string {
-    return this.blogs;
+  getGeeksForGeeks(): Observable<string> {
+    return this.config.pipe(map(config => config?.geeksforgeeks ?? ''));
   }
 
-  getCodeChef(): string {
-    return this.codechef;
+  getBlogs(): Observable<string> {
+    return this.config.pipe(map(config => config?.blogs ?? ''));
+  }
+
+  getCodeChef(): Observable<string> {
+    return this.config.pipe(map(config => config?.codechef ?? ''));
+  }
+
+  getEmail(): Observable<string> {
+    return this.config.pipe(map(config => config?.email ?? ''));
+  }
+
+  getSphereTags(): Observable<string[]> {
+    return this.config.pipe(map(config => config?.sphereTags ?? []));
   }
 
   getTerminalCommands(): TerminalCommand {
     return this.term_commands;
   }
 
-  getSkills(): any {
-    return this.skills;
+  getSkills(): Observable<Skill[]> {
+    return this.data.pipe(map(data => data?.skills ?? []));
   }
 
-  getExperience(): any {
-    return this.experiences;
+  getExperience(): Observable<Experience[]> {
+    return this.data.pipe(map(data => data?.experiences ?? []));
   }
 
-  getProjects(): any {
-    return this.projects;
-  }
-
-  getSphereTags(): string[] {
-    return this.sphereTags;
-  }
-
-  getEmail(): string {
-    return this.email;
+  getProjects(): Observable<Project[]> {
+    return this.data.pipe(map(data => data?.projects ?? []));
   }
 }

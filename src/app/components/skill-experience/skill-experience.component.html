@@ -8,15 +8,25 @@
     </div>
     <div class="skills-experience">
         <div class="skills">
-            <app-skill-card *ngFor="let skill of skills" [title]="skill.title" [items]="skill.items"></app-skill-card>
+            <ng-container *ngIf="skills | async as skills; else skillsLoading">
+                <app-skill-card *ngFor="let skill of skills" [title]="skill.title" [items]="skill.items"></app-skill-card>
+            </ng-container>
+            <ng-template #skillsLoading>
+                <div class="font-sec">Loading skills...</div>
+            </ng-template>
         </div>
         <div class="experiences">
             <div class="title-font title-flex custom-top-bottom-shadow" id="exp">
                 <h1> > Work Experience <i class="link fa-solid fa-laptop-code"></i></h1>
             </div>
-            <app-experience-card *ngFor="let experience of experiences" [logo]="experience.logo"
-                [organisation]="experience.organisation" [link]="experience.link"
-                [positions]="experience.positions"></app-experience-card>
+            <ng-container *ngIf="experiences | async as experiences; else experiencesLoading">
+                <app-experience-card *ngFor="let experience of experiences" [logo]="experience.logo"
+                    [organisation]="experience.organisation" [link]="experience.link"
+                    [positions]="experience.positions"></app-experience-card>
+            </ng-container>
+            <ng-template #experiencesLoading>
+                <div class="font-sec">Loading experiences...</div>
+            </ng-template>
         </div>
     </div>
 

@@ -1,4 +1,5 @@
 import { Component, HostListener, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { ConfigService } from 'src/app/services/config.service';
 
 @Component({
@@ -7,11 +8,11 @@ import { ConfigService } from 'src/app/services/config.service';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
-  isWindow: boolean = window.innerWidth > 1130 ? true : false;
-  resume!: string;
-  github!: string;
-  blogs!: string;
-  linkedIn!: string
+  isWindow: boolean = window.innerWidth > 1130;
+  resume: Observable<string>;
+  github: Observable<string>;
+  blogs: Observable<string>;
+  linkedIn: Observable<string>;
 
   constructor(private configService: ConfigService) {
     this.resume = this.configService.getResume();
@@ -22,6 +23,6 @@ export class NavbarComponent {
 
   @HostListener('window:resize', ['$event'])
   onResize(event: any) {
-    this.isWindow = event.target.innerWidth > 1130 ? true : false;
+    this.isWindow = event.target.innerWidth > 1130;
   }
 }
