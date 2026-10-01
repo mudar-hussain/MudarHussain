@@ -4,15 +4,15 @@
     <p class="font-sec">Let's Build Something Amazing Together!</p>
 
     <form [formGroup]="contactForm" (ngSubmit)="sendMessage()">
-      
+
       <div class="form-group">
-        <input type="text" placeholder="First Name" formControlName="firstName" 
+        <input type="text" placeholder="First Name" formControlName="firstName"
           [class.invalid]="submitted && contactForm.get('firstName')?.invalid" />
         <input type="text" placeholder="Last Name" formControlName="lastName" />
       </div>
 
       <div class="form-group">
-        <input type="email" placeholder="Your Email Address" formControlName="email" 
+        <input type="email" placeholder="Your Email Address" formControlName="email"
           [class.invalid]="submitted && contactForm.get('email')?.invalid" />
         <div *ngIf="submitted && contactForm.get('email')?.invalid" class="error">
           Please enter a valid email.
@@ -24,14 +24,14 @@
       </div>
 
       <div class="form-group">
-        <textarea placeholder="Write your message here..." formControlName="message" 
+        <textarea placeholder="Write your message here..." formControlName="message"
           [class.invalid]="submitted && contactForm.get('message')?.invalid"></textarea>
       </div>
 
       <button type="submit" class="custom-bottom">
         Send Message <i class="fa-sharp-duotone fa-solid fa-paper-plane"></i>
       </button>
-      
+
     </form>
 </div>
 
@@ -41,17 +41,17 @@
       I'm open to new job opportunities and freelance projects. If you have an
       idea, a challenge, or just want to say hi, feel free to reach out!
     </p>
-    <a target="_blank" href="mailto:mudar.shussain@gmail.com">
-      <i class="fa-solid fa-envelope"></i> mudar.shussain<span class="text-light-beige">@gmail.com</span>
+    <a target="_blank" [href]="'mailto:' + this.emailWithoutDomain + '@gmail.com'">
+      <i class="fa-solid fa-envelope"></i> {{ this.emailWithoutDomain }}<span class="text-light-beige">@gmail.com</span>
     </a>
     <br />
     <a><i class="fa-sharp-duotone fa-solid fa-location-dot"></i> Pune,
       <span class="text-light-beige">India</span></a>
     <br />
     <div class="social-links">
-      <a class="link" [href]="this.linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
-      <a class="link" [href]="this.github"><i class="fa-brands fa-github"></i></a>
-      <a class="link" [href]="this.leetcode"><i class="fa-solid fa-code"></i></a>
+      <a class="link" [href]="this.linkedin" target="_blank" rel="noreferrer"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a class="link" [href]="this.github" target="_blank" rel="noreferrer"><i class="fa-brands fa-github"></i></a>
+      <a class="link" [href]="this.leetcode" target="_blank" rel="noreferrer"><i class="fa-solid fa-code"></i></a>
     </div>
     <br />
     <a target="_blank" [href]="this.resume">

@@ -53,6 +53,9 @@ export class TerminalComponent implements OnInit, OnDestroy {
 
   // Process the entered command
   processCommand(command: string): void {
+    if (!command) {
+      return;
+    }
     if (command.toLowerCase() === 'clear') {
       // Clear terminal output
       this.responseHistory = [];

@@ -16,6 +16,7 @@ export class ContactComponent implements OnInit {
   linkedin: string;
   github: string;
   leetcode: string;
+  emailWithoutDomain: string;
   emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
 
@@ -24,6 +25,7 @@ export class ContactComponent implements OnInit {
     this.linkedin = this.configService.getLinkedIn();
     this.github = this.configService.getGithub();
     this.leetcode = this.configService.getLeetcode();
+    this.emailWithoutDomain = this.configService.getEmail().split('@')[0];
   }
 
   ngOnInit(): void {
@@ -50,7 +52,8 @@ export class ContactComponent implements OnInit {
       .then(() => {
         console.log('Message sent successfully!');
         alert('Your message has been sent!');
-        this.submitted = false; // Reset the form after successful submission
+        this.submitted = false;
+        this.contactForm.reset();
       })
       .catch(error => {
         console.error('Error sending message:', error);

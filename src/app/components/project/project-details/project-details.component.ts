@@ -20,13 +20,17 @@ export class ProjectDetailsComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    const carouselEl = document.getElementById('carouselExample');
-    if (carouselEl) {
+    const carouselEl = document.getElementById(this.carouselId);
+    if (carouselEl && typeof bootstrap !== 'undefined' && bootstrap.Carousel) {
       new bootstrap.Carousel(carouselEl, {
         interval: 3000,
         ride: 'carousel'
       });
     }
+  }
+
+  get carouselId(): string {
+    return 'carousel-' + this.project.id;
   }
   
     setStackItems(stacks: ProjectStack[]) {

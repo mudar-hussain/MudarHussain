@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Project, ProjectStack } from 'src/app/models/project.model';
 
 @Component({
@@ -6,7 +6,7 @@ import { Project, ProjectStack } from 'src/app/models/project.model';
   templateUrl: './project-card.component.html',
   styleUrls: ['./project-card.component.css']
 })
-export class ProjectCardComponent {
+export class ProjectCardComponent implements OnInit {
   @Input() project!: Project;
   stackItems: string[] = [];
   selectedProject: Project | null = null;

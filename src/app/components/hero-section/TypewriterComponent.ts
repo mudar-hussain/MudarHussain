@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-typewriter',
@@ -19,7 +19,7 @@ import { Component, Input, OnInit } from '@angular/core';
   `]
 })
 
-export class TypewriterComponent implements OnInit {
+export class TypewriterComponent implements OnInit, OnDestroy {
   @Input() strings: string[] = [];
   @Input() typingSpeed = 80;
   @Input() deleteSpeed = 50;
@@ -29,9 +29,17 @@ export class TypewriterComponent implements OnInit {
   private strIndex = 0;
   private charIndex = 0;
   private isDeleting = false;
+  private timeoutId: ReturnType<typeof setTimeout> | null = null;
+
 
   ngOnInit() {
     this.type();
+  }
+
+  ngOnDestroy() {
+    if (this.timeoutId) {
+      clearTimeout(this.timeoutId);
+    }
   }
 
   type() {
@@ -52,6 +60,6 @@ export class TypewriterComponent implements OnInit {
       this.strIndex = (this.strIndex + 1) % this.strings.length;
     }
 
-    setTimeout(() => this.type(), timeout);
+    this.timeoutId = setTimeout(() => this.type(), timeout);
   }
 }

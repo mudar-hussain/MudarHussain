@@ -1,4 +1,4 @@
-import { AfterViewInit, Component } from '@angular/core';
+import { AfterViewInit, Component, OnDestroy } from '@angular/core';
 import { ConfigService } from 'src/app/services/config.service';
 import TagCloud from 'TagCloud';
 
@@ -8,7 +8,9 @@ import TagCloud from 'TagCloud';
   templateUrl: './rotating-sphere.component.html',
   styleUrls: ['./rotating-sphere.component.css']
 })
-export class RotatingSphereComponent implements AfterViewInit {
+export class RotatingSphereComponent implements AfterViewInit, OnDestroy {
+  private tagCloudInstance: any;
+
   tags: string[];
   constructor(private configService: ConfigService) {
     this.tags = this.formatTags(this.configService.getSphereTags());
@@ -25,9 +27,19 @@ export class RotatingSphereComponent implements AfterViewInit {
         useHTML: true
       };
 
-      TagCloud([container], this.tags, options);
+      this.tagCloudInstance = TagCloud([container], this.tags, options);
     } else {
       console.error('Tag cloud container not found.');
+    }
+  }
+
+  ngOnDestroy(): void {
+    const container = document.getElementById('tag-cloud-container');
+    if (container) {
+      container.innerHTML = ''; // Clear the container's content
+    }
+    if (this.tagCloudInstance) {
+      this.tagCloudInstance.destroy();
     }
   }
 

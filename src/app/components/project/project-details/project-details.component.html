@@ -12,12 +12,12 @@
             </div>
             <div class="modal-body">
                 <!-- Image Carousel -->
-                <div id="carouselExample" class="carousel carousel-dark slide" data-bs-ride="carousel"
+                <div [id]="carouselId" class="carousel carousel-dark slide" data-bs-ride="carousel"
                     data-bs-interval="3000">
                     <!-- Carousel Indicators -->
                     <div class="carousel-indicators">
                         <button *ngFor="let img of project.images; let idx = index" type="button"
-                            data-bs-target="#carouselExample" [attr.data-bs-slide-to]="idx" [class.active]="idx === 0"
+                        [attr.data-bs-target]="'#' + carouselId" [attr.data-bs-slide-to]="idx" [class.active]="idx === 0"
                             [attr.aria-current]="idx === 0 ? 'true' : null" [attr.aria-label]="'Slide ' + (idx + 1)">
                         </button>
                     </div>
@@ -27,12 +27,12 @@
                             <img [src]="img" class="d-block w-100" alt="Project image"  loading="lazy" decoding="async">
                         </div>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                    <button class="carousel-control-prev" type="button" [attr.data-bs-target]="'#' + carouselId"
                         data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" style="color: black;"></span>
                         <span class="visually-hidden">Prev</span>
                     </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                    <button class="carousel-control-next" type="button" [attr.data-bs-target]="'#' + carouselId"
                         data-bs-slide="next">
                         <span class="carousel-control-next-icon"></span>
                         <span class="visually-hidden">Next</span>

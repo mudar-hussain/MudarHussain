@@ -252,39 +252,31 @@ export const Experiences = [
     positions: [
       {
         title: "Full Stack Developer II",
-        duration: "Sep '23 - Present",
+        duration: "Sep 2023 - Present",
         location: "Pune, India",
         content: [
           {
-            text: "Lead developer for Trade Interface Application (TIA), a core trade finance platform supporting Import / Export LCs, Guarantees, Document Examination, Payments, and Billing workflows.",
+            text: "Lead developer for TIA, building Java/Spring Boot microservices for trade workflows across LCs, Payments, & Billing.",
             link: ""
           },
           {
-            text: "Architected an AI/LLM-based SWIFT MT700 enrichment pipeline using parallel prompt engineering & rule-based clause mapping, achieving 96% accuracy and eliminating manual processing.",
+            text: "Architected an AI/LLM-powered SWIFT MT700 enrichment pipeline using parallel prompting and rule-based clause mapping, achieving 96% accuracy and eliminating manual processing for the BNY operations team.",
             link: ""
           },
           {
-            text: "Built an automated billing & accounting system for accruals, fees, & maturity cycles, eliminating Automated Financial Systems (AFS) dependency & reducing manual effort by 4+ hrs/day.",
+            text: "Designed an automated billing and accounting system for accruals, fees, and maturity cycles, eliminating Automated Financial Systems (AFS) dependency and saving 4+ hours of manual effort daily.",
             link: ""
           },
           {
-            text: "Developed a multi-tenant invoicing system enabling scalable, service-oriented client billing for partner banks.",
+            text: "Built a multi-tenant invoicing platform with hierarchical commission management for clients, partner banks, and BNY.",
             link: ""
           },
           {
-            text: "Designed a multi-level commission engine with hierarchical fee structures across Clients, Partner Banks & BNY Global.",
+            text: "Created a real-time trade monitoring dashboard, centralizing global transaction volumes, costs, alerts, & trends.",
             link: ""
           },
           {
-            text: "Built a real-time trade monitoring dashboard tracking the global transactions, errors, alerts, cost, & volume trends.",
-            link: ""
-          },
-          {
-            text: "Resolved security vulnerabilities across five microservices and ensured compliance via dependency upgrades and code fixes.",
-            link: ""
-          },
-          {
-            text: "Improved code quality and release reliability by achieving 90% test coverage, resolving SonarQube issues, and implementing an AutoRFC CI/CD pipeline for seamless prod deployments.",
+            text: "Improved security and release reliability across 3 microservices by upgrading Spring Boot 3 to 4, raising test coverage from 0% to 90%, and automating production deployments via FastPath CI/CD pipeline.",
             link: ""
           },
         ],
@@ -298,30 +290,22 @@ export const Experiences = [
     positions: [
       {
         title: "Systems Engineer",
-        duration: "Apr '22 - Sep '23",
+        duration: "Apr 2022 - Sep 2023",
         location: "Nagpur, India",
         content: [
           {
-            text: "Engineered a customer data validation feature by integrating D&B and Google API, reducing manual validation time by 80%",
+            text: "Automated customer data validation using Dun & Bradstreet (D&B) APIs and implemented RBAC with multi-level authentication, reducing manual data validation efforts by 80%.",
             link: ""
           },
-          {
-            text: "Designed & implemented role-based access control & multi-level authentication, mitigating security risks identified in audits.",
-            link: ""
-          }
         ],
       },
       {
         title: "Assistant System Engineer",
-        duration: "Apr '21 - Mar '22",
+        duration: "Apr 2021 - Mar 2022",
         location: "Nagpur, India",
         content: [
           {
-            text: "Built an RPA-driven data transformation pipeline for logistics workflows, reducing manual effort by 5+ hours/day.",
-            link: ""
-          },
-          {
-            text: "Built Power BI dashboards on sales & lead trends, empowering actionable insights for stakeholders.",
+            text: "Engineered a daily data ingestion pipeline using Power Automate to process Excel files from 16 clients, parse and load logistics and sales data into Oracle, and power a centralized Power BI dashboard, saving 5+ hours of manual effort daily.",
             link: ""
           },
           {
@@ -339,7 +323,7 @@ export const Experiences = [
     positions: [
       {
         title: "Site Execution Engineer",
-        duration: "Jun '19 - Mar '21",
+        duration: "Jun 2019 - Mar 2021",
         location: "Nagpur, India",
         content: [
           {
@@ -357,7 +341,7 @@ export const Experiences = [
     positions: [
       {
         title: "AutoCAD Draftsman (2D & 3D) [Intern]",
-        duration: "Jul '17 - Sep '17",
+        duration: "Jul 2017 - Sep 2017",
         location: "Amravati, India",
         content: [
           {
@@ -372,36 +356,40 @@ export const Experiences = [
 
 export const Projects = [
   {
-    id: "project-1",
-    title: "Logic In Layers",
-    github: "https://github.com/mudar-hussain/Logic-In-Layers",
-    url: "https://logicinlayers.web.app/",
+    id: "helix-cache",
+    title: "HelixCache",
+    github: "https://github.com/mudar-hussain/helix-cache",
+    url: "",
     images: [
-      "https://raw.githubusercontent.com/mudar-hussain/mudar-hussain/main/portfolio/assets/img/project/logicinlayers/1.png",
-      "https://raw.githubusercontent.com/mudar-hussain/mudar-hussain/main/portfolio/assets/img/project/logicinlayers/2.png",
-      "https://raw.githubusercontent.com/mudar-hussain/mudar-hussain/main/portfolio/assets/img/project/logicinlayers/3.png",
-      "https://raw.githubusercontent.com/mudar-hussain/mudar-hussain/main/portfolio/assets/img/project/logicinlayers/4.png",
-      "https://raw.githubusercontent.com/mudar-hussain/mudar-hussain/main/portfolio/assets/img/project/logicinlayers/5.png",
-      "https://raw.githubusercontent.com/mudar-hussain/mudar-hussain/main/portfolio/assets/img/project/logicinlayers/6.png",
-      "https://raw.githubusercontent.com/mudar-hussain/mudar-hussain/main/portfolio/assets/img/project/logicinlayers/7.png",
-      "https://raw.githubusercontent.com/mudar-hussain/mudar-hussain/main/portfolio/assets/img/project/logicinlayers/8.png",
-      "https://raw.githubusercontent.com/mudar-hussain/mudar-hussain/main/portfolio/assets/img/project/logicinlayers/9.png",
+      "https://raw.githubusercontent.com/mudar-hussain/helix-cache/main/docs/screenshots/ring-view.png",
+      "https://raw.githubusercontent.com/mudar-hussain/helix-cache/main/docs/screenshots/cache-distribution.png",
+      "https://raw.githubusercontent.com/mudar-hussain/helix-cache/main/docs/screenshots/partition-dual-ring.png",
+      "https://raw.githubusercontent.com/mudar-hussain/helix-cache/main/docs/screenshots/docker-cluster.png",
+      "https://raw.githubusercontent.com/mudar-hussain/helix-cache/main/docs/screenshots/node-control.png",
+      "https://raw.githubusercontent.com/mudar-hussain/helix-cache/main/docs/screenshots/activity-log.png",
+      "https://raw.githubusercontent.com/mudar-hussain/helix-cache/main/docs/screenshots/cache-operations.png",
+      "https://raw.githubusercontent.com/mudar-hussain/helix-cache/main/docs/screenshots/hot-keys.png",
     ],
-    tagline: "Responsive Web Application",
+    tagline: "Self-Healing Distributed KV Cache",
     content: [
-      "Developed a blogging platform to share technical insights through structured posts.",
-      "Built an admin dashboard with Firebase for hosting, auth, storage, and CRUD operations."
+      "Implemented a SHA-256-based consistent hash ring with virtual nodes for key distribution, quorum-based replication (W=2 / R=2, RF=3), hinted handoff for write durability, anti-entropy sync on recovery, and self-healing failover across a 5-node Docker cluster.",
+      "Built an observability platform with SSE event streaming, hash-ring visualization, request and replica tracing, network partition and split-brain simulation, Prometheus metrics, and an EMA-driven hot-key prediction engine for cluster-wide workload analysis."
     ],
     stack: [
       {
-        id: "Node",
-        icon: "fa-brands fa-java",
-        name: "Node",
+        id: "java",
+        icon: "icon-java-bold",
+        name: "Java",
       },
       {
-        id: "Figma",
-        icon: "fa-brands fa-python",
-        name: "Figma",
+        id: "spring",
+        icon: "icon-spring",
+        name: "Spring Boot",
+      },
+      {
+        id: "docker",
+        icon: "icon-docker",
+        name: "Docker",
       },
       {
         id: "Angular",
@@ -409,29 +397,14 @@ export const Projects = [
         name: "Angular",
       },
       {
-        id: "Firebase",
-        icon: "fa-solid fa-database",
-        name: "Firebase",
-      },
-      {
         id: "Typescript",
-        icon: "fa-brands fa-c",
+        icon: "fa-brands fa-js",
         name: "Typescript",
-      },
-      {
-        id: "html",
-        icon: "fa-brands fa-html5",
-        name: "HTML",
-      },
-      {
-        id: "css",
-        icon: "fa-brands fa-css3-alt",
-        name: "CSS",
       }
     ]
   },
   {
-    id: "project-2",
+    id: "sticky-linkz",
     title: "Sticky Linkz",
     github: "https://github.com/mudar-hussain/StickyLinkz",
     url: "https://stickylinkz.web.app/",
@@ -446,9 +419,9 @@ export const Projects = [
       "https://raw.githubusercontent.com/mudar-hussain/mudar-hussain/main/portfolio/assets/img/project/stickylinkz/8.png",
       "https://raw.githubusercontent.com/mudar-hussain/mudar-hussain/main/portfolio/assets/img/project/stickylinkz/9.png"
     ],
-    tagline: "Web Application",
+    tagline: "URL Shortener Platform",
     content: [
-      "Developed a URL shortener with QR code, link activation / deactivation, \& sharing capabilities.",
+      "Engineered a URL shortener with short-link generation, QR codes, secure redirection, \& link lifecycle management.",
       "Implemented auth and optimized redirection for secure access with edit / delete features."
     ],
     stack: [
@@ -474,18 +447,77 @@ export const Projects = [
       },
       {
         id: "Node",
-        icon: "fa-brands fa-java",
+        icon: "fa-brands fa-node",
         name: "Node",
       },
       {
         id: "Figma",
-        icon: "fa-brands fa-python",
+        icon: "fa-brands fa-figma",
         name: "Figma",
       },
       {
         id: "Typescript",
-        icon: "fa-brands fa-c",
+        icon: "fa-brands fa-js",
         name: "Typescript",
+      },
+      {
+        id: "css",
+        icon: "fa-brands fa-css3-alt",
+        name: "CSS",
+      }
+    ]
+  },
+  {
+    id: "project-1",
+    title: "Logic In Layers",
+    github: "https://github.com/mudar-hussain/Logic-In-Layers",
+    url: "https://logicinlayers.web.app/",
+    images: [
+      "https://raw.githubusercontent.com/mudar-hussain/mudar-hussain/main/portfolio/assets/img/project/logicinlayers/1.png",
+      "https://raw.githubusercontent.com/mudar-hussain/mudar-hussain/main/portfolio/assets/img/project/logicinlayers/2.png",
+      "https://raw.githubusercontent.com/mudar-hussain/mudar-hussain/main/portfolio/assets/img/project/logicinlayers/3.png",
+      "https://raw.githubusercontent.com/mudar-hussain/mudar-hussain/main/portfolio/assets/img/project/logicinlayers/4.png",
+      "https://raw.githubusercontent.com/mudar-hussain/mudar-hussain/main/portfolio/assets/img/project/logicinlayers/5.png",
+      "https://raw.githubusercontent.com/mudar-hussain/mudar-hussain/main/portfolio/assets/img/project/logicinlayers/6.png",
+      "https://raw.githubusercontent.com/mudar-hussain/mudar-hussain/main/portfolio/assets/img/project/logicinlayers/7.png",
+      "https://raw.githubusercontent.com/mudar-hussain/mudar-hussain/main/portfolio/assets/img/project/logicinlayers/8.png",
+      "https://raw.githubusercontent.com/mudar-hussain/mudar-hussain/main/portfolio/assets/img/project/logicinlayers/9.png",
+    ],
+    tagline: "Technical Blogging Platform",
+    content: [
+      "Built a blogging platform with Firebase Authentication, Firestore content management, category filtering, and search.",
+      "Built an admin dashboard with Firebase for hosting, auth, storage, and CRUD operations."
+    ],
+    stack: [
+      {
+        id: "Node",
+        icon: "fa-brands fa-node",
+        name: "Node",
+      },
+      {
+        id: "Figma",
+        icon: "fa-brands fa-figma",
+        name: "Figma",
+      },
+      {
+        id: "Angular",
+        icon: "fa-solid fa-database",
+        name: "Angular",
+      },
+      {
+        id: "Firebase",
+        icon: "fa-solid fa-database",
+        name: "Firebase",
+      },
+      {
+        id: "Typescript",
+        icon: "fa-brands fa-js",
+        name: "Typescript",
+      },
+      {
+        id: "html",
+        icon: "fa-brands fa-html5",
+        name: "HTML",
       },
       {
         id: "css",
@@ -515,7 +547,7 @@ export const Projects = [
       },
       {
         id: "Spring",
-        icon: "fa-brands fa-python",
+        icon: "fa-brands fa-leaf",
         name: "Spring",
       },
       {
@@ -525,7 +557,7 @@ export const Projects = [
       },
       {
         id: "React",
-        icon: "fa-brands fa-c",
+        icon: "fa-brands fa-react",
         name: "React",
       },
       {
@@ -568,7 +600,7 @@ export const Projects = [
     stack: [
       {
         id: "React",
-        icon: "fa-brands fa-java",
+        icon: "fa-brands fa-react",
         name: "React Js",
       },
       {
@@ -621,12 +653,12 @@ export const Projects = [
       },
       {
         id: "Thyme-leaf",
-        icon: "fa-brands fa-python",
+        icon: "fa-brands fa-leaf",
         name: "Thyme-leaf",
       },
       {
         id: "Spring",
-        icon: "fa-brands fa-python",
+        icon: "fa-brands fa-leaf",
         name: "Spring",
       },
       {
@@ -676,12 +708,12 @@ export const Projects = [
       },
       {
         id: "React",
-        icon: "fa-brands fa-python",
+        icon: "fa-brands fa-react",
         name: "React",
       },
       {
         id: "Spring",
-        icon: "fa-brands fa-python",
+        icon: "fa-brands fa-leaf",
         name: "Spring",
       },
       {
