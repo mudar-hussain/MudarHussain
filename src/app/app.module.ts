@@ -71,7 +71,8 @@ import { TypewriterComponent } from './components/hero-section/TypewriterCompone
     provideFirestore(() => getFirestore()),
     provideStorage(() => getStorage()),
     provideAuth(() => getAuth())
-  )],
+  )
+],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

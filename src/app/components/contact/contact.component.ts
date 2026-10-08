@@ -1,8 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { Observable, Subscription } from 'rxjs';
+import { Subscription } from 'rxjs';
 import { Contact } from 'src/app/models/contact.model';
-import { PortfolioConfig } from 'src/app/models/portfolio-config';
 import { ConfigService } from 'src/app/services/config.service';
 import { ContactService } from 'src/app/services/contact.service';
 
@@ -11,10 +10,10 @@ import { ContactService } from 'src/app/services/contact.service';
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.css']
 })
-export class ContactComponent implements OnInit {
+export class ContactComponent implements OnInit, OnDestroy {
   contactForm!: FormGroup;
   submitted = false;
-  config!: Subscription;
+  configSub!: Subscription;
   resume!: string;
   linkedin!: string;
   github!: string;
@@ -26,7 +25,7 @@ export class ContactComponent implements OnInit {
 
 
   constructor(private fb: FormBuilder, private configService: ConfigService, private contactService: ContactService) {
-    // this.config = this.configService.getConfig();
+    // this.configSub = this.configService.getConfig();
     // this.resume = this.configService.getResume();
     // this.linkedin = this.configService.getLinkedIn();
     // this.github = this.configService.getGithub();
@@ -43,13 +42,13 @@ export class ContactComponent implements OnInit {
       message: ['', Validators.required]
     });
 
-    this.config = this.configService.getConfig().subscribe(config => {
-      if (config) {
-        this.resume = config.resume;
-        this.linkedin = config.linkedin;
-        this.github = config.github;
-        this.leetcode = config.leetcode;
-        this.email = config.email;
+    this.configSub = this.configService.getConfig().subscribe(configSub => {
+      if (configSub) {
+        this.resume = configSub.resume;
+        this.linkedin = configSub.linkedin;
+        this.github = configSub.github;
+        this.leetcode = configSub.leetcode;
+        this.email = configSub.email;
         this.emailUsername = this.email.split('@')[0];
         this.emailDomain = this.email.split('@')[1];
       }
@@ -57,8 +56,8 @@ export class ContactComponent implements OnInit {
   }
 
   ngOnDestroy(): void {
-    if (this.config) {
-      this.config.unsubscribe();
+    if (this.configSub) {
+      this.configSub.unsubscribe();
     }
   }
 

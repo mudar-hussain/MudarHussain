@@ -16,17 +16,9 @@ import { PortfolioData } from '../models/portfolio-data';
 export class ConfigService {
   private term_commands: TerminalCommand = TerminalCommands;
 
-  private config: Observable<PortfolioConfig> = (docData(
-        doc(this.firestore, 'portfolio', 'config')
-      ) as Observable<PortfolioConfig>).pipe(
-        shareReplay(1)
-      );
+  private config!: Observable<PortfolioConfig>;
 
-  private data: Observable<PortfolioData> = (docData(
-    doc(this.firestore, 'portfolio', 'data')
-      ) as Observable<PortfolioData>).pipe(
-        shareReplay(1)
-      );
+  private data!: Observable<PortfolioData>;
 
   private resume: string = Resume;
   private linkedIn: string = LinkedIn;
@@ -43,7 +35,18 @@ export class ConfigService {
   private sphereTags: string[] = SphereTags;
   private email: string = Email;
 
-  constructor(private firestore: Firestore) {}
+  constructor(private firestore: Firestore) {
+    this.config = (docData(
+      doc(this.firestore, 'portfolio', 'config')
+    ) as Observable<PortfolioConfig>).pipe(
+      shareReplay(1)
+    );
+    this.data = (docData(
+      doc(this.firestore, 'portfolio', 'data')
+    ) as Observable<PortfolioData>).pipe(
+      shareReplay(1)
+    );
+  }
 
   getConfig(): Observable<PortfolioConfig> {
     return this.config;
@@ -90,7 +93,7 @@ export class ConfigService {
   }
 
   getSphereTags(): Observable<string[]> {
-    return this.config.pipe(map(config => config?.sphereTags ?? []));
+    return this.config.pipe(map(config => Array.isArray(config?.sphereTags) ? config?.sphereTags : []));
   }
 
   getTerminalCommands(): TerminalCommand {

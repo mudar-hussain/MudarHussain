@@ -17,7 +17,7 @@ export class RotatingSphereComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.subscription = this.configService.getSphereTags().subscribe((tags: string[]) => {
-      if (tags && tags.length > 0) {
+      if (Array.isArray(tags) && tags.length > 0) {
         this.initializeTagCloud(this.formatTags(tags));
       }
     });
