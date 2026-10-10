@@ -19,6 +19,7 @@ export class RotatingSphereComponent implements OnInit, OnDestroy {
     this.subscription = this.configService.getSphereTags().subscribe((tags: string[]) => {
       if (Array.isArray(tags) && tags.length > 0) {
         this.initializeTagCloud(this.formatTags(tags));
+        // this.initializeTagCloud(tags);
       }
     });
   }
@@ -43,6 +44,9 @@ export class RotatingSphereComponent implements OnInit, OnDestroy {
       return;
     }
     container.innerHTML = '';
+    if (this.tagCloudInstance?.destroy) {
+      this.tagCloudInstance.destroy();
+    }
     const options = {
       radius: 180,
       maxSpeed: 'fast' as "fast",

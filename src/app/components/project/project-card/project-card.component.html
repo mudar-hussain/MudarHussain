@@ -6,7 +6,7 @@
   </div>
   <div class="project-card-image" (click)="openProjectDetails()">
     <div class="project-card-image-wrapper">
-      <img [src]="project.images[0]" [alt]="project.title" loading="lazy" decoding="async" />
+      <img *ngIf="project.images && project.images.length > 0" [src]="project.images[0]" [alt]="project.title" loading="lazy" decoding="async" />
     </div>
   </div>
   <div class="project-card-title title-font" (click)="openProjectDetails()">
